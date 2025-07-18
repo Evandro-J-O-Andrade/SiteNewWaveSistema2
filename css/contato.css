@@ -1,0 +1,202 @@
+/* === Importa o CSS global com variáveis, fontes, navbar, banner, rodapé === */
+@import url('/css/index.css');
+
+/* === BANNER COM LOGO E SLOGAN === */
+.banner {
+  background: linear-gradient(180deg, var(--cor-escura), var(--cor-secundaria));
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--branco);
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.banner .logo-central {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner .slogan {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* === CONTAINER DO FORMULÁRIO DE CONTATO === */
+.conteudo-contato {
+  max-width: 700px;
+  margin: 3rem auto 5rem;
+  padding: 2rem;
+  background: linear-gradient(180deg, var(--cor-escura), var(--cor-secundaria));
+  color: var(--branco);
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box; /* Garante que padding não ultrapasse o container */
+}
+
+/* Título e parágrafo introdutório */
+.conteudo-contato h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.conteudo-contato p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* === FORMULÁRIO DE CONTATO === */
+.form-contato {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Três colunas para layout lado a lado */
+  gap: 1rem;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Campos padrão (nome, email, telefone) */
+.form-contato .campo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Campo que ocupa toda a linha (mensagem) */
+.form-contato .campo-full {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo dos rótulos */
+.form-contato label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--branco);
+}
+
+/* Estilo geral dos inputs e textarea */
+.form-contato input,
+.form-contato textarea {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--cinza-claro);
+  font-size: 1rem;
+  font-family: var(--fonte-principal);
+  background-color: var(--branco);
+  color: var(--preto);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; /* Garante que padding não estoure o layout */
+}
+
+/* Altura padrão dos inputs */
+.form-contato input {
+  height: 44px;
+}
+
+/* Estilo específico da textarea */
+.form-contato textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* === BOTÃO DE ENVIO === */
+.form-contato button {
+  grid-column: 1 / -1; /* Ocupa todas as colunas no grid */
+  background-color: var(--cor-primaria);
+  color: var(--branco);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  justify-self: center; /* Centraliza no grid */
+  width: 150px;
+  margin-top: 1rem;
+}
+
+.form-contato button:hover {
+  background-color: var(--cor-secundaria);
+  transform: scale(1.05);
+}
+
+/* === SEÇÃO DE CONTATOS EXTRA === */
+.contatos-extra {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(180deg, var(--cor-escura), var(--cor-secundaria));
+  color: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+.contatos-extra h2 {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.contatos-extra p {
+  margin: 0;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+  border-right: 1px solid var(--branco);
+}
+
+.contatos-extra p:last-child {
+  border-right: none;
+}
+
+/* === RESPONSIVIDADE PARA DISPOSITIVOS MENORES === */
+@media (max-width: 768px) {
+  .conteudo-contato {
+    margin: 2rem 1rem 4rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .conteudo-contato h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Grid vira coluna única no mobile */
+  .form-contato {
+    grid-template-columns: 1fr;
+  }
+
+  .form-contato button {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  /* Contatos extra empilhados no mobile */
+  .contatos-extra {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  .contatos-extra p {
+    border: none;
+  }
+}

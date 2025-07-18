@@ -1,0 +1,81 @@
+/* Importa as variáveis globais do index.css */
+@import url('/css/index.css');
+
+/* Container principal do conteúdo Sobre */
+.conteudo-sobre {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: var(--cor-escura);
+  font-family: var(--fonte-principal);
+}
+
+/* Título principal */
+.conteudo-sobre h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--cor-primaria);
+}
+
+/* Parágrafo introdutório */
+.introducao-sobre {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--cinza-escuro);
+  line-height: 1.6;
+}
+
+/* Container flexível para Missão, Visão e Valores */
+.container-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Caixas individuais (Missão, Visão, Valores) */
+.box-info {
+  flex: 1 1 280px;
+  background-color: var(--cinza-claro);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Título das caixas */
+.box-info h2 {
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Texto das caixas */
+.box-info p,
+.box-info ul {
+  color: var(--preto);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Lista de valores */
+.box-info ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .container-info {
+    flex-direction: column;
+  }
+
+  .conteudo-sobre h1 {
+    font-size: 2rem;
+  }
+
+  .introducao-sobre {
+    font-size: 1.1rem;
+  }
+}

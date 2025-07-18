@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Página de Produtos da New Wave Sistemas Digitais -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Define a codificação UTF-8 para suportar caracteres especiais -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Define a viewport para garantir responsividade em dispositivos móveis -->
+
+  <title>Produtos - New Wave</title>
+  <!-- Título que aparece na aba do navegador -->
+
+  <!-- Link para o CSS global do site -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <!-- Link para o CSS específico da página Produtos -->
+  <link rel="stylesheet" href="../css/produtos.css" />
+</head>
+
+<body>
+  <!-- =================== NAVBAR =================== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <!-- Container que agrupa logo e menu de navegação -->
+
+      <div class="nav-logo">
+        <!-- Imagem do ícone da logo -->
+        <img src="../img/logoicon.png" alt="Logo" class="logo-icon" />
+        <!-- Imagem com o nome da empresa ao lado da logo -->
+        <img src="../img/lentralog.png" alt="Nome da Empresa" class="logo-nome" />
+      </div>
+
+      <nav>
+        <!-- Links do menu de navegação -->
+        <a href="../index.html">Home</a>
+        <a href="../html/sobre.html">Sobre</a>
+
+        <!-- Link ativo indicando a página atual -->
+        <a href="../html/produtos.html" class="ativo">Produtos</a>
+
+        <!-- ✅ NOVA ABA: Link para página Serviços -->
+        <a href="../html/servicos.html">Serviços</a>
+
+        <a href="../html/contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =================== CONTEÚDO PRINCIPAL =================== -->
+  <main>
+    <!-- Banner com degradê e texto personalizado para Produtos -->
+    <section class="banner" id="produtos">
+      <!-- Logo centralizada no banner para reforço da marca -->
+      <img src="../img/logoicon.png" alt="Logo New Wave" class="logo-central" />
+      <!-- Título principal da página -->
+      <h1>Produtos</h1>
+      <!-- Slogan ou frase de destaque relacionada à página de produtos -->
+      <p class="slogan">Conheça nossas soluções tecnológicas</p>
+    </section>
+
+    <!-- Seção de introdução à lista de produtos -->
+    <section class="introducao">
+      <!-- Título da seção -->
+      <h1>Nossos Produtos</h1>
+      <!-- Texto explicativo sobre a empresa e seus produtos -->
+      <p>Explore as soluções que a New Wave Sistemas oferece para empresas modernas.</p>
+    </section>
+
+    <!-- Grade de produtos, layout em grid para melhor visualização -->
+    <section class="produtos-grid">
+      <!-- Card individual de produto -->
+      <div class="produto">
+        <!-- Imagem representativa do produto -->
+        <img src="../img/produto1.jpeg" alt="Produto 1" />
+        <!-- Nome do produto -->
+        <p>Sistema de Orçamento</p>
+        <!-- Botão para saber mais detalhes -->
+        <button class="btn-saiba-mais">Saiba mais</button>
+      </div>
+
+      <div class="produto">
+        <img src="../img/produto2.jpeg" alt="Produto 2" />
+        <p>Cadastro de Clientes</p>
+        <button class="btn-saiba-mais">Saiba mais</button>
+      </div>
+
+      <div class="produto">
+        <img src="../img/produto3.jpeg" alt="Produto 3" />
+        <p>Relatórios Personalizados</p>
+        <button class="btn-saiba-mais">Saiba mais</button>
+      </div>
+
+      <div class="produto">
+        <img src="../img/produto4.png" alt="Produto 4" />
+        <p>Integração com Intranet</p>
+        <button class="btn-saiba-mais">Saiba mais</button>
+      </div>
+
+      <div class="produto">
+        <img src="../img/produto5.jpeg" alt="Produto 5" />
+        <p>Suporte Especializado</p>
+        <button class="btn-saiba-mais">Saiba mais</button>
+      </div>
+
+      <!-- Removi duplicatas para manter a grade limpa e organizada -->
+    </section>
+  </main>
+
+  <!-- =================== RODAPÉ =================== -->
+  <footer class="rodape">
+    <!-- Logo no rodapé para reforço da identidade visual -->
+    <img src="../img/lentralog.png" alt="Logo Rodapé" />
+    <!-- Texto de direitos autorais -->
+    <p>&copy; 2025 New Wave Sistemas Digitais</p>
+  </footer>
+</body>
+
+</html>

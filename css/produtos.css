@@ -1,0 +1,108 @@
+/* === Importa variáveis globais do index.css === */
+@import url('/css/index.css');  
+/* Importa as variáveis de cores, fontes e resets do CSS global para manter padronização */
+
+/* === Estilos específicos da página de produtos === */
+
+/* Introdução da página */
+.introducao {
+  text-align: center;             /* Centraliza o texto */
+  padding: 3rem 1rem 2rem;        /* Espaçamento generoso para separar do topo e entre os elementos */
+  color: var(--cor-escura);       /* Usa azul marinho definido no global para destaque */
+}
+
+.introducao h1 {
+  font-size: 2.2rem;              /* Título um pouco menor que o banner, mas ainda grande */
+  margin-bottom: 0.5rem;          /* Espaço abaixo do título */
+}
+
+.introducao p {
+  font-size: 1.1rem;              /* Texto ligeiramente maior para melhor leitura */
+  color: var(--cinza-escuro);     /* Cinza escuro para contraste sem ser muito pesado */
+}
+
+/* Grade de produtos */
+.produtos-grid {
+  display: grid;                                  /* Usa grid para organização */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Colunas responsivas com mínimo de 180px */
+  gap: 2rem;                                     /* Espaço maior entre cards para maior respiro */
+  padding: 2rem 1rem;                            /* Espaçamento interno para respirar */
+  max-width: 1100px;                             /* Largura máxima para não esticar demais */
+  margin: 0 auto;                                /* Centraliza horizontalmente */
+}
+
+/* Cada cartão de produto */
+.produto {
+  text-align: center;
+  background-color: var(--cinza-claro);          /* Fundo cinza claro para destacar o card */
+  border-radius: 8px;                            /* Bordas arredondadas para suavizar */
+  padding: 1.5rem;                               /* Espaçamento interno maior para conforto visual */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);        /* Sombra leve para dar profundidade */
+  transition: transform 0.3s, box-shadow 0.3s;  /* Transição suave para hover */
+}
+
+/* Efeito ao passar o mouse */
+.produto:hover {
+  transform: translateY(-6px);                   /* Eleva o card levemente */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);      /* Sombra mais forte para destaque */
+}
+
+/* Imagens dos produtos */
+.produto img {
+  width: 100%;                                   /* Preenche o container */
+  max-width: 150px;                              /* Limita o tamanho máximo */
+  height: auto;                                  /* Mantém proporção */
+  margin-bottom: 1rem;                           /* Espaço abaixo da imagem */
+}
+
+/* Nome do produto */
+.produto p {
+  font-weight: 600;                              /* Texto em negrito médio */
+  color: var(--preto);                           /* Cor preta para contraste */
+}
+
+/* === Estilo para os botões “Saiba mais” na grade de produtos === */
+.btn-saiba-mais {
+  background-color: var(--cor-primaria);        /* Fundo azul principal */
+  color: var(--branco);                          /* Texto branco */
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;                           /* Botão arredondado, estilo "pill" */
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 0.8rem;                            /* Espaço acima para separar do texto */
+  display: inline-block;
+  font-size: 1rem;
+}
+
+/* Efeito hover: botão fica azul claro e levemente aumenta */
+.btn-saiba-mais:hover {
+  background-color: var(--cor-secundaria);      /* Azul claro */
+  transform: scale(1.05);                        /* Aumenta levemente */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .introducao h1 {
+    font-size: 1.8rem;                           /* Título menor em telas pequenas */
+  }
+
+  .produtos-grid {
+    gap: 1rem;                                  /* Espaço reduzido entre cards */
+  }
+
+  .produto img {
+    max-width: 100px;                           /* Imagens menores para dispositivos móveis */
+  }
+
+  .produto {
+    padding: 1rem;                              /* Padding menor para caber melhor */
+  }
+
+  /* Botão menor em dispositivos móveis */
+  .btn-saiba-mais {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Página Contato da New Wave Sistemas Digitais -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Define codificação da página para UTF-8 -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Configuração para responsividade em dispositivos móveis -->
+
+  <title>Contato - New Wave Sistemas Digitais</title>
+  <!-- Título que aparece na aba do navegador -->
+
+  <link rel="stylesheet" href="/css/contato.css" />
+  <!-- Importa o CSS específico para a página de contato -->
+</head>
+
+<body>
+  <!-- NAVBAR: Barra de navegação principal -->
+  <header class="navbar">
+    <div class="nav-container">
+      <!-- Logo da empresa: ícone e nome -->
+      <div class="nav-logo">
+        <img src="/img/logoicon.png" alt="Logo" class="logo-icon" />
+        <img src="/img/lentralog.png" alt="Nome da Empresa" class="logo-nome" />
+      </div>
+
+      <!-- Links de navegação com a nova aba "Serviços" adicionada -->
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/html/sobre.html">Sobre</a>
+        <a href="/html/produtos.html">Produtos</a>
+        <a href="/html/servicos.html">Serviços</a> <!-- ✅ Aba adicionada -->
+        <a href="/html/contato.html" class="ativo">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER: seção com logo central, título e slogan -->
+  <section class="banner" id="contato">
+    <img src="/img/logoicon.png" alt="Logo New Wave" class="logo-central" />
+    <h1>Contato</h1>
+    <p class="slogan">Fale conosco, estamos prontos para ajudar</p>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- Container do formulário de contato e texto introdutório -->
+    <section class="conteudo-contato">
+      <!-- Título principal da seção -->
+      <h1>Fale Conosco</h1>
+
+      <!-- Texto de introdução / convite para contato -->
+      <p>Estamos à disposição para atender você. Envie sua mensagem ou entre em contato pelos nossos canais abaixo.</p>
+
+      <!-- FORMULÁRIO DE CONTATO -->
+      <form class="form-contato" action="#" method="post">
+        <!-- Campo Nome Completo -->
+        <div class="campo">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" />
+        </div>
+
+        <!-- Campo E-mail -->
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" />
+        </div>
+
+        <!-- Campo Telefone -->
+        <div class="campo">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX" />
+        </div>
+
+        <!-- Campo Mensagem: ocupa toda a largura -->
+        <div class="campo-full">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+        </div>
+
+        <!-- Botão para enviar formulário -->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- SEÇÃO DE CONTATOS EXTRA ABAIXO DO FORMULÁRIO -->
+    <section class="contatos-extra">
+      <h2>Outros Canais de Contato</h2>
+
+      <!-- Informações adicionais de contato -->
+      <p><strong>Telefone:</strong> (11) 1234-5678</p>
+      <p><strong>E-mail:</strong> contato@newwave.com.br</p>
+      <p><strong>Endereço:</strong> Rua da Tecnologia, 123, São Paulo - SP</p>
+      <p><strong>CNPJ:</strong> 12.345.678/0001-99</p>
+    </section>
+  </main>
+
+  <!-- RODAPÉ: seção final com logo e direitos autorais -->
+  <footer class="rodape">
+    <img src="/img/lentralog.png" alt="Logo Rodapé" />
+    <p>&copy; 2025 New Wave Sistemas Digitais</p>
+  </footer>
+</body>
+
+</html>

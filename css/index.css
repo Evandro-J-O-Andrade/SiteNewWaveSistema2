@@ -1,0 +1,299 @@
+/* === VARIÁVEIS GLOBAIS PARA CORES E FONTES === */
+:root {
+  --cor-primaria: #0077b6;           /* Azul principal usado no site */
+  --cor-secundaria: #90e0ef;         /* Azul claro para destaques e detalhes */
+  --cor-escura: #023e8a;             /* Azul escuro usado em banners e degradês */
+  --cinza-claro: #e0e0e0;            /* Cinza claro para textos e fundos suaves */
+  --cinza-escuro: #d0d0d0;           /* Cinza um pouco mais escuro (reserva) */
+  --cinza-preto: #1a1a1a;            /* Cor base escura usada como fundo geral */
+  --preto: #111111;                  /* Preto intenso para textos de destaque */
+  --branco: #ffffff;                 /* Branco puro para fundo claro */
+
+  --fonte-principal: 'Segoe UI', sans-serif; /* Fonte geral do site */
+}
+
+/* === RESET GERAL DE ESTILOS === */
+* {
+  margin: 0;                         /* Remove margem padrão de todos elementos para evitar espaçamentos inesperados */
+  padding: 0;                        /* Remove padding padrão para padronizar espaçamentos */
+  box-sizing: border-box;           /* Inclui padding e borda dentro do cálculo do tamanho total do elemento */
+}
+
+/* === ESTILO DO BODY (FUNDO ESCURO) === */
+body {
+  font-family: var(--fonte-principal);  /* Define a fonte principal do site */
+  background: linear-gradient(           /* Aplica degradê vertical como fundo da página */
+    180deg,
+    var(--cinza-preto) 0%,              /* Começa com cinza preto no topo */
+    var(--cinza-preto) 40%,             /* Mantém cinza preto até 40% da altura */
+    var(--cor-primaria) 100%            /* Transição para azul principal no fim */
+  );
+  color: var(--cinza-claro);            /* Cor clara para texto garantindo contraste no fundo escuro */
+  min-height: 100vh;                    /* Garante que o corpo tenha altura mínima da tela inteira */
+}
+
+/* === NAVBAR SUPERIOR === */
+.navbar {
+  background: linear-gradient(          /* Aplica degradê similar ao do body para a navbar */
+    180deg,
+    var(--cinza-preto) 0%,
+    var(--cinza-preto) 40%,
+    var(--cor-primaria) 100%
+  );
+  padding: 1rem 2rem;                   /* Espaçamento interno da barra: 1rem vertical e 2rem horizontal */
+  display: flex;                        /* Usa flexbox para organizar itens na horizontal */
+  justify-content: space-between;      /* Espaça logo e menu para os extremos */
+  align-items: center;                 /* Alinha verticalmente ao centro */
+  color: var(--branco);                /* Cor do texto branco */
+}
+
+/* === CONTAINER INTERNO DA NAVBAR === */
+.nav-container {
+  display: flex;                        /* Flexbox para organizar logo e menu */
+  align-items: center;                 /* Alinha verticalmente os itens */
+  gap: 2rem;                          /* Espaço de 2rem entre elementos filhos */
+  width: 100%;                        /* Ocupa 100% da largura disponível */
+}
+
+/* === ÁREA DA LOGO (IMAGEM + TEXTO) === */
+.nav-logo {
+  display: flex;                      /* Flexbox para alinhar logo ícone e texto lado a lado */
+  align-items: center;               /* Alinha verticalmente ao centro */
+  gap: 0.8rem;                      /* Espaço de 0.8rem entre ícone e texto */
+}
+
+/* === MENU DE NAVEGAÇÃO === */
+nav {
+  margin-left: auto;                 /* Empurra o menu para o lado direito */
+  display: flex;                    /* Organiza links na horizontal */
+  gap: 1.5rem;                     /* Espaço de 1.5rem entre links */
+}
+
+/* === TAMANHO DAS LOGOS === */
+.logo-icon {
+  max-width: 60px;                  /* Define largura máxima para ícone da logo */
+  height: auto;                    /* Mantém proporção da imagem */
+}
+
+.logo-nome {
+  max-width: 220px;                /* Define largura máxima para o nome da logo */
+  height: auto;                   /* Mantém proporção */
+}
+
+/* === LINKS DO MENU === */
+nav a {
+  color: var(--branco);            /* Cor branca para os links */
+  text-decoration: none;          /* Remove sublinhado padrão */
+  font-weight: 600;               /* Define peso da fonte para negrito leve */
+  transition: color 0.3s;         /* Transição suave na mudança de cor ao passar mouse */
+}
+
+/* === EFEITO HOVER NOS LINKS === */
+nav a:hover {
+  color: var(--cor-secundaria);   /* Muda a cor para azul claro quando o mouse passa sobre o link */
+}
+
+/* === BANNER INICIAL (HOME) === */
+.banner {
+  background: linear-gradient(     /* Degradê do azul escuro para o azul claro */
+    180deg,
+    var(--cor-escura),
+    var(--cor-secundaria)
+  );
+  padding: 3rem 1rem;              /* Espaçamento interno do banner: 3rem vertical e 1rem horizontal */
+  text-align: center;              /* Centraliza todo o conteúdo dentro do banner */
+  color: var(--branco);            /* Cor do texto branca */
+  border-radius: 0 0 25px 25px;   /* Arredonda cantos inferiores do banner */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar o banner */
+}
+
+/* === LOGO CENTRAL NO BANNER === */
+.logo-central {
+  max-width: 200px;                /* Largura máxima da logo central */
+  margin-bottom: 1rem;             /* Espaço abaixo da logo */
+}
+
+/* === TÍTULO PRINCIPAL === */
+h1 {
+  font-size: 2.5rem;              /* Tamanho grande para o título principal */
+  margin-bottom: 0.5rem;          /* Espaço abaixo do título */
+}
+
+/* === FRASE DE IMPACTO (SLOGAN) === */
+.slogan {
+  font-size: 1.2rem;              /* Tamanho menor para o slogan */
+}
+
+/* === SEÇÃO PADRÃO DE CONTEÚDO === */
+.conteudo {
+  padding: 2rem 1rem;             /* Espaçamento interno: 2rem vertical e 1rem horizontal */
+  max-width: 960px;               /* Largura máxima para centralizar o conteúdo */
+  margin: 2rem auto 4rem;         /* Margem superior, horizontal automática (centralizado) e inferior */
+  background: linear-gradient(    /* Fundo com degradê escuro */
+    180deg,
+    var(--cinza-preto) 0%,
+    var(--cinza-preto) 50%,
+    var(--cor-primaria) 100%
+  );
+  color: var(--cinza-claro);      /* Texto em tom claro para contraste */
+  border-radius: 12px;            /* Bordas arredondadas para suavizar */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra leve para profundidade */
+  box-sizing: border-box;         /* Inclui padding e borda no tamanho do elemento */
+}
+
+/* === TÍTULO DAS SEÇÕES DE CONTEÚDO === */
+.conteudo h2 {
+  margin-bottom: 1rem;            /* Espaço abaixo do título da seção */
+  color: var(--cor-secundaria);  /* Azul claro para destaque */
+  text-align: center;             /* Centraliza o título */
+}
+
+/* === GRADE DE PRODUTOS (DESTAQUES) === */
+.produtos-grid {
+  display: grid;                  /* Usa grid layout para organizar produtos */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Colunas responsivas: mínimo 160px e máximo 1fr */
+  gap: 1.5rem;                   /* Espaçamento entre os produtos */
+  margin-top: 1rem;              /* Espaço acima da grade */
+  justify-items: center;         /* Centraliza os itens dentro das células do grid */
+}
+
+/* === ESTILO DOS CARDS DE PRODUTO === */
+.produto {
+  text-align: center;            /* Centraliza texto e imagens dentro do card */
+  padding: 1rem;                /* Espaçamento interno do card */
+  border-radius: 8px;           /* Bordas arredondadas para suavidade */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra leve para destaque */
+  transition: transform 0.3s;    /* Animação suave para transformações */
+}
+
+/* === ANIMAÇÃO NO HOVER DOS PRODUTOS === */
+.produto:hover {
+  transform: translateY(-5px);   /* Levanta o card ao passar o mouse */
+}
+
+/* === IMAGENS DOS PRODUTOS === */
+.produto img {
+  width: 100%;                  /* Imagem ocupa toda a largura do container */
+  height: auto;                 /* Mantém proporção da imagem */
+  max-width: 150px;             /* Limita a largura máxima da imagem */
+  margin-bottom: 0.5rem;        /* Espaço abaixo da imagem */
+}
+
+/* === DESCRIÇÃO DOS PRODUTOS === */
+.produto p {
+  font-weight: 500;             /* Peso médio da fonte para texto */
+  color: var(--cinza-claro);   /* Cor clara para o texto */
+}
+
+/* === RODAPÉ FINAL === */
+.rodape {
+  background: linear-gradient(  /* Fundo com degradê escuro para azul */
+    180deg,
+    var(--cinza-preto) 0%,
+    var(--cinza-preto) 40%,
+    var(--cor-primaria) 100%
+  );
+  color: var(--branco);          /* Texto branco no rodapé */
+  text-align: center;            /* Centraliza o conteúdo */
+  padding: 2rem 1rem;            /* Espaçamento interno */
+}
+
+/* === LOGO NO RODAPÉ === */
+.rodape img {
+  max-width: 140px;              /* Limita largura da logo no rodapé */
+  margin-bottom: 1rem;           /* Espaço abaixo da imagem */
+  height: auto;                  /* Mantém proporção */
+}
+
+/* === DEGRADÊ EXCLUSIVO PARA A SEÇÃO DE DESTAQUES NA HOME === */
+.conteudo.destaques {
+  background: linear-gradient(    /* Degradê do azul escuro para o azul principal */
+    180deg,
+    var(--cor-escura) 0%,
+    var(--cor-primaria) 100%
+  );
+  color: var(--cinza-claro);      /* Texto claro para bom contraste */
+}
+
+/* === ESTILO EXCLUSIVO PARA PRODUTOS NA HOME COM DEGRADÊ PRETO PARA AZUL === */
+.produto-home {
+  text-align: center;             /* Centraliza conteúdo */
+  padding: 1rem;                  /* Espaçamento interno */
+  border-radius: 8px;             /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Sombra um pouco mais escura */
+  transition: transform 0.3s;     /* Animação suave */
+
+  /* Fundo com degradê preto quase opaco no topo para azul principal embaixo */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85) 0%,       /* Preto quase opaco no topo */
+    var(--cor-primaria) 100%       /* Azul principal embaixo */
+  );
+  color: var(--branco);            /* Texto branco para contraste */
+}
+
+/* === ANIMAÇÃO NO HOVER DOS PRODUTOS NA HOME === */
+.produto-home:hover {
+  transform: translateY(-7px);    /* Levanta o card um pouco mais que o padrão */
+}
+
+/* === RESPONSIVIDADE PARA TELAS MENORES === */
+@media (max-width: 768px) {
+  /* Navbar: muda layout para coluna em telas pequenas */
+  .nav-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  /* Menu: também vira coluna e tira margem lateral */
+  nav {
+    margin-left: 0;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  /* Espaçamento maior entre links */
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  /* Ajusta tamanho da logo no banner */
+  .logo-central {
+    max-width: 150px;
+  }
+
+  /* Ajusta tamanho dos logos na navbar */
+  .logo-icon {
+    max-width: 45px;
+  }
+
+  .logo-nome {
+    max-width: 160px;
+  }
+
+  /* Reduz tamanho dos títulos */
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* Reduz tamanho do slogan */
+  .slogan {
+    font-size: 1rem;
+  }
+
+  /* Ajusta grade de produtos para telas pequenas */
+  .produtos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  /* Ajusta tamanho das imagens dos produtos */
+  .produto img {
+    max-width: 100px;
+  }
+
+  /* Reduz margem e padding do conteúdo para melhor visualização */
+  .conteudo {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
