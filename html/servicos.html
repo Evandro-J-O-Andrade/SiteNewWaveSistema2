@@ -1,123 +1,135 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Declara que este documento está no formato HTML5 -->
+
+<html lang="pt-br"> <!-- Define o idioma principal da página como português do Brasil -->
+
 <head>
-  <meta charset="UTF-8" />
-  <!-- Define a codificação UTF-8 para suportar caracteres especiais -->
+  <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres como UTF-8, permitindo acentuação e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Faz o site se adaptar corretamente em dispositivos móveis -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Garante que a página seja responsiva em dispositivos móveis -->
+  <title>Serviços - New Wave Sistemas Digitais</title> <!-- Define o título que aparece na aba do navegador -->
 
-  <title>Serviços - New Wave Sistemas Digitais</title>
-  <!-- Título que aparece na aba do navegador -->
+  <!-- Importa o CSS global que contém estilos gerais e padrões aplicados em todas as páginas -->
+  <link rel="stylesheet" href="../css/index.css" />
 
-  <!-- Importa o CSS específico da página de serviços -->
+  <!-- Importa o CSS específico para a página de serviços, com estilos adicionais e personalizados -->
   <link rel="stylesheet" href="../css/servicos.css" />
+<link rel="stylesheet" href="/css/midiaquire.css" />
+  <!-- Importa o CSS específico para responsividade e mídia queries -->
+   
+  <!-- Importa o Font Awesome por CDN para permitir o uso de ícones sociais (WhatsApp, Instagram, etc.) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
 </head>
-<body>
 
-  <!-- ===== INÍCIO DO CABEÇALHO/NAVBAR ===== -->
-  <header class="navbar">
-    <div class="nav-container">
-      <!-- Container que organiza a logo e o menu lado a lado -->
+<body> <!-- Início do corpo da página (tudo que será visível no navegador) -->
 
-      <!-- Logo da empresa (ícone + nome) -->
-      <div class="nav-logo">
-        <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon" />
-        <!-- Ícone pequeno da logo -->
-        <img src="../img/lentralog.png" alt="Nome New Wave" class="logo-nome" />
-        <!-- Nome completo da empresa ao lado da logo -->
+  <!-- ===== INÍCIO DO CABEÇALHO / NAVBAR ===== -->
+  <header class="navbar"> <!-- Início do cabeçalho que contém o menu de navegação -->
+    <div class="nav-container"> <!-- Container para organizar o logo e o menu -->
+
+      <div class="nav-logo"> <!-- Bloco que agrupa o ícone e o nome da empresa -->
+        <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon" /> <!-- Ícone pequeno da empresa -->
+        <img src="../img/lentralog.png" alt="Nome New Wave" class="logo-nome" /> <!-- Nome da empresa ao lado do ícone -->
       </div>
 
-      <!-- Menu de navegação -->
-      <nav>
-        <!-- Links principais do site -->
-        <a href="/index.html">Home</a>
-        <a href="/html/sobre.html">Sobre</a>
-        <a href="/html/produtos.html">Produtos</a>
-        <a href="/html/servicos.html">Serviços</a>
-        <a href="/html/contato.html">Contato</a>
+      <nav> <!-- Início do menu de navegação com links para outras páginas -->
+        <a href="../index.html">Home</a> <!-- Link para a página inicial -->
+        <a href="../html/sobre.html">Sobre</a> <!-- Link para a página "Sobre" -->
+        <a href="../html/produtos.html">Produtos</a> <!-- Link para a página de produtos -->
+        <a href="../html/servicos.html" class="ativo">Serviços</a> <!-- Link para esta página, com classe ativo para destacar -->
+        <a href="../html/contato.html">Contato</a> <!-- Link para a página de contato -->
       </nav>
 
-    </div>
+    </div> <!-- Fim do container do cabeçalho -->
   </header>
-  <!-- ===== FIM DO CABEÇALHO/NAVBAR ===== -->
+  <!-- ===== FIM DO CABEÇALHO / NAVBAR ===== -->
 
-  <!-- ===== INÍCIO DO BANNER DA PÁGINA ===== -->
-  <section class="banner">
-    <!-- Imagem de fundo do banner com classe para estilização -->
-    <img src="../img/banner2.png" alt="Banner Serviços" class="banner-img" />
-
-    <!-- Título principal do banner, posicionado sobre a imagem -->
-    <h1>Serviços Prestados</h1>
+  <!-- ===== INÍCIO DO BANNER PRINCIPAL ===== -->
+  <section class="banner"> <!-- Seção que exibe a imagem principal e o título da página -->
+    <img src="../img/servico-novidade.jpg" alt="Banner Serviços" class="banner-img" /> <!-- Imagem do banner -->
+    <h1>Serviços</h1> <!-- Título sobre a imagem do banner -->
   </section>
-  <!-- ===== FIM DO BANNER ===== -->
+  <!-- ===== FIM DO BANNER PRINCIPAL ===== -->
 
   <!-- ===== INÍCIO DO CONTEÚDO PRINCIPAL ===== -->
-  <main class="conteudo">
-    <!-- Título principal da seção de serviços -->
-    <h2 class="titulo-pagina">Conheça Nossos Serviços</h2>
+  <main class="conteudo"> <!-- Define o conteúdo principal da página -->
 
-    <!-- Grid responsivo que organiza os serviços em colunas -->
-    <div class="servicos-grid">
+    <h2 class="titulo-pagina">Conheça Nossos Serviços</h2> <!-- Título introdutório da seção de serviços -->
 
-      <!-- Serviço 1: Infraestrutura de Redes -->
+    <div class="servicos-grid"> <!-- Container que organiza os serviços em formato de grade -->
+
+      <!-- Cada bloco "servico" representa um serviço oferecido -->
       <div class="servico">
         <img src="../img/servico-redes.jpeg" alt="Infraestrutura de Redes" />
-        <!-- Imagem ilustrativa do serviço -->
         <h3>Infraestrutura de Redes</h3>
-        <!-- Nome do serviço -->
         <p>Instalação e organização de redes cabeadas e Wi-Fi para empresas e residências.</p>
-        <!-- Descrição breve do serviço -->
       </div>
 
-      <!-- Serviço 2: Câmeras de Segurança -->
       <div class="servico">
         <img src="../img/servico-cameras.jpg" alt="Instalação de Câmeras" />
         <h3>Instalação de Câmeras</h3>
         <p>Monitoramento moderno com câmeras de alta resolução e acesso remoto seguro.</p>
       </div>
 
-      <!-- Serviço 3: Sistemas de Alarme -->
       <div class="servico">
         <img src="../img/servico-alarmes.jpg" alt="Sistemas de Alarme" />
         <h3>Sistemas de Alarme</h3>
         <p>Proteção ativa para seu patrimônio com sensores e alarmes inteligentes.</p>
       </div>
 
-      <!-- Serviço 4: Reconhecimento Facial -->
       <div class="servico">
         <img src="../img/servico-facial.png" alt="Reconhecimento Facial" />
         <h3>Reconhecimento Facial</h3>
         <p>Soluções modernas de controle de acesso com tecnologia facial de última geração.</p>
       </div>
 
-      <!-- Serviço 5: Manutenção de Computadores -->
       <div class="servico">
         <img src="../img/servico-manutencao.jpg" alt="Manutenção de Computadores" />
         <h3>Manutenção de Computadores</h3>
         <p>Serviços técnicos de qualidade para notebooks, desktops e servidores.</p>
       </div>
 
-      <!-- Serviço 6: Novidades em Tecnologia -->
       <div class="servico">
         <img src="../img/servico-novidade.jpg" alt="Novidades em Tecnologia" />
         <h3>Novidades em Tecnologia</h3>
         <p>Estamos sempre atualizados com as novas tendências para oferecer o melhor!</p>
       </div>
 
-    </div>
+    </div> <!-- Fim do grid de serviços -->
+
   </main>
   <!-- ===== FIM DO CONTEÚDO PRINCIPAL ===== -->
 
-  <!-- ===== INÍCIO DO RODAPÉ ===== -->
-  <footer class="rodape">
-    <!-- Logo no rodapé -->
-    <img src="../img/lentralog.png" alt="Logo Rodapé" />
+  <!-- ===== INÍCIO DO RODAPÉ COM REDES SOCIAIS ===== -->
+  <footer class="rodape"> <!-- Início do rodapé do site -->
+    <img src="../img/lentralog.png" alt="Logo Rodapé" /> <!-- Logo da empresa no rodapé -->
+    <p>&copy; 2025 New Wave Sistemas Digitais</p> <!-- Direitos autorais -->
 
-    <!-- Texto de direitos autorais -->
-    <p>&copy; 2025 New Wave Sistemas Digitais</p>
+    <div class="social-links"> <!-- Container dos links para redes sociais -->
+
+      <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" title="Fale conosco pelo WhatsApp" class="social-link">
+        <i class="fab fa-whatsapp"></i> WhatsApp <!-- Ícone e texto para o WhatsApp -->
+      </a>
+
+      <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" title="Nos siga no Instagram" class="social-link">
+        <i class="fab fa-instagram"></i> Instagram <!-- Ícone e texto para o Instagram -->
+      </a>
+
+      <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" title="Curta nossa página no Facebook" class="social-link">
+        <i class="fab fa-facebook-f"></i> Facebook <!-- Ícone e texto para o Facebook -->
+      </a>
+
+      <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" title="Conecte-se no LinkedIn" class="social-link">
+        <i class="fab fa-linkedin"></i> LinkedIn <!-- Ícone e texto para o LinkedIn -->
+      </a>
+
+    </div> <!-- Fim do bloco de redes sociais -->
   </footer>
   <!-- ===== FIM DO RODAPÉ ===== -->
 
-</body>
-</html>
+</body> <!-- Fim do corpo da página -->
+
+</html> <!-- Fim do documento HTML -->

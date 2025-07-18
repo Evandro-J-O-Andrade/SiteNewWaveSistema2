@@ -1,0 +1,37 @@
+{
+  "name": "New Wave Sistemas Digitais",
+  
+
+  "short_name": "New Wave",
+  
+
+  "description": "Sistemas digitais modernos e personalizados para sua empresa.",
+  
+
+  "start_url": "./index.html",
+  
+
+  "display": "standalone",
+  
+
+  "background_color": "#0077b6",
+  
+
+  "theme_color": "#0077b6",
+ 
+
+  "icons": [
+    {
+      "src": "img/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+      
+    },
+    {
+      "src": "img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+      
+    }
+  ]
+}

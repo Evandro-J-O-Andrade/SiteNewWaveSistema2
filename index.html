@@ -1,94 +1,155 @@
 <!DOCTYPE html>
+<!-- Declara que este documento é um HTML5 -->
+
 <html lang="pt-br">
-<!-- Define o idioma como português do Brasil -->
+<!-- Elemento raiz da página, idioma definido como português do Brasil -->
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Codificação de caracteres UTF-8 para acentos e caracteres especiais -->
+  <!-- Define a codificação de caracteres para UTF-8, permitindo caracteres especiais e acentuação -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Garante responsividade para dispositivos móveis -->
+  <!-- Define a viewport para controle de responsividade em dispositivos móveis -->
+
+  <meta name="description" content="New Wave Sistemas Digitais - Soluções tecnológicas modernas e personalizadas" />
+  <!-- Descrição para motores de busca -->
+
+  <meta name="keywords" content="New Wave, Sistemas Digitais, Tecnologia, Soluções, Software, Desenvolvimento" />
+  <!-- Palavras-chave para SEO -->
+
+  <meta name="author" content="New Wave Sistemas Digitais" />
+  <!-- Autor do site -->
+
+  <!-- Favicons e ícones para várias plataformas, todos dentro da pasta img -->
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png" />
+  <!-- Ícone favicon PNG 96x96 pixels -->
+
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <!-- Ícone favicon no formato SVG -->
+
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <!-- Ícone padrão para navegadores antigos -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+  <!-- Ícone para dispositivos Apple -->
+
+  <link rel="manifest" href="../site.webmanifest" />
+  <!-- Arquivo manifest para Progressive Web App -->
 
   <title>New Wave Sistemas Digitais</title>
-  <!-- Título exibido na aba do navegador -->
+  <!-- Título da página que aparece na aba do navegador -->
 
   <link rel="stylesheet" href="../css/index.css" />
-  <!-- Importa o CSS global para aplicar estilos compartilhados -->
+  <!-- Importa o arquivo CSS externo com os estilos gerais do site -->
+   <link rel="stylesheet" href="/css/midiaquire.css" />
+  <!-- Importa o CSS específico resposivel -->
+
+  <!-- IMPORTANTE: Link do Font Awesome igual ao do produtos.html, sem atributos extras -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Importa a biblioteca Font Awesome via CDN para usar os ícones nas redes sociais -->
 </head>
 
 <body>
   <!-- =================== NAVBAR =================== -->
   <header class="navbar">
-    <!-- Barra de navegação superior -->
-    <div class="nav-container">
-      <!-- Container que organiza logo e links lado a lado -->
+    <!-- Cabeçalho da página com barra de navegação -->
 
-      <!-- Logo do site -->
+    <div class="nav-container">
+      <!-- Container para alinhar e organizar o conteúdo da navbar -->
+
       <div class="nav-logo">
+        <!-- Área do logo da empresa -->
+
         <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon" />
+        <!-- Imagem do ícone do logo com texto alternativo para acessibilidade -->
+
         <img src="../img/lentralog.png" alt="Nome New Wave" class="logo-nome" />
+        <!-- Imagem com o nome da empresa -->
       </div>
 
-      <!-- Menu de navegação com links para outras páginas -->
       <nav>
-        <!-- Link para a seção inicial (banner/home) -->
+        <!-- Elemento de navegação com links para as seções/páginas -->
+
         <a href="index.html#home">Home</a>
+        <!-- Link para a seção "home" na página index.html -->
 
-        <!-- Link para a página "Sobre" -->
         <a href="/html/sobre.html">Sobre</a>
+        <!-- Link para página "Sobre" -->
 
-        <!-- Link para a página "Produtos" -->
         <a href="/html/produtos.html">Produtos</a>
+        <!-- Link para página de produtos -->
 
-        <!-- ✅ NOVA ABA: Link para a página "Serviços" -->
         <a href="/html/servicos.html">Serviços</a>
+        <!-- Link para página de serviços -->
 
-        <!-- Link para a página "Contato" -->
         <a href="/html/contato.html">Contato</a>
+        <!-- Link para página de contato -->
       </nav>
     </div>
   </header>
 
   <!-- =================== CONTEÚDO PRINCIPAL =================== -->
   <main class="main-content">
-    <!-- Banner principal da home com logo central e slogan -->
+    <!-- Conteúdo principal da página -->
+
     <section class="banner" id="home">
+      <!-- Seção banner com ID "home" para referência nos links -->
+
       <img src="../img/logoicon.png" alt="Logo Central" class="logo-central" />
+      <!-- Imagem do logo centralizado no banner -->
+
       <h1>New Wave Sistemas Digitais</h1>
+      <!-- Título principal da página -->
+
       <p class="slogan">Uma nova onda de tecnologia</p>
+      <!-- Slogan da empresa -->
     </section>
 
-    <!-- Seção de introdução com apresentação da empresa -->
     <section class="conteudo">
+      <!-- Seção de conteúdo -->
+
       <h2>Transformamos Tecnologia em Solução</h2>
+      <!-- Título secundário -->
+
       <p>
         A <strong>New Wave</strong> oferece sistemas digitais modernos e personalizados para empresas que desejam
         profissionalizar seus processos com eficiência, segurança e performance.
       </p>
+      <!-- Parágrafo explicativo com destaque para o nome da empresa -->
     </section>
 
-    <!-- Destaques de produtos -->
-    <!-- Esta seção ganhou a classe adicional "destaques" para estilo diferenciado -->
     <section class="conteudo destaques">
+      <!-- Seção para destacar produtos -->
+
       <h2>Nossos Destaques</h2>
+      <!-- Título da seção -->
+
       <div class="produtos-grid">
-        <!-- Cada item de produto será estilizado com uma classe específica no CSS -->
+        <!-- Container em grid para organizar os produtos destacados -->
+
         <div class="produto produto-home">
           <img src="../img/produto1.jpeg" alt="Produto 1" />
+          <!-- Imagem do produto 1 com texto alternativo -->
+
           <p>Controle de Orçamentos</p>
+          <!-- Nome ou descrição curta do produto -->
         </div>
+
         <div class="produto produto-home">
           <img src="../img/produto2.jpeg" alt="Produto 2" />
           <p>Gestão de Clientes</p>
         </div>
+
         <div class="produto produto-home">
           <img src="../img/produto3.jpeg" alt="Produto 3" />
           <p>Relatórios Interativos</p>
         </div>
+
         <div class="produto produto-home">
           <img src="../img/produto4.png" alt="Produto 4" />
           <p>Integração com Intranet</p>
         </div>
+
         <div class="produto produto-home">
           <img src="../img/produto5.jpeg" alt="Produto 5" />
           <p>Painel de Indicadores</p>
@@ -99,9 +160,37 @@
 
   <!-- =================== RODAPÉ =================== -->
   <footer class="rodape">
-    <!-- Rodapé com logo e direitos autorais -->
+    <!-- Rodapé da página -->
+
     <img src="../img/lentralog.png" alt="Logo Rodapé" />
+    <!-- Imagem do logo usado no rodapé -->
+
     <p>&copy; 2025 New Wave Sistemas Digitais</p>
+    <!-- Texto de direitos autorais -->
+
+    <div class="social-links">
+      <!-- Container dos links sociais -->
+
+      <a href="https://wa.me/5511910669810" target="_blank" title="Converse pelo WhatsApp" class="social-link">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+        <!-- Ícone do WhatsApp da Font Awesome seguido do texto -->
+      </a>
+
+      <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" title="Siga no Instagram" class="social-link">
+        <i class="fab fa-instagram"></i> Instagram
+        <!-- Ícone do Instagram da Font Awesome seguido do texto -->
+      </a>
+
+      <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" title="Acompanhe no Facebook" class="social-link">
+        <i class="fab fa-facebook"></i> Facebook
+        <!-- Ícone do Facebook da Font Awesome seguido do texto -->
+      </a>
+
+      <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" title="Veja no LinkedIn" class="social-link">
+        <i class="fab fa-linkedin"></i> LinkedIn
+        <!-- Ícone do LinkedIn da Font Awesome seguido do texto -->
+      </a>
+    </div>
   </footer>
 </body>
 </html>

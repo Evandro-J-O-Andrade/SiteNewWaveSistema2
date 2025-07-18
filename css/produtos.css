@@ -1,6 +1,7 @@
 /* === Importa variáveis globais do index.css === */
 @import url('/css/index.css');  
 /* Importa as variáveis de cores, fontes e resets do CSS global para manter padronização */
+@import url('/css/midiaquire.css');
 
 /* === Estilos específicos da página de produtos === */
 

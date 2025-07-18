@@ -1,0 +1,247 @@
+/* === midiaquire.css - Media Queries para responsividade global === */
+@import url('/css/index.css');
+
+/* Estilos base para telas muito pequenas (ex: celulares antigos e pequenos) */
+@media (max-width: 320px) {
+  body {
+    font-size: 14px;
+    /* Diminui o tamanho da fonte para que o texto caiba melhor em telas muito pequenas */
+  }
+
+  .conteudo-contato, .contatos-extra {
+    max-width: 100%;
+    /* Garante que o conteúdo ocupe toda a largura da tela disponível */
+
+    padding: 1rem;
+    /* Aplica um espaçamento interno menor para economizar espaço */
+
+    margin: 1rem;
+    /* Margem para afastar o conteúdo das bordas da tela */
+  }
+
+  .form-contato {
+    grid-template-columns: 1fr;
+    /* Ajusta o formulário para uma única coluna para facilitar leitura e interação */
+
+    gap: 0.5rem;
+    /* Espaço menor entre os campos para economizar espaço */
+  }
+
+  .form-contato button {
+    width: 100%;
+    /* Faz o botão ocupar toda a largura do container */
+
+    font-size: 1rem;
+    /* Define uma fonte menor para se adaptar à tela pequena */
+  }
+}
+
+/* Celulares pequenos (360px - comum em smartphones atuais pequenos) */
+@media (min-width: 321px) and (max-width: 480px) {
+  body {
+    font-size: 15px;
+    /* Aumenta o tamanho da fonte para melhor legibilidade em celulares pequenos */
+  }
+
+  .conteudo-contato, .contatos-extra {
+    max-width: 95%;
+    /* Define largura máxima para o conteúdo com uma pequena margem lateral */
+
+    padding: 1.5rem;
+    /* Aumenta o espaçamento interno para mais conforto visual */
+
+    margin: 1.5rem auto;
+    /* Centraliza o conteúdo horizontalmente e aplica margem superior/inferior */
+  }
+
+  .form-contato {
+    grid-template-columns: 1fr;
+    /* Mantém o formulário em uma única coluna */
+
+    gap: 0.75rem;
+    /* Espaçamento intermediário entre os campos */
+  }
+
+  .form-contato button {
+    width: 100%;
+    /* Botão ocupa toda a largura disponível */
+
+    font-size: 1.05rem;
+    /* Fonte levemente maior para melhor leitura */
+  }
+}
+
+/* Celulares médios a grandes e pequenos tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    /* Fonte confortável para dispositivos médios */
+  }
+
+  .conteudo-contato, .contatos-extra {
+    max-width: 700px;
+    /* Define largura máxima fixa para facilitar a leitura */
+
+    padding: 2rem;
+    /* Espaçamento interno maior para melhor estética */
+
+    margin: 2rem auto;
+    /* Margem superior e inferior e centralização horizontal */
+  }
+
+  .form-contato {
+    grid-template-columns: 1fr;
+    /* Formulário em coluna única */
+
+    gap: 1rem;
+    /* Espaçamento mais generoso entre campos */
+  }
+
+  .form-contato button {
+    width: 70%;
+    /* Botão ocupa 70% da largura do container para um equilíbrio visual */
+
+    font-size: 1.1rem;
+    /* Tamanho da fonte maior para destaque */
+  }
+}
+
+/* Tablets maiores e telas pequenas de notebook (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 17px;
+    /* Fonte maior para telas maiores */
+  }
+
+  .conteudo-contato, .contatos-extra {
+    max-width: 750px;
+    /* Aumenta a largura máxima para tablets maiores */
+
+    padding: 2rem 3rem;
+    /* Padding horizontal maior para mais espaço lateral */
+
+    margin: 2rem auto;
+    /* Margens superior e inferior e centralização */
+  }
+
+  .form-contato {
+    grid-template-columns: 2fr 1fr;
+    /* Layout com duas colunas: primeira maior para campos maiores, segunda menor */
+
+    gap: 1rem;
+    /* Espaçamento entre colunas */
+  }
+
+  .form-contato button {
+    width: 150px;
+    /* Largura fixa para consistência visual */
+
+    font-size: 1.1rem;
+    /* Fonte confortável para leitura */
+  }
+}
+
+/* Tela de notebooks e desktops médios (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  body {
+    font-size: 18px;
+    /* Fonte maior para monitores de tamanho médio */
+  }
+
+  .conteudo-contato, .contatos-extra {
+    max-width: 900px;
+    /* Maior largura para desktop médio */
+
+    padding: 3rem 4rem;
+    /* Padding mais generoso para conforto visual */
+
+    margin: 3rem auto;
+    /* Margem para centralizar e espaçar verticalmente */
+  }
+
+  .form-contato {
+    grid-template-columns: 2fr 1fr;
+    /* Layout com duas colunas para manter boa organização */
+
+    gap: 1.2rem;
+    /* Espaçamento maior entre campos */
+  }
+
+  .form-contato button {
+    width: 180px;
+    /* Botão maior para desktop */
+
+    font-size: 1.2rem;
+    /* Fonte maior para destaque */
+  }
+}
+
+/* Telas grandes (1441px - 1920px) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  body {
+    font-size: 19px;
+    /* Fonte um pouco maior para telas grandes */
+  }
+
+  .conteudo-contato, .contatos-extra {
+    max-width: 1100px;
+    /* Largura ampla para desktop grande */
+
+    padding: 4rem 6rem;
+    /* Padding horizontal amplo para conforto visual */
+
+    margin: 3rem auto;
+    /* Margem para afastar e centralizar */
+  }
+
+  .form-contato {
+    grid-template-columns: 3fr 1fr;
+    /* Layout com a primeira coluna maior para destaque nos campos mais importantes */
+
+    gap: 1.5rem;
+    /* Espaçamento amplo entre os campos */
+  }
+
+  .form-contato button {
+    width: 200px;
+    /* Botão grande para facilidade de clique */
+
+    font-size: 1.3rem;
+    /* Fonte grande para destaque */
+  }
+}
+
+/* TVs e telas muito grandes (1921px em diante) */
+@media (min-width: 1921px) {
+  body {
+    font-size: 20px;
+    /* Fonte muito maior para telas gigantes */
+  }
+
+  .conteudo-contato, .contatos-extra {
+    max-width: 1400px;
+    /* Máxima largura para telas muito grandes */
+
+    padding: 5rem 8rem;
+    /* Padding lateral muito generoso para equilíbrio */
+
+    margin: 4rem auto;
+    /* Margem maior para espaçamento vertical */
+  }
+
+  .form-contato {
+    grid-template-columns: 3fr 1fr;
+    /* Mantém o layout com colunas proporcionais para telas grandes */
+
+    gap: 2rem;
+    /* Espaçamento grande entre os campos */
+  }
+
+  .form-contato button {
+    width: 220px;
+    /* Botão maior para facilidade de uso em telas grandes */
+
+    font-size: 1.4rem;
+    /* Fonte muito grande para destaque */
+  }
+}

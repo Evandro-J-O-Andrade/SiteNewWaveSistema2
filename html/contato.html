@@ -1,107 +1,260 @@
 <!DOCTYPE html>
+<!-- Declara que este documento é HTML5 -->
+
 <html lang="pt-br">
-<!-- Página Contato da New Wave Sistemas Digitais -->
+<!-- Define o idioma do documento como português do Brasil -->
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Define codificação da página para UTF-8 -->
+  <!-- Define a codificação dos caracteres para UTF-8, garantindo que acentos e símbolos especiais funcionem -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Configuração para responsividade em dispositivos móveis -->
+  <!-- Ajusta a largura da página para a largura do dispositivo e escala inicial 1 para responsividade -->
 
   <title>Contato - New Wave Sistemas Digitais</title>
-  <!-- Título que aparece na aba do navegador -->
+  <!-- Define o título da aba/janela do navegador -->
+
+  <link rel="stylesheet" href="/css/index.css" />
+  <!-- Link para o arquivo CSS global do site, que contém estilos compartilhados -->
 
   <link rel="stylesheet" href="/css/contato.css" />
-  <!-- Importa o CSS específico para a página de contato -->
+  <!-- Link para o CSS específico desta página de contato -->
+<link rel="stylesheet" href="/css/midiaquire.css" />
+  <!-- Importa o CSS específico para responsividade e mídia queries -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <!-- Importa a biblioteca Font Awesome via CDN para usar ícones sociais -->
 </head>
 
 <body>
-  <!-- NAVBAR: Barra de navegação principal -->
+  <!-- Corpo principal da página -->
+
   <header class="navbar">
+    <!-- Cabeçalho contendo a barra de navegação -->
     <div class="nav-container">
-      <!-- Logo da empresa: ícone e nome -->
+      <!-- Container que agrupa os elementos da navbar para facilitar o layout -->
+
       <div class="nav-logo">
+        <!-- Área da logo dentro da navbar -->
+
         <img src="/img/logoicon.png" alt="Logo" class="logo-icon" />
+        <!-- Imagem do ícone da logo -->
+
         <img src="/img/lentralog.png" alt="Nome da Empresa" class="logo-nome" />
+        <!-- Imagem com o nome da empresa ao lado do ícone -->
       </div>
 
-      <!-- Links de navegação com a nova aba "Serviços" adicionada -->
       <nav>
+        <!-- Menu de navegação principal -->
+
         <a href="/index.html">Home</a>
+        <!-- Link para a página inicial -->
+
         <a href="/html/sobre.html">Sobre</a>
+        <!-- Link para a página Sobre -->
+
         <a href="/html/produtos.html">Produtos</a>
-        <a href="/html/servicos.html">Serviços</a> <!-- ✅ Aba adicionada -->
+        <!-- Link para a página Produtos -->
+
+        <a href="/html/servicos.html">Serviços</a>
+        <!-- Link para a página Serviços -->
+
         <a href="/html/contato.html" class="ativo">Contato</a>
+        <!-- Link para a página Contato, com classe "ativo" para indicar a página atual -->
       </nav>
     </div>
   </header>
 
-  <!-- BANNER: seção com logo central, título e slogan -->
   <section class="banner" id="contato">
+    <!-- Seção banner da página, com id para navegação direta -->
+
     <img src="/img/logoicon.png" alt="Logo New Wave" class="logo-central" />
+    <!-- Logo centralizada no banner -->
+
     <h1>Contato</h1>
+    <!-- Título principal do banner -->
+
     <p class="slogan">Fale conosco, estamos prontos para ajudar</p>
+    <!-- Slogan ou mensagem curta para chamar atenção -->
   </section>
 
-  <!-- CONTEÚDO PRINCIPAL -->
   <main>
-    <!-- Container do formulário de contato e texto introdutório -->
+    <!-- Conteúdo principal da página -->
+
     <section class="conteudo-contato">
-      <!-- Título principal da seção -->
+      <!-- Container principal do formulário de contato e texto -->
+
       <h1>Fale Conosco</h1>
+      <!-- Título da seção -->
 
-      <!-- Texto de introdução / convite para contato -->
       <p>Estamos à disposição para atender você. Envie sua mensagem ou entre em contato pelos nossos canais abaixo.</p>
+      <!-- Texto explicativo para o usuário -->
 
-      <!-- FORMULÁRIO DE CONTATO -->
-      <form class="form-contato" action="#" method="post">
-        <!-- Campo Nome Completo -->
-        <div class="campo">
+      <form id="formContato" class="form-contato" action="#" method="post">
+        <!-- Formulário para envio de contato, com id para JavaScript -->
+
+        <div class="campo campo-full">
+          <!-- Campo que ocupa toda a largura da grid -->
+
           <label for="nome">Nome Completo</label>
-          <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" />
+          <!-- Label associado ao campo nome -->
+
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            placeholder="Seu nome completo"
+          />
+          <!-- Campo de texto para o nome do usuário, obrigatório -->
         </div>
 
-        <!-- Campo E-mail -->
         <div class="campo">
+          <!-- Campo que ocupa parte da largura da grid -->
+
           <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" />
+          <!-- Label associado ao campo email -->
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="seuemail@exemplo.com"
+          />
+          <!-- Campo para email, obrigatório e com validação de formato -->
         </div>
 
-        <!-- Campo Telefone -->
         <div class="campo">
+          <!-- Campo para telefone -->
+
           <label for="telefone">Telefone</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX" />
+          <!-- Label para telefone -->
+
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="(XX) XXXXX-XXXX"
+          />
+          <!-- Campo para telefone, opcional, com placeholder do formato -->
         </div>
 
-        <!-- Campo Mensagem: ocupa toda a largura -->
-        <div class="campo-full">
+        <div class="campo campo-full">
+          <!-- Campo que ocupa toda a largura da grid -->
+
           <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+          <!-- Label para a mensagem -->
+
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            required
+            placeholder="Escreva sua mensagem aqui..."
+          ></textarea>
+          <!-- Área de texto para a mensagem, obrigatória -->
         </div>
 
-        <!-- Botão para enviar formulário -->
         <button type="submit">Enviar</button>
+        <!-- Botão para enviar o formulário -->
       </form>
     </section>
 
-    <!-- SEÇÃO DE CONTATOS EXTRA ABAIXO DO FORMULÁRIO -->
     <section class="contatos-extra">
-      <h2>Outros Canais de Contato</h2>
+      <!-- Seção com outros canais de contato -->
 
-      <!-- Informações adicionais de contato -->
-      <p><strong>Telefone:</strong> (11) 1234-5678</p>
-      <p><strong>E-mail:</strong> contato@newwave.com.br</p>
-      <p><strong>Endereço:</strong> Rua da Tecnologia, 123, São Paulo - SP</p>
-      <p><strong>CNPJ:</strong> 12.345.678/0001-99</p>
+      <h2>Outros Canais de Contato</h2>
+      <!-- Título da seção -->
+
+      <p><strong>Telefone:</strong> (11) 91066-9810</p>
+      <!-- Telefone fixo ou celular para contato -->
+
+      <p><strong>E-mail:</strong> evandro_j.o.a@hotmail.com</p>
+      <!-- E-mail de contato -->
+
+      <p><strong>Endereço:</strong> Viela Aristides de Oliveira, Nº 130, Vila Julia - SP</p>
+      <!-- Endereço físico da empresa -->
+
+      <p><strong>CNPJ:</strong> 29.328.524/0001-98</p>
+      <!-- Número do CNPJ da empresa -->
+
+      <a
+        href="https://wa.me/5511910669810"
+        target="_blank"
+        class="btn-whatsapp"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <!-- Ícone do WhatsApp usando Font Awesome -->
+
+        Fale conosco pelo WhatsApp!
+        <!-- Texto do botão/link -->
+      </a>
     </section>
   </main>
 
-  <!-- RODAPÉ: seção final com logo e direitos autorais -->
   <footer class="rodape">
+    <!-- Rodapé da página -->
+
     <img src="/img/lentralog.png" alt="Logo Rodapé" />
+    <!-- Logo no rodapé -->
+
     <p>&copy; 2025 New Wave Sistemas Digitais</p>
+    <!-- Direitos autorais -->
+
+    <div class="social-links">
+      <!-- Links para redes sociais -->
+
+      <a
+        href="https://wa.me/5511910669810"
+        target="_blank"
+        title="WhatsApp"
+        class="social-link"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <!-- Ícone WhatsApp -->
+        WhatsApp
+      </a>
+
+      <a
+        href="https://www.instagram.com/SEUINSTAGRAM"
+        target="_blank"
+        title="Instagram"
+        class="social-link"
+      >
+        <i class="fab fa-instagram"></i>
+        <!-- Ícone Instagram -->
+        Instagram
+      </a>
+
+      <a
+        href="https://www.facebook.com/SEUFACEBOOK"
+        target="_blank"
+        title="Facebook"
+        class="social-link"
+      >
+        <i class="fab fa-facebook-f"></i>
+        <!-- Ícone Facebook -->
+        Facebook
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/SEULINKEDIN"
+        target="_blank"
+        title="LinkedIn"
+        class="social-link"
+      >
+        <i class="fab fa-linkedin"></i>
+        <!-- Ícone LinkedIn -->
+        LinkedIn
+      </a>
+    </div>
   </footer>
+
+  <script src="/js/contato.js" defer></script>
+  <!-- Importa o arquivo JavaScript que manipula o formulário, carregado após o HTML -->
 </body>
 
 </html>

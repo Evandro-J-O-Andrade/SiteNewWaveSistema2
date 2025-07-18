@@ -1,5 +1,7 @@
 /* Importa as variáveis globais do index.css */
 @import url('/css/index.css');
+@import url('/css/midiaquire.css');
+/* === CSS para a página Sobre respoisvel === */
 
 /* Container principal do conteúdo Sobre */
 .conteudo-sobre {
