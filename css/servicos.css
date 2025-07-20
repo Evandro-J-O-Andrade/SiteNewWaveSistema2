@@ -1,170 +1,182 @@
-/* Importa o CSS global para manter identidade visual */
-@import url('./index.css');
-@import url('/css/midiaquire.css');
-/* === CSS para a página de Serviços === */
+/* Importa o CSS global e o CSS de media queries */
+@import url('./index.css'); /* Importa estilos globais do site */
+@import url('/css/midiaquire.css'); /* Importa regras de responsividade */
 
 /* === BANNER DA PÁGINA SERVIÇOS === */
 .banner {
-  position: relative; /* Permite posicionar elementos filhos, como o título */
-  width: 100%; /* Ocupa toda a largura da tela */
-  height: 280px; /* Altura fixa para o banner */
-  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o banner */
-
-  /* Imagem de fundo fixa para o banner */
-  /* A imagem em si está no HTML dentro da tag <img> para melhor SEO e acessibilidade,
-     mas usamos position absoluta para cobrir o banner */
-  display: flex; /* Flexbox para centralizar texto */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  position: relative; /* Permite o posicionamento absoluto dos filhos */
+  width: 100%; /* O banner ocupa toda a largura da tela */
+  height: 280px; /* Altura fixa do banner */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o limite do banner */
+  display: flex; /* Ativa o Flexbox para alinhar elementos filhos */
+  justify-content: center; /* Centraliza filhos horizontalmente */
+  align-items: center; /* Centraliza filhos verticalmente */
   background: linear-gradient(
     to right,
     rgba(0, 119, 182, 0.85),
     rgba(2, 62, 138, 0.85)
-  ); /* Degradê azul sobreposto para contraste */
-  color: #fff; /* Texto branco para contraste */
-  text-align: center; /* Centraliza texto */
-  border-bottom: 4px solid var(--cor-primaria); /* Linha decorativa embaixo do banner */
+  ); /* Fundo com degradê azul semi-transparente */
+  color: #fff; /* Cor do texto branca */
+  text-align: center; /* Centraliza o texto */
+  border-bottom: 4px solid var(--cor-primaria); /* Linha decorativa inferior */
 }
 
+/* Imagem de fundo do banner */
 .banner-img {
-  position: absolute; /* Coloca a imagem em segundo plano */
-  top: 0;
-  left: 0;
-  width: 100%; /* A imagem cobre toda largura do banner */
-  height: 280px; /* Mesmo tamanho do banner */
-  object-fit: cover; /* A imagem cobre a área mantendo proporção */
-  z-index: 0; /* Coloca atrás do texto */
-  opacity: 0.6; /* Dá uma leve transparência para destacar o texto */
+  position: absolute; /* Fixa a imagem atrás dos elementos internos */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Preenche toda a largura */
+  height: 280px; /* Altura igual ao banner */
+  object-fit: cover; /* Mantém a proporção da imagem preenchendo o espaço */
+  z-index: 0; /* Coloca atrás do conteúdo */
+  opacity: 0.6; /* Define a transparência da imagem de fundo */
 }
 
+/* Container que centraliza a logomarca e o título */
+.banner-conteudo {
+  position: relative; /* Permite sobrepor a imagem de fundo */
+  display: flex; /* Flexbox ativado */
+  flex-direction: column; /* Organiza os filhos em coluna (logo em cima, título embaixo) */
+  align-items: center; /* Centraliza na horizontal */
+  z-index: 1; /* Garante que fique sobre a imagem de fundo */
+}
+
+/* Logomarca centralizada e com tamanho destacado */
+.banner-logo {
+  max-width: 220px; /* Define um tamanho máximo maior para a logo */
+  margin-bottom: 15px; /* Espaço entre a logo e o título */
+}
+
+/* Título da página dentro do banner */
 .banner h1 {
-  position: relative; /* Para ficar sobre a imagem */
   font-size: 2.4rem; /* Tamanho grande para destaque */
-  font-weight: 600; /* Fonte em negrito */
-  z-index: 1; /* Fica acima da imagem */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para melhor leitura */
+  font-weight: 600; /* Negrito */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para legibilidade */
+  margin: 0; /* Remove margem padrão */
 }
 
 /* === CONTEÚDO PRINCIPAL === */
 .conteudo {
-  max-width: 960px; /* Limita a largura para leitura confortável */
-  margin: 40px auto; /* Espaçamento em cima e embaixo, centralizado */
-  padding: 0 20px; /* Espaço nas laterais para mobile */
+  max-width: 960px; /* Limita a largura do conteúdo */
+  margin: 40px auto; /* Centraliza o conteúdo e adiciona margem acima/abaixo */
+  padding: 0 20px; /* Padding lateral */
 }
 
-/* Título principal da página serviços */
+/* Título da seção */
 .titulo-pagina {
-  font-size: 2rem;
-  color: var(--cor-escura);
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: 600;
+  font-size: 2rem; /* Tamanho do texto */
+  color: var(--cor-escura); /* Cor definida na variável global */
+  margin-bottom: 30px; /* Espaçamento inferior */
+  text-align: center; /* Centraliza o texto */
+  font-weight: 600; /* Negrito */
 }
 
 /* === GRID DE SERVIÇOS === */
 .servicos-grid {
-  display: grid; /* Grid CSS para organizar os serviços */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
-  gap: 2rem;                                     /* Espaço maior entre cards para maior respiro */
-  padding: 2rem 1rem;                            /* Espaçamento interno para respirar */
-  max-width: 1100px;                             /* Largura máxima para não esticar demais */
-  margin: 0 auto;                                /* Centraliza horizontalmente */
+  display: grid; /* Layout em grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Quantidade de colunas automática */
+  gap: 2rem; /* Espaçamento entre os itens */
+  padding: 2rem 1rem; /* Espaçamento interno */
+  max-width: 1100px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza */
 }
 
 /* Cada card de serviço */
 .servico {
-  background: #ffffff; /* Fundo branco para destaque */
+  background: #fff; /* Fundo branco */
   border-radius: 12px; /* Bordas arredondadas */
   padding: 20px; /* Espaçamento interno */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); /* Sombra leve para profundidade */
-  transition: transform 0.3s ease; /* Transição suave para efeito hover */
-  cursor: pointer; /* Cursor de mãozinha para indicar interatividade */
-
-  /* Adicionado box-sizing para incluir padding dentro da largura */
-  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08); /* Sombra leve */
+  transition: transform 0.3s ease; /* Transição suave no hover */
+  cursor: pointer; /* Cursor em formato de mão */
+  box-sizing: border-box; /* Inclui padding dentro do tamanho definido */
 }
 
-/* Efeito ao passar o mouse */
+/* Efeito ao passar o mouse sobre o card */
 .servico:hover {
-  transform: translateY(-5px); /* Eleva o card para destacar */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais forte */
+  transform: translateY(-5px); /* Move o card para cima */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra mais forte */
 }
 
-/* Imagem dentro do card */
-/* Ajuste para dar espaçamento maior da imagem às bordas do container */
+/* Imagem dos cards de serviço */
 .servico img {
-  width: calc(100% - 40px); /* Reduzimos largura para deixar margem lateral */
-  max-height: 160px; /* Limita a altura para manter proporção */
-  object-fit: cover; /* Corta a imagem para preencher o espaço */
-  border-radius: 8px; /* Cantos arredondados */
-
-  /* Espaçamento para separar a imagem das bordas do card */
-  margin: 0 20px 15px 20px; /* margem superior 0, laterais 20px, inferior 15px */
-  display: block; /* Evita espaço extra em linha */
+  width: calc(100% - 40px); /* Reduz um pouco o tamanho para manter margens laterais */
+  max-height: 160px; /* Altura máxima da imagem */
+  object-fit: cover; /* Mantém proporção cortando se necessário */
+  border-radius: 8px; /* Bordas arredondadas */
+  margin: 0 20px 15px 20px; /* Margens: topo 0, laterais 20px, baixo 15px */
+  display: block; /* Garante que a imagem não tenha espaço extra */
 }
 
-/* Título do serviço */
+/* Título dentro dos cards */
 .servico h3 {
-  font-size: 1.2rem;
-  color: var(--cor-primaria);
-  margin-bottom: 10px;
-  padding: 0 20px; /* Para alinhar com a margem da imagem */
-  box-sizing: border-box;
+  font-size: 1.2rem; /* Tamanho do título */
+  color: var(--cor-primaria); /* Cor primária */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  padding: 0 20px; /* Padding lateral */
+  box-sizing: border-box; /* Inclui padding no tamanho do elemento */
 }
 
-/* Descrição do serviço */
+/* Texto descritivo dentro dos cards */
 .servico p {
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.4;
-  padding: 0 20px; /* Para alinhar com a margem da imagem */
-  box-sizing: border-box;
+  font-size: 0.95rem; /* Tamanho menor */
+  color: #333; /* Cor do texto */
+  line-height: 1.4; /* Altura da linha para facilitar leitura */
+  padding: 0 20px; /* Padding lateral */
+  box-sizing: border-box; /* Padding incluso no tamanho */
 }
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
-  /* Ajusta o tamanho da fonte do título principal do banner */
-  .banner h1 {
-    font-size: 1.8rem;
-  }
-
-  /* Ajusta a altura do banner para telas menores */
   .banner,
   .banner-img {
-    height: 200px;
+    height: 200px; /* Reduz altura do banner em tablets */
   }
 
-  /* Ajusta largura da imagem dentro dos cards para telas médias */
+  .banner-logo {
+    max-width: 160px; /* Diminui logo em tablets */
+  }
+
+  .banner h1 {
+    font-size: 1.8rem; /* Reduz o tamanho do título */
+  }
+
   .servico img {
-    width: calc(100% - 30px);
-    margin: 0 15px 15px 15px;
+    width: calc(100% - 30px); /* Ajusta largura das imagens dos cards */
+    margin: 0 15px 15px 15px; /* Ajusta as margens */
   }
 
-  /* Ajusta padding dos textos para alinhar com a imagem */
   .servico h3,
   .servico p {
-    padding: 0 15px;
+    padding: 0 15px; /* Padding menor nos textos */
   }
 }
 
 @media (max-width: 480px) {
-  /* Ajusta tamanho das fontes nos cards de serviço */
+  .banner-logo {
+    max-width: 120px; /* Reduz logo em smartphones */
+  }
+
+  .banner h1 {
+    font-size: 1.5rem; /* Fonte menor no título */
+  }
+
   .servico h3 {
-    font-size: 1rem;
+    font-size: 1rem; /* Título do card menor */
   }
+
   .servico p {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Texto menor */
   }
 
-  /* Ajusta largura da imagem dentro dos cards para telas pequenas */
   .servico img {
-    width: calc(100% - 20px);
-    margin: 0 10px 15px 10px;
+    width: calc(100% - 20px); /* Ajuste para telas muito pequenas */
+    margin: 0 10px 15px 10px; /* Margens ajustadas */
   }
 
-  /* Ajusta padding dos textos para alinhar com a imagem */
   .servico h3,
   .servico p {
-    padding: 0 10px;
+    padding: 0 10px; /* Padding lateral reduzido */
   }
 }

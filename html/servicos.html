@@ -1,135 +1,122 @@
-<!DOCTYPE html> <!-- Declara que este documento está no formato HTML5 -->
-
-<html lang="pt-br"> <!-- Define o idioma principal da página como português do Brasil -->
+<!DOCTYPE html> <!-- Define o documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página -->
 
 <head>
-  <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres como UTF-8, permitindo acentuação e caracteres especiais -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Faz o site se adaptar corretamente em dispositivos móveis -->
+  <meta charset="UTF-8"> <!-- Suporte a acentuação e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+  <title>Serviços - New Wave Sistemas Digitais</title> <!-- Título da aba do navegador -->
 
-  <title>Serviços - New Wave Sistemas Digitais</title> <!-- Define o título que aparece na aba do navegador -->
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../css/index.css">
 
-  <!-- Importa o CSS global que contém estilos gerais e padrões aplicados em todas as páginas -->
-  <link rel="stylesheet" href="../css/index.css" />
+  <!-- CSS específico da página de serviços -->
+  <link rel="stylesheet" href="../css/servicos.css">
 
-  <!-- Importa o CSS específico para a página de serviços, com estilos adicionais e personalizados -->
-  <link rel="stylesheet" href="../css/servicos.css" />
-<link rel="stylesheet" href="/css/midiaquire.css" />
-  <!-- Importa o CSS específico para responsividade e mídia queries -->
-   
-  <!-- Importa o Font Awesome por CDN para permitir o uso de ícones sociais (WhatsApp, Instagram, etc.) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-  />
+  <!-- CSS de media queries -->
+  <link rel="stylesheet" href="/css/midiaquire.css">
+
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
 </head>
 
-<body> <!-- Início do corpo da página (tudo que será visível no navegador) -->
+<body> <!-- Início do conteúdo visível -->
 
-  <!-- ===== INÍCIO DO CABEÇALHO / NAVBAR ===== -->
-  <header class="navbar"> <!-- Início do cabeçalho que contém o menu de navegação -->
-    <div class="nav-container"> <!-- Container para organizar o logo e o menu -->
+  <!-- ===== CABEÇALHO ===== -->
+  <header class="navbar">
+    <div class="nav-container">
 
-      <div class="nav-logo"> <!-- Bloco que agrupa o ícone e o nome da empresa -->
-        <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon" /> <!-- Ícone pequeno da empresa -->
-        <img src="../img/lentralog.png" alt="Nome New Wave" class="logo-nome" /> <!-- Nome da empresa ao lado do ícone -->
+      <!-- Logotipo no menu -->
+      <div class="nav-logo">
+        <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon">
+        <img src="../img/lentralog.png" alt="Nome New Wave" class="logo-nome">
       </div>
 
-      <nav> <!-- Início do menu de navegação com links para outras páginas -->
-        <a href="../index.html">Home</a> <!-- Link para a página inicial -->
-        <a href="../html/sobre.html">Sobre</a> <!-- Link para a página "Sobre" -->
-        <a href="../html/produtos.html">Produtos</a> <!-- Link para a página de produtos -->
-        <a href="../html/servicos.html" class="ativo">Serviços</a> <!-- Link para esta página, com classe ativo para destacar -->
-        <a href="../html/contato.html">Contato</a> <!-- Link para a página de contato -->
+      <!-- Navegação -->
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../html/sobre.html">Sobre</a>
+        <a href="../html/produtos.html">Produtos</a>
+        <a href="../html/servicos.html" class="ativo">Serviços</a>
+        <a href="../html/contato.html">Contato</a>
       </nav>
 
-    </div> <!-- Fim do container do cabeçalho -->
+    </div>
   </header>
-  <!-- ===== FIM DO CABEÇALHO / NAVBAR ===== -->
 
-  <!-- ===== INÍCIO DO BANNER PRINCIPAL ===== -->
-  <section class="banner"> <!-- Seção que exibe a imagem principal e o título da página -->
-    <img src="../img/servico-novidade.jpg" alt="Banner Serviços" class="banner-img" /> <!-- Imagem do banner -->
-    <h1>Serviços</h1> <!-- Título sobre a imagem do banner -->
+  <!-- ===== BANNER PRINCIPAL COM IMAGEM, LOGO E TÍTULO ===== -->
+  <section class="banner"> <!-- Banner visual principal -->
+
+    <!-- Imagem de fundo do banner -->
+    <img src="../img/servico-novidade.jpg" alt="Banner Serviços" class="banner-img">
+
+    <!-- Container para logo e título centralizados -->
+    <div class="banner-conteudo">
+      <img src="../img/logoicon.png" alt="Logomarca New Wave" class="banner-logo"> <!-- Logomarca central -->
+      <h1>Serviços</h1> <!-- Título abaixo da logomarca -->
+    </div>
+
   </section>
-  <!-- ===== FIM DO BANNER PRINCIPAL ===== -->
 
-  <!-- ===== INÍCIO DO CONTEÚDO PRINCIPAL ===== -->
-  <main class="conteudo"> <!-- Define o conteúdo principal da página -->
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main class="conteudo">
 
-    <h2 class="titulo-pagina">Conheça Nossos Serviços</h2> <!-- Título introdutório da seção de serviços -->
+    <h2 class="titulo-pagina">Conheça Nossos Serviços</h2>
 
-    <div class="servicos-grid"> <!-- Container que organiza os serviços em formato de grade -->
-
-      <!-- Cada bloco "servico" representa um serviço oferecido -->
+    <div class="servicos-grid">
+      <!-- Cards dos serviços -->
       <div class="servico">
-        <img src="../img/servico-redes.jpeg" alt="Infraestrutura de Redes" />
+        <img src="../img/servico-redes.jpeg" alt="Infraestrutura de Redes">
         <h3>Infraestrutura de Redes</h3>
         <p>Instalação e organização de redes cabeadas e Wi-Fi para empresas e residências.</p>
       </div>
 
       <div class="servico">
-        <img src="../img/servico-cameras.jpg" alt="Instalação de Câmeras" />
+        <img src="../img/servico-cameras.jpg" alt="Instalação de Câmeras">
         <h3>Instalação de Câmeras</h3>
         <p>Monitoramento moderno com câmeras de alta resolução e acesso remoto seguro.</p>
       </div>
 
       <div class="servico">
-        <img src="../img/servico-alarmes.jpg" alt="Sistemas de Alarme" />
+        <img src="../img/servico-alarmes.jpg" alt="Sistemas de Alarme">
         <h3>Sistemas de Alarme</h3>
         <p>Proteção ativa para seu patrimônio com sensores e alarmes inteligentes.</p>
       </div>
 
       <div class="servico">
-        <img src="../img/servico-facial.png" alt="Reconhecimento Facial" />
+        <img src="../img/servico-facial.png" alt="Reconhecimento Facial">
         <h3>Reconhecimento Facial</h3>
         <p>Soluções modernas de controle de acesso com tecnologia facial de última geração.</p>
       </div>
 
       <div class="servico">
-        <img src="../img/servico-manutencao.jpg" alt="Manutenção de Computadores" />
+        <img src="../img/servico-manutencao.jpg" alt="Manutenção de Computadores">
         <h3>Manutenção de Computadores</h3>
         <p>Serviços técnicos de qualidade para notebooks, desktops e servidores.</p>
       </div>
 
       <div class="servico">
-        <img src="../img/servico-novidade.jpg" alt="Novidades em Tecnologia" />
+        <img src="../img/servico-novidade.jpg" alt="Novidades em Tecnologia">
         <h3>Novidades em Tecnologia</h3>
         <p>Estamos sempre atualizados com as novas tendências para oferecer o melhor!</p>
       </div>
 
-    </div> <!-- Fim do grid de serviços -->
+    </div>
 
   </main>
-  <!-- ===== FIM DO CONTEÚDO PRINCIPAL ===== -->
 
-  <!-- ===== INÍCIO DO RODAPÉ COM REDES SOCIAIS ===== -->
-  <footer class="rodape"> <!-- Início do rodapé do site -->
-    <img src="../img/lentralog.png" alt="Logo Rodapé" /> <!-- Logo da empresa no rodapé -->
-    <p>&copy; 2025 New Wave Sistemas Digitais</p> <!-- Direitos autorais -->
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape">
+    <img src="../img/lentralog.png" alt="Logo Rodapé">
+    <p>&copy; 2025 New Wave Sistemas Digitais</p>
 
-    <div class="social-links"> <!-- Container dos links para redes sociais -->
-
-      <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" title="Fale conosco pelo WhatsApp" class="social-link">
-        <i class="fab fa-whatsapp"></i> WhatsApp <!-- Ícone e texto para o WhatsApp -->
-      </a>
-
-      <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" title="Nos siga no Instagram" class="social-link">
-        <i class="fab fa-instagram"></i> Instagram <!-- Ícone e texto para o Instagram -->
-      </a>
-
-      <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" title="Curta nossa página no Facebook" class="social-link">
-        <i class="fab fa-facebook-f"></i> Facebook <!-- Ícone e texto para o Facebook -->
-      </a>
-
-      <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" title="Conecte-se no LinkedIn" class="social-link">
-        <i class="fab fa-linkedin"></i> LinkedIn <!-- Ícone e texto para o LinkedIn -->
-      </a>
-
-    </div> <!-- Fim do bloco de redes sociais -->
+    <div class="social-links">
+      <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
   </footer>
-  <!-- ===== FIM DO RODAPÉ ===== -->
 
-</body> <!-- Fim do corpo da página -->
+</body>
 
-</html> <!-- Fim do documento HTML -->
+</html>

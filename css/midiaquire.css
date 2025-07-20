@@ -245,3 +245,28 @@
     /* Fonte muito grande para destaque */
   }
 }
+
+@media (max-width: 768px) {
+  .banner,
+  .banner-img {
+    height: 200px;
+  }
+
+  .banner-logo {
+    max-width: 160px; /* Reduz logo em tablets */
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-logo {
+    max-width: 120px; /* Logo menor em celulares */
+  }
+
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+}
