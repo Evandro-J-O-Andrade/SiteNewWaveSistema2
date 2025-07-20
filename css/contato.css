@@ -1,460 +1,223 @@
 /* === Importa o CSS global com variáveis, fontes, navbar, banner, rodapé === */
-@import url('/css/index.css');  
-/* Importa estilos base do site, que contém variáveis CSS, fontes, e estilos globais */
-@import url('/css/midiaquire.css');
-
-/* === BANNER COM LOGO E SLOGAN === */
-.banner {
-  background: linear-gradient(180deg, var(--cor-escura), var(--cor-secundaria));
-  /* Fundo em degradê vertical do tom escuro para o tom secundário */
-
-  padding: 3rem 1rem;
-  /* Espaçamento interno: 3rem em cima e embaixo, 1rem nas laterais */
-
-  text-align: center;
-  /* Centraliza horizontalmente o conteúdo do banner */
-
-  color: var(--branco);
-  /* Cor do texto em branco */
-
-  border-radius: 0 0 25px 25px;
-  /* Arredonda só os cantos inferiores esquerdo e direito */
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  /* Sombra suave para dar profundidade */
-}
-
-.banner .logo-central {
-  width: 200px;
-  /* Define largura fixa da logo central */
-
-  margin-bottom: 1rem;
-  /* Espaço abaixo da logo */
-}
-
-.banner h1 {
-  font-size: 2.5rem;
-  /* Fonte grande para o título principal */
-
-  margin-bottom: 0.5rem;
-  /* Espaço inferior entre título e próximo elemento */
-}
-
-.banner .slogan {
-  font-size: 1.2rem;
-  /* Tamanho da fonte do slogan */
-
-  font-weight: 500;
-  /* Peso médio da fonte */
-}
-
+@import url('/css/index.css');  /* Importa estilos globais principais do site */
+@import url('/css/midiaquire.css'); /* Importa media queries globais */
 
 /* === CONTAINER DO FORMULÁRIO DE CONTATO === */
 .conteudo-contato {
-  max-width: 700px;
-  /* Limita a largura máxima a 700px */
+  max-width: 600px; /* Limita a largura máxima para evitar containers muito largos */
+  margin: 2rem auto 4rem; /* Margem superior e inferior com centralização horizontal */
+  padding: 1.5rem 1.5rem; /* Espaço interno ao redor do conteúdo */
 
-  margin: 3rem auto 5rem;
-  /* Margem superior 3rem, centraliza horizontalmente, margem inferior 5rem */
-
-  padding: 2rem;
-  /* Espaço interno em todos os lados */
-
-  background: linear-gradient(180deg, var(--cor-escura), var(--cor-secundaria));
+  background: linear-gradient(180deg, var(--cor-escura), var(--cor-secundaria)); 
   /* Fundo com degradê vertical */
 
-  color: var(--branco);
-  /* Cor branca para o texto */
+  color: var(--branco); /* Texto branco para contraste */
+  text-align: center; /* Centraliza texto */
 
-  text-align: center;
-  /* Centraliza o conteúdo textual */
-
-  border-radius: 12px;
-  /* Bordas arredondadas */
-
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  /* Sombra leve para destacar o container */
-
-  box-sizing: border-box;
-  /* Inclui padding e borda na largura total do container */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra leve para destaque */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
 }
 
 .conteudo-contato h1 {
-  font-size: 2.2rem;
-  /* Tamanho maior para título */
-
-  margin-bottom: 1rem;
-  /* Espaço abaixo do título */
+  font-size: 2rem; /* Tamanho da fonte do título */
+  margin-bottom: 1rem; /* Espaço abaixo do título */
 }
 
 .conteudo-contato p {
-  font-size: 1.1rem;
-  /* Fonte legível para parágrafos */
-
-  margin-bottom: 2rem;
-  /* Espaço maior abaixo para separar do próximo conteúdo */
-
-  line-height: 1.5;
-  /* Espaçamento entre linhas para melhor leitura */
+  font-size: 1.1rem; /* Tamanho da fonte do texto */
+  margin-bottom: 1.5rem; /* Espaço abaixo do parágrafo */
+  line-height: 1.5; /* Espaçamento entre linhas para facilitar leitura */
 }
-
 
 /* === FORMULÁRIO DE CONTATO === */
 .form-contato {
-  display: grid;
-  /* Usa grid para organizar os campos do formulário */
-
-  grid-template-columns: 2fr 1fr;
-  /* Define duas colunas, a primeira com o dobro da largura da segunda */
-
-  gap: 1rem;
-  /* Espaçamento entre colunas e linhas do grid */
-
-  text-align: left;
-  /* Alinha texto à esquerda dentro dos campos */
-
-  width: 100%;
-  /* O formulário ocupa toda a largura disponível do container */
-
-  box-sizing: border-box;
-  /* Inclui padding e borda na largura total */
+  display: grid; /* Layout em grid para organização */
+  grid-template-columns: 1fr 1fr; /* Duas colunas de tamanhos iguais */
+  gap: 1rem; /* Espaço entre colunas e linhas */
+  text-align: left; /* Alinha textos à esquerda */
+  width: 100%; /* Ocupa toda largura do container pai */
+  box-sizing: border-box; /* Inclui padding e bordas na largura */
 }
 
-/* Cada campo do formulário */
 .form-contato .campo {
-  display: flex;
-  /* Usa flexbox para organizar label e input na vertical */
-
-  flex-direction: column;
-  /* Label fica acima do input */
-
-  width: 100%;
-  /* O campo ocupa toda largura da célula do grid */
-
+  display: flex; /* Flexbox para organizar label e input verticalmente */
+  flex-direction: column; /* Label em cima, input embaixo */
+  width: 100%; /* Ocupa toda largura disponível */
   box-sizing: border-box;
 }
 
-/* Campo nome ocupa toda a linha do grid */
+/* Campo nome ocupa toda a largura do formulário (as duas colunas) */
 #nome {
   grid-column: 1 / -1;
-  /* O campo "nome" estica da primeira até a última coluna do grid */
 }
 
-/* Estilo dos labels do formulário */
+/* Estilo dos labels */
 .form-contato label {
-  font-weight: 600;
-  /* Texto em negrito para destaque */
-
-  margin-bottom: 0.4rem;
-  /* Espaço abaixo do label */
-
-  color: var(--branco);
-  /* Cor branca */
+  font-weight: 600; /* Negrito */
+  margin-bottom: 0.4rem; /* Espaço abaixo do label */
+  color: var(--branco); /* Cor branca */
 }
 
-/* Estilo comum para inputs e textarea */
+/* Inputs e textarea */
 .form-contato input,
 .form-contato textarea {
-  padding: 0.7rem 1rem;
-  /* Espaçamento interno confortável */
-
-  border-radius: 8px;
-  /* Bordas arredondadas para suavidade */
-
-  border: 1px solid var(--cinza-claro);
-  /* Borda fina e cinza claro */
-
-  font-size: 1rem;
-  /* Fonte legível */
-
-  font-family: var(--fonte-principal);
-  /* Fonte principal definida no projeto */
-
-  background-color: var(--branco);
-  /* Fundo branco para os campos */
-
-  color: var(--preto);
-  /* Cor do texto preta */
-
-  width: 100%;
-  /* Ocupar toda largura da célula */
-
-  max-width: 100%;
-  /* Limitar para não extrapolar */
-
+  padding: 0.6rem 1rem; /* Espaçamento interno confortável */
+  border-radius: 8px; /* Bordas arredondadas */
+  border: 1px solid var(--cinza-claro); /* Borda cinza clara */
+  font-size: 1rem; /* Tamanho da fonte legível */
+  font-family: var(--fonte-principal); /* Fonte padrão do site */
+  background-color: var(--branco); /* Fundo branco */
+  color: var(--preto); /* Texto preto */
+  width: 100%; /* Ocupa toda largura da célula */
+  max-width: 100%; /* Limita largura máxima */
   box-sizing: border-box;
-  /* Inclui padding no cálculo da largura */
 }
 
-/* Altura padrão dos inputs */
+/* Altura dos inputs */
 .form-contato input {
-  height: 44px;
-  /* Altura confortável para digitação */
+  height: 40px; /* Altura confortável para digitação */
 }
 
-/* Alinha o campo telefone à direita */
+/* Campo telefone fica na coluna da direita, alinhado à direita */
 #telefone {
-  justify-self: end;
-  /* Posiciona o telefone alinhado à direita da célula do grid */
+  justify-self: end; /* Alinha campo à direita da célula */
+  max-width: 250px; /* Limita a largura para não ficar muito largo */
 }
 
-/* Estilo para textarea */
+/* Textarea para mensagem */
 .form-contato textarea {
-  min-height: 120px;
-  /* Altura mínima para o campo de texto maior */
-
-  resize: vertical;
-  /* Permite redimensionar só verticalmente */
+  min-height: 100px; /* Altura mínima maior */
+  resize: vertical; /* Permite redimensionar só verticalmente */
 }
 
-/* Campo mensagem ocupa toda a linha */
+/* Campo mensagem ocupa toda largura (duas colunas) */
 .form-contato .campo-full {
   grid-column: 1 / -1;
-  /* Ocupa todas as colunas da linha */
-
   display: flex;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Estilo do botão do formulário */
+/* Botão do formulário */
 .form-contato button {
-  grid-column: 1 / -1;
-  /* Botão ocupa toda a largura da linha do grid */
-
-  background-color: var(--cor-primaria);
-  /* Cor principal definida nas variáveis */
-
-  color: var(--branco);
-  /* Texto branco */
-
-  border: none;
-  /* Remove borda padrão */
-
-  padding: 0.8rem 1.5rem;
-  /* Espaço interno */
-
-  border-radius: 25px;
-  /* Bordas arredondadas */
-
-  font-weight: 600;
-  /* Negrito */
-
-  font-size: 1.1rem;
-  /* Fonte maior para destaque */
-
-  cursor: pointer;
-  /* Cursor muda para indicar clicável */
-
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  /* Transições suaves para cor e escala */
-
-  justify-self: center;
-  /* Centraliza o botão na célula do grid */
-
-  width: 150px;
-  /* Largura fixa */
-
-  margin-top: 1rem;
-  /* Espaço acima do botão */
+  grid-column: 1 / -1; /* Ocupa toda largura da linha */
+  background-color: var(--cor-primaria); /* Cor primária do site */
+  color: var(--branco); /* Texto branco */
+  border: none; /* Sem borda */
+  padding: 0.8rem 1.5rem; /* Espaçamento interno */
+  border-radius: 25px; /* Bordas arredondadas */
+  font-weight: 600; /* Negrito */
+  font-size: 1.1rem; /* Fonte maior */
+  cursor: pointer; /* Cursor tipo botão */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animações suaves */
+  justify-self: center; /* Centraliza no grid */
+  width: 160px; /* Largura fixa do botão */
+  margin-top: 1rem; /* Espaço acima do botão */
 }
 
-/* Efeito hover do botão */
 .form-contato button:hover {
-  background-color: var(--cor-primaria-escura);
-  /* Cor mais escura no hover */
-
-  transform: scale(1.05);
-  /* Leve aumento de tamanho */
+  background-color: var(--cor-primaria-escura); /* Cor mais escura no hover */
+  transform: scale(1.05); /* Zoom leve */
 }
-
 
 /* === BOTÃO DO WHATSAPP === */
 .btn-whatsapp {
-  display: inline-flex;
-  /* Flexbox inline para alinhar ícone e texto na horizontal */
-
-  align-items: center;
-  /* Alinha verticalmente ao centro */
-
-  justify-content: center;
-  /* Centraliza horizontalmente */
-
-  gap: 0.4rem;
-  /* Espaçamento entre ícone e texto */
-
-  background-color: #25D366;
-  /* Cor verde oficial do WhatsApp */
-
-  color: white;
-  /* Texto branco */
-
-  font-weight: 600;
-  /* Negrito */
-
-  padding: 0.4rem 1rem;
-  /* Espaço interno compacto */
-
-  border-radius: 20px;
-  /* Bordas arredondadas menores */
-
-  text-decoration: none;
-  /* Remove sublinhado de link */
-
-  font-size: 0.95rem;
-  /* Fonte menor */
-
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  /* Transições suaves */
-
-  cursor: pointer;
-  /* Cursor clicável */
-
-  width: auto;
-  /* Largura automática conforme conteúdo */
-
-  max-width: fit-content;
-  /* Limita largura para não esticar demais */
-
-  margin-top: 1rem;
-  /* Espaço acima */
+  display: inline-flex; /* Flexbox inline para alinhar ícone e texto */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 0.4rem; /* Espaço entre ícone e texto */
+  background-color: #25D366; /* Verde WhatsApp */
+  color: white; /* Texto branco */
+  font-weight: 600; /* Negrito */
+  padding: 0.4rem 1rem; /* Espaçamento interno compacto */
+  border-radius: 20px; /* Bordas arredondadas */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 0.95rem; /* Fonte menor */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+  cursor: pointer; /* Cursor clicável */
+  width: auto; /* Largura automática conforme conteúdo */
+  max-width: fit-content; /* Limita largura ao conteúdo */
+  margin-top: 1rem; /* Espaço acima */
 }
 
 .btn-whatsapp i {
-  font-size: 1.1rem;
-  /* Tamanho do ícone do WhatsApp */
+  font-size: 1.1rem; /* Tamanho do ícone */
 }
 
 .btn-whatsapp:hover {
-  background-color: #128C4A;
-  /* Cor verde mais escura no hover */
-
-  transform: scale(1.05);
-  /* Leve zoom */
+  background-color: #128C4A; /* Verde mais escuro no hover */
+  transform: scale(1.05); /* Zoom leve */
 }
-
 
 /* === SEÇÃO DE CONTATOS EXTRA === */
 .contatos-extra {
-  max-width: 700px;
-  /* Limita largura para alinhamento com outras seções */
-
-  margin: 0 auto 3rem;
-  /* Centraliza horizontalmente e dá margem inferior */
-
-  padding: 1.5rem 2rem;
-  /* Espaço interno */
-
-  background: linear-gradient(180deg, var(--cor-escura), var(--cor-secundaria));
-  /* Fundo com degradê vertical */
-
-  color: var(--branco);
-  /* Texto branco */
-
-  border-radius: 12px;
-  /* Bordas arredondadas */
-
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  /* Sombra leve */
-
-  text-align: center;
-  /* Centraliza o texto */
-
-  display: flex;
-  /* Flexbox para alinhar os itens */
-
-  flex-direction: column;
-  /* Organiza os itens em coluna (vertical) */
-
-  align-items: center;
-  /* Centraliza os itens horizontalmente */
-
-  gap: 1.2rem;
-  /* Espaçamento entre os itens */
-
-  box-sizing: border-box;
+  max-width: 600px; /* Largura máxima do container */
+  margin: 0 auto 3rem; /* Centralizado horizontalmente, margem inferior */
+  padding: 1.5rem 2rem; /* Espaço interno */
+  background: linear-gradient(180deg, var(--cor-escura), var(--cor-secundaria)); /* Fundo degradê */
+  color: var(--branco); /* Texto branco */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra leve */
+  text-align: center; /* Centraliza texto */
+  display: flex; /* Flexbox para layout */
+  flex-direction: column; /* Alinha itens verticalmente */
+  align-items: center; /* Centraliza itens horizontalmente */
+  gap: 1.2rem; /* Espaço entre itens */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
 }
 
-/* Título dentro da seção contatos-extra */
 .contatos-extra h2 {
-  width: 100%;
-  /* Ocupa toda largura do container */
-
-  margin-bottom: 1rem;
-  /* Espaço abaixo do título */
-
-  font-size: 1.8rem;
-  /* Fonte grande para destaque */
+  width: 100%; /* Ocupa toda largura */
+  margin-bottom: 1rem; /* Espaço abaixo */
+  font-size: 1.8rem; /* Tamanho do título */
 }
 
-/* Parágrafos dentro da seção */
 .contatos-extra p {
-  margin: 0;
-  /* Remove margens padrão */
-
-  font-weight: 500;
-  /* Peso médio do texto */
-
-  white-space: nowrap;
-  /* Evita quebra de linha no texto */
-
-  padding: 0 0.5rem;
-  /* Espaço interno horizontal para separar visualmente */
-
-  border-right: 1px solid var(--branco);
-  /* Linha vertical para separar textos lado a lado */
+  margin: 0; /* Remove margens padrão */
+  font-weight: 500; /* Peso médio */
+  white-space: nowrap; /* Não permite quebra de linha */
+  padding: 0 0.5rem; /* Espaço interno horizontal */
+  border-right: 1px solid var(--branco); /* Linha vertical à direita */
 }
 
-/* Remove a borda do último parágrafo para não deixar linha sobrando */
 .contatos-extra p:last-child {
-  border-right: none;
+  border-right: none; /* Remove borda do último elemento */
 }
-
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
   .conteudo-contato {
-    margin: 2rem 1rem 4rem;
-    /* Margens ajustadas para telas menores */
-
-    padding: 1.5rem 1rem;
-    /* Padding reduzido */
+    margin: 2rem 1rem 4rem; /* Margens ajustadas para telas menores */
+    padding: 1rem 1rem; /* Padding reduzido */
   }
 
   .conteudo-contato h1 {
-    font-size: 1.8rem;
-    /* Título menor para mobile */
+    font-size: 1.6rem; /* Título menor no mobile */
   }
 
   .form-contato {
-    grid-template-columns: 1fr;
-    /* Muda para uma coluna única no formulário */
+    grid-template-columns: 1fr; /* Formulário em coluna única */
   }
 
   #telefone {
-    justify-self: stretch;
-    /* Telefone ocupa toda largura da célula */
+    justify-self: stretch; /* Campo telefone ocupa toda largura */
+    max-width: 100%; /* Largura total para encaixe */
   }
 
   .form-contato button {
-    width: 100%;
-    /* Botão ocupa 100% da largura */
-
-    justify-self: stretch;
-    /* Botão esticado para preencher */
+    width: 100%; /* Botão ocupa toda largura */
+    justify-self: stretch; /* Estica para preencher */
   }
 
   .contatos-extra {
-    gap: 1rem;
-    /* Espaçamento menor entre itens */
-
-    padding: 1rem 1rem;
-    /* Padding reduzido */
+    gap: 1rem; /* Espaço menor entre itens */
+    padding: 1rem 1rem; /* Padding reduzido */
   }
 
   .contatos-extra p {
-    border: none;
-    /* Remove bordas para visual mais limpo no mobile */
+    border: none; /* Remove bordas para visual limpo */
+    white-space: normal; /* Permite quebra de linha no mobile para não sair do container */
   }
 }

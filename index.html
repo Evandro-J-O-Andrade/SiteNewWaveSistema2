@@ -41,12 +41,12 @@
 
   <link rel="stylesheet" href="../css/index.css" />
   <!-- Importa o arquivo CSS externo com os estilos gerais do site -->
-   <link rel="stylesheet" href="/css/midiaquire.css" />
-  <!-- Importa o CSS específico resposivel -->
 
-  <!-- IMPORTANTE: Link do Font Awesome igual ao do produtos.html, sem atributos extras -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/midiaquire.css" />
+  <!-- Importa o CSS específico para responsividade -->
+
   <!-- Importa a biblioteca Font Awesome via CDN para usar os ícones nas redes sociais -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
@@ -73,16 +73,16 @@
         <a href="index.html#home">Home</a>
         <!-- Link para a seção "home" na página index.html -->
 
-        <a href="/html/sobre.html">Sobre</a>
+        <a href="/html/sobre.html#sobre">Sobre</a>
         <!-- Link para página "Sobre" -->
 
-        <a href="/html/produtos.html">Produtos</a>
+        <a href="/html/produtos.html#produto">Produtos</a>
         <!-- Link para página de produtos -->
 
-        <a href="/html/servicos.html">Serviços</a>
+        <a href="/html/servicos.html#servicos">Serviços</a>
         <!-- Link para página de serviços -->
 
-        <a href="/html/contato.html">Contato</a>
+        <a href="/html/contato.html#contato">Contato</a>
         <!-- Link para página de contato -->
       </nav>
     </div>
@@ -95,18 +95,26 @@
     <section class="banner" id="home">
       <!-- Seção banner com ID "home" para referência nos links -->
 
-      <img src="../img/logoicon.png" alt="Logo Central" class="logo-central" />
-      <!-- Imagem do logo centralizado no banner -->
+      <!-- Imagem de fundo do banner -->
+      <img src="/img/tsunami.png" alt="Banner Serviços" class="banner-img" />
 
-      <h1>New Wave Sistemas Digitais</h1>
-      <!-- Título principal da página -->
+      <!-- Container para logo, título principal e slogan, todos centralizados -->
+      <div class="banner-conteudo">
+        <!-- Container flex vertical para logo e textos -->
 
-      <p class="slogan">Uma nova onda de tecnologia</p>
-      <!-- Slogan da empresa -->
+        <img src="../img/logoicon.png" alt="Logomarca New Wave" class="banner-logo" />
+        <!-- Logomarca central -->
+
+        <h1>New Wave Sistemas Digitais</h1>
+        <!-- Título principal da página, fica abaixo da logo -->
+
+        <p class="slogan">Uma nova onda de tecnologia</p>
+        <!-- Slogan da empresa, abaixo do título -->
+      </div>
     </section>
 
     <section class="conteudo">
-      <!-- Seção de conteúdo -->
+      <!-- Seção de conteúdo textual -->
 
       <h2>Transformamos Tecnologia em Solução</h2>
       <!-- Título secundário -->

@@ -2,43 +2,68 @@
 <!-- Declara que este documento é HTML5 -->
 
 <html lang="pt-br">
-<!-- Elemento raiz da página, define o idioma como português do Brasil -->
+<!-- Elemento raiz do documento, define o idioma da página como Português do Brasil -->
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Define a codificação de caracteres para UTF-8, suportando acentuação -->
+  <!-- Define o conjunto de caracteres como UTF-8, suportando acentuação e caracteres especiais -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Define a viewport para garantir responsividade em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Define a viewport para responsividade em dispositivos móveis -->
+
+  <meta name="description" content="Sobre a New Wave - Conheça nossa história, missão, visão e valores." />
+  <!-- Descrição da página para mecanismos de busca -->
+
+  <meta name="keywords" content="New Wave, Sobre, Empresa, Missão, Visão, Valores" />
+  <!-- Palavras-chave para SEO -->
+
+  <meta name="author" content="New Wave Sistemas Digitais" />
+  <!-- Autor do documento -->
 
   <title>Sobre - New Wave</title>
   <!-- Título que aparece na aba do navegador -->
 
-  <link rel="stylesheet" href="../css/index.css" />
-  <!-- Importa o CSS global do site para estilos base e layout geral -->
+  <!-- Favicons e ícones para diferentes dispositivos -->
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png" />
+  <!-- Ícone favicon no formato PNG com tamanho 96x96 -->
 
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <!-- Ícone favicon no formato SVG -->
+
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <!-- Ícone favicon para navegadores antigos -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+  <!-- Ícone para dispositivos Apple (iPhone, iPad) -->
+
+  <link rel="manifest" href="../site.webmanifest" />
+  <!-- Manifesto do site para Progressive Web App -->
+
+  <!-- CSS global do site -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <!-- CSS específico da página Sobre -->
   <link rel="stylesheet" href="../css/sobre.css" />
-  <!-- Importa o CSS específico da página Sobre para estilos personalizados -->
-<link rel="stylesheet" href="/css/midiaquire.css" />
-  <!-- Importa o CSS específico para responsividade e mídia queries -->
+  <!-- CSS global para responsividade -->
+  <link rel="stylesheet" href="/css/midiaquire.css" />
+
+  <!-- Biblioteca de ícones Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
-  <!-- Importa o CSS do Font Awesome via CDN para usar ícones sociais -->
+  <!-- Importa o CSS do Font Awesome para usar ícones sociais -->
 </head>
 
 <body>
-  <!-- Início do corpo da página, onde todo o conteúdo visível fica -->
-
+  <!-- =================== NAVBAR =================== -->
   <header class="navbar">
-  <!-- Cabeçalho da página, que contém a barra de navegação -->
+    <!-- Cabeçalho da página, que contém a barra de navegação -->
 
     <div class="nav-container">
-    <!-- Container que agrupa logo e menu para melhor organização -->
+      <!-- Container que agrupa logo e menu para melhor organização -->
 
       <div class="nav-logo">
-      <!-- Área do logo (imagem e nome) -->
+        <!-- Área do logo (imagem e nome) -->
 
         <img src="../img/logoicon.png" alt="Logo" class="logo-icon" />
         <!-- Imagem do ícone do logo com texto alternativo para acessibilidade -->
@@ -48,7 +73,7 @@
       </div>
 
       <nav>
-      <!-- Elemento de navegação contendo os links do menu -->
+        <!-- Elemento de navegação contendo os links do menu -->
 
         <a href="../index.html">Home</a>
         <!-- Link para a página inicial -->
@@ -68,43 +93,54 @@
     </div>
   </header>
 
+  <!-- =================== CONTEÚDO PRINCIPAL =================== -->
   <main class="main-content">
-  <!-- Conteúdo principal da página -->
+    <!-- Conteúdo principal da página -->
 
+    <!-- ===== BANNER ATUALIZADO COM IMAGEM DE FUNDO, LOGO, TÍTULO E SLOGAN ===== -->
     <section class="banner" id="sobre">
-    <!-- Seção banner para destaque, com id para referência -->
+      <!-- Seção banner com ID para referência -->
 
-      <img src="../img/logoicon.png" alt="Logo New Wave" class="logo-central" />
-      <!-- Logo centralizada dentro do banner -->
+      <img src="../img/tsunami2.png" alt="Banner Sobre" class="banner-img" />
+      <!-- Imagem de fundo do banner -->
 
-      <h1>Sobre a New Wave</h1>
-      <!-- Título principal do banner -->
+      <div class="banner-conteudo">
+        <!-- Container para logo, título e slogan centralizados -->
 
-      <p class="slogan">Conheça nossa história e valores</p>
-      <!-- Slogan da página abaixo do título -->
+        <img src="../img/logoicon.png" alt="Logo Central" class="banner-logo" />
+        <!-- Logo central no banner -->
+
+        <h1>Sobre a New Wave</h1>
+        <!-- Título principal no banner -->
+
+        <p class="slogan">Conheça nossa história e valores</p>
+        <!-- Slogan da página abaixo do título -->
+      </div>
     </section>
 
+    <!-- ===== SEÇÃO DE CONTEÚDO SOBRE ===== -->
     <section class="conteudo-sobre">
-    <!-- Seção com o conteúdo detalhado sobre a empresa -->
+      <!-- Seção contendo informações detalhadas sobre a empresa -->
 
       <h1>Sobre Nós</h1>
       <!-- Título da seção -->
 
       <p class="introducao-sobre">
+        <!-- Parágrafo de introdução sobre a empresa -->
+
         A <strong>New Wave Sistemas Digitais</strong> é uma empresa dedicada a
         desenvolver soluções tecnológicas modernas, seguras e eficientes para
         transformar o dia a dia das empresas.
       </p>
-      <!-- Parágrafo que apresenta a empresa com destaque no nome -->
 
       <div class="container-info">
-      <!-- Container que agrupa as caixas de informações da empresa -->
+        <!-- Container que agrupa as caixas com missão, visão e valores -->
 
         <div class="box-info">
-        <!-- Caixa de informação sobre a missão -->
+          <!-- Caixa de informação sobre a missão -->
 
           <h2>Missão</h2>
-          <!-- Título da caixa -->
+          <!-- Título da caixa missão -->
 
           <p>
             Fornecer softwares personalizados que atendam às necessidades específicas de cada cliente, sempre com inovação e qualidade.
@@ -113,10 +149,10 @@
         </div>
 
         <div class="box-info">
-        <!-- Caixa de informação sobre a visão -->
+          <!-- Caixa de informação sobre a visão -->
 
           <h2>Visão</h2>
-          <!-- Título da caixa -->
+          <!-- Título da caixa visão -->
 
           <p>
             Ser reconhecida como a principal referência em tecnologia digital para empresas no Brasil.
@@ -125,13 +161,13 @@
         </div>
 
         <div class="box-info">
-        <!-- Caixa de informação sobre os valores -->
+          <!-- Caixa de informação sobre os valores -->
 
           <h2>Valores</h2>
-          <!-- Título da caixa -->
+          <!-- Título da caixa valores -->
 
           <ul>
-          <!-- Lista com os valores da empresa -->
+            <!-- Lista dos valores da empresa -->
 
             <li>Inovação constante</li>
             <!-- Valor 1 -->
@@ -150,20 +186,21 @@
     </section>
   </main>
 
+  <!-- =================== RODAPÉ =================== -->
   <footer class="rodape">
-  <!-- Rodapé da página -->
+    <!-- Rodapé da página -->
 
     <img src="../img/lentralog.png" alt="Logo Rodapé" />
-    <!-- Logo no rodapé para reforço da marca -->
+    <!-- Imagem do logo usado no rodapé -->
 
     <p>&copy; 2025 New Wave Sistemas Digitais</p>
     <!-- Texto de direitos autorais -->
 
     <div class="social-links">
-    <!-- Container para os links das redes sociais -->
+      <!-- Container para links das redes sociais -->
 
-      <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" title="Converse pelo WhatsApp" class="social-link">
-      <!-- Link para WhatsApp que abre em nova aba -->
+      <a href="https://wa.me/5511910669810" target="_blank" title="Converse pelo WhatsApp" class="social-link">
+        <!-- Link para WhatsApp que abre em nova aba -->
 
         <i class="fab fa-whatsapp"></i>
         <!-- Ícone do WhatsApp via Font Awesome -->
@@ -173,7 +210,7 @@
       </a>
 
       <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" title="Siga no Instagram" class="social-link">
-      <!-- Link para Instagram que abre em nova aba -->
+        <!-- Link para Instagram que abre em nova aba -->
 
         <i class="fab fa-instagram"></i>
         <!-- Ícone do Instagram via Font Awesome -->
@@ -183,17 +220,17 @@
       </a>
 
       <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" title="Curta no Facebook" class="social-link">
-      <!-- Link para Facebook que abre em nova aba -->
+        <!-- Link para Facebook que abre em nova aba -->
 
-        <i class="fab fa-facebook-f"></i>
-        <!-- Ícone do Facebook via Font Awesome, versão com '-f' para ícone mais moderno -->
+        <i class="fab fa-facebook"></i>
+        <!-- Ícone do Facebook via Font Awesome -->
 
         Facebook
         <!-- Texto visível ao lado do ícone -->
       </a>
 
       <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" title="Conecte-se no LinkedIn" class="social-link">
-      <!-- Link para LinkedIn que abre em nova aba -->
+        <!-- Link para LinkedIn que abre em nova aba -->
 
         <i class="fab fa-linkedin"></i>
         <!-- Ícone do LinkedIn via Font Awesome -->
@@ -204,4 +241,5 @@
     </div>
   </footer>
 </body>
+
 </html>

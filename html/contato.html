@@ -6,48 +6,74 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Define a codificação dos caracteres para UTF-8, garantindo que acentos e símbolos especiais funcionem -->
+  <!-- Define a codificação dos caracteres como UTF-8 para permitir acentuação e caracteres especiais -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Ajusta a largura da página para a largura do dispositivo e escala inicial 1 para responsividade -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Configura a viewport para responsividade em dispositivos móveis -->
+
+  <meta name="description" content="Entre em contato com a New Wave Sistemas Digitais. Estamos prontos para atender você!" />
+  <!-- Descrição da página para mecanismos de busca (SEO) -->
+
+  <meta name="keywords" content="New Wave, Contato, Fale Conosco, Suporte, Atendimento" />
+  <!-- Palavras-chave para SEO -->
+
+  <meta name="author" content="New Wave Sistemas Digitais" />
+  <!-- Define o autor da página -->
 
   <title>Contato - New Wave Sistemas Digitais</title>
-  <!-- Define o título da aba/janela do navegador -->
+  <!-- Título que aparece na aba do navegador -->
 
+  <!-- FAVICONS PARA DIVERSOS DISPOSITIVOS E NAVEGADORES -->
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png" />
+  <!-- Ícone favicon no formato PNG com 96x96 px -->
+
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <!-- Ícone favicon no formato SVG -->
+
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <!-- Favicon no formato ICO para compatibilidade com navegadores antigos -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+  <!-- Ícone para dispositivos Apple (iPhone, iPad) -->
+
+  <link rel="manifest" href="../site.webmanifest" />
+  <!-- Manifesto do site para configurar Progressive Web App -->
+
+  <!-- ESTILOS CSS -->
   <link rel="stylesheet" href="/css/index.css" />
-  <!-- Link para o arquivo CSS global do site, que contém estilos compartilhados -->
+  <!-- Estilos globais do site -->
 
   <link rel="stylesheet" href="/css/contato.css" />
-  <!-- Link para o CSS específico desta página de contato -->
-<link rel="stylesheet" href="/css/midiaquire.css" />
-  <!-- Importa o CSS específico para responsividade e mídia queries -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <!-- Importa a biblioteca Font Awesome via CDN para usar ícones sociais -->
+  <!-- Estilos específicos da página de contato -->
+
+  <link rel="stylesheet" href="/css/midiaquire.css" />
+  <!-- Estilos responsivos via media queries -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <!-- Biblioteca de ícones Font Awesome via CDN -->
 </head>
 
 <body>
-  <!-- Corpo principal da página -->
+  <!-- INÍCIO DO CORPO VISÍVEL DA PÁGINA -->
 
   <header class="navbar">
-    <!-- Cabeçalho contendo a barra de navegação -->
+    <!-- Cabeçalho com a barra de navegação -->
+
     <div class="nav-container">
-      <!-- Container que agrupa os elementos da navbar para facilitar o layout -->
+      <!-- Container para agrupar o logo e o menu -->
 
       <div class="nav-logo">
-        <!-- Área da logo dentro da navbar -->
+        <!-- Área do logotipo -->
 
         <img src="/img/logoicon.png" alt="Logo" class="logo-icon" />
-        <!-- Imagem do ícone da logo -->
+        <!-- Ícone da logo -->
 
         <img src="/img/lentralog.png" alt="Nome da Empresa" class="logo-nome" />
-        <!-- Imagem com o nome da empresa ao lado do ícone -->
+        <!-- Nome da empresa ao lado do logo -->
       </div>
 
       <nav>
-        <!-- Menu de navegação principal -->
+        <!-- Menu de navegação -->
 
         <a href="/index.html">Home</a>
         <!-- Link para a página inicial -->
@@ -62,136 +88,101 @@
         <!-- Link para a página Serviços -->
 
         <a href="/html/contato.html" class="ativo">Contato</a>
-        <!-- Link para a página Contato, com classe "ativo" para indicar a página atual -->
+        <!-- Link para a página Contato (página atual) -->
       </nav>
     </div>
   </header>
 
+  <!-- BANNER PRINCIPAL COM IMAGEM DE FUNDO E CONTEÚDO CENTRALIZADO -->
   <section class="banner" id="contato">
-    <!-- Seção banner da página, com id para navegação direta -->
+    <!-- Seção de banner identificada como 'contato' -->
 
-    <img src="/img/logoicon.png" alt="Logo New Wave" class="logo-central" />
-    <!-- Logo centralizada no banner -->
+    <img src="/img/tsunami2.png" alt="Banner Contato" class="banner-img" />
+    <!-- Imagem de fundo do banner -->
 
-    <h1>Contato</h1>
-    <!-- Título principal do banner -->
+    <div class="banner-conteudo">
+      <!-- Container para conteúdo centralizado no banner -->
 
-    <p class="slogan">Fale conosco, estamos prontos para ajudar</p>
-    <!-- Slogan ou mensagem curta para chamar atenção -->
+      <img src="/img/logoicon.png" alt="Logo Central" class="banner-logo" />
+      <!-- Logotipo central do banner -->
+
+      <h1>Contato</h1>
+      <!-- Título principal do banner -->
+
+      <p class="slogan">Fale conosco, estamos prontos para ajudar</p>
+      <!-- Slogan ou frase de apoio -->
+    </div>
   </section>
 
   <main>
     <!-- Conteúdo principal da página -->
 
     <section class="conteudo-contato">
-      <!-- Container principal do formulário de contato e texto -->
+      <!-- Seção de formulário de contato -->
 
       <h1>Fale Conosco</h1>
       <!-- Título da seção -->
 
       <p>Estamos à disposição para atender você. Envie sua mensagem ou entre em contato pelos nossos canais abaixo.</p>
-      <!-- Texto explicativo para o usuário -->
+      <!-- Texto de instrução -->
 
       <form id="formContato" class="form-contato" action="#" method="post">
-        <!-- Formulário para envio de contato, com id para JavaScript -->
+        <!-- Formulário de contato -->
 
         <div class="campo campo-full">
-          <!-- Campo que ocupa toda a largura da grid -->
+          <!-- Campo completo (full width) para o nome -->
 
           <label for="nome">Nome Completo</label>
-          <!-- Label associado ao campo nome -->
-
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            required
-            placeholder="Seu nome completo"
-          />
-          <!-- Campo de texto para o nome do usuário, obrigatório -->
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" />
+          <!-- Campo de texto para o nome -->
         </div>
 
         <div class="campo">
-          <!-- Campo que ocupa parte da largura da grid -->
-
           <label for="email">E-mail</label>
-          <!-- Label associado ao campo email -->
-
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="seuemail@exemplo.com"
-          />
-          <!-- Campo para email, obrigatório e com validação de formato -->
+          <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" />
+          <!-- Campo de email com validação -->
         </div>
 
         <div class="campo">
-          <!-- Campo para telefone -->
-
           <label for="telefone">Telefone</label>
-          <!-- Label para telefone -->
-
-          <input
-            type="tel"
-            id="telefone"
-            name="telefone"
-            placeholder="(XX) XXXXX-XXXX"
-          />
-          <!-- Campo para telefone, opcional, com placeholder do formato -->
+          <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" />
+          <!-- Campo de telefone opcional -->
         </div>
 
         <div class="campo campo-full">
-          <!-- Campo que ocupa toda a largura da grid -->
-
           <label for="mensagem">Mensagem</label>
-          <!-- Label para a mensagem -->
-
-          <textarea
-            id="mensagem"
-            name="mensagem"
-            rows="5"
-            required
-            placeholder="Escreva sua mensagem aqui..."
-          ></textarea>
-          <!-- Área de texto para a mensagem, obrigatória -->
+          <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+          <!-- Área de texto para mensagem -->
         </div>
 
         <button type="submit">Enviar</button>
-        <!-- Botão para enviar o formulário -->
+        <!-- Botão para envio do formulário -->
       </form>
     </section>
 
     <section class="contatos-extra">
-      <!-- Seção com outros canais de contato -->
+      <!-- Seção de contatos adicionais -->
 
       <h2>Outros Canais de Contato</h2>
       <!-- Título da seção -->
 
       <p><strong>Telefone:</strong> (11) 91066-9810</p>
-      <!-- Telefone fixo ou celular para contato -->
+      <!-- Telefone para contato -->
 
       <p><strong>E-mail:</strong> evandro_j.o.a@hotmail.com</p>
-      <!-- E-mail de contato -->
+      <!-- E-mail para contato -->
 
       <p><strong>Endereço:</strong> Viela Aristides de Oliveira, Nº 130, Vila Julia - SP</p>
-      <!-- Endereço físico da empresa -->
+      <!-- Endereço físico -->
 
       <p><strong>CNPJ:</strong> 29.328.524/0001-98</p>
-      <!-- Número do CNPJ da empresa -->
+      <!-- CNPJ da empresa -->
 
-      <a
-        href="https://wa.me/5511910669810"
-        target="_blank"
-        class="btn-whatsapp"
-      >
+      <a href="https://wa.me/5511910669810" target="_blank" class="btn-whatsapp">
         <i class="fab fa-whatsapp"></i>
-        <!-- Ícone do WhatsApp usando Font Awesome -->
-
         Fale conosco pelo WhatsApp!
-        <!-- Texto do botão/link -->
       </a>
+      <!-- Link para contato via WhatsApp -->
     </section>
   </main>
 
@@ -199,7 +190,7 @@
     <!-- Rodapé da página -->
 
     <img src="/img/lentralog.png" alt="Logo Rodapé" />
-    <!-- Logo no rodapé -->
+    <!-- Logotipo no rodapé -->
 
     <p>&copy; 2025 New Wave Sistemas Digitais</p>
     <!-- Direitos autorais -->
@@ -207,54 +198,26 @@
     <div class="social-links">
       <!-- Links para redes sociais -->
 
-      <a
-        href="https://wa.me/5511910669810"
-        target="_blank"
-        title="WhatsApp"
-        class="social-link"
-      >
-        <i class="fab fa-whatsapp"></i>
-        <!-- Ícone WhatsApp -->
-        WhatsApp
+      <a href="https://wa.me/5511910669810" target="_blank" class="social-link" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
 
-      <a
-        href="https://www.instagram.com/SEUINSTAGRAM"
-        target="_blank"
-        title="Instagram"
-        class="social-link"
-      >
-        <i class="fab fa-instagram"></i>
-        <!-- Ícone Instagram -->
-        Instagram
+      <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" class="social-link" title="Instagram">
+        <i class="fab fa-instagram"></i> Instagram
       </a>
 
-      <a
-        href="https://www.facebook.com/SEUFACEBOOK"
-        target="_blank"
-        title="Facebook"
-        class="social-link"
-      >
-        <i class="fab fa-facebook-f"></i>
-        <!-- Ícone Facebook -->
-        Facebook
+      <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" class="social-link" title="Facebook">
+        <i class="fab fa-facebook-f"></i> Facebook
       </a>
 
-      <a
-        href="https://www.linkedin.com/in/SEULINKEDIN"
-        target="_blank"
-        title="LinkedIn"
-        class="social-link"
-      >
-        <i class="fab fa-linkedin"></i>
-        <!-- Ícone LinkedIn -->
-        LinkedIn
+      <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" class="social-link" title="LinkedIn">
+        <i class="fab fa-linkedin"></i> LinkedIn
       </a>
     </div>
   </footer>
 
   <script src="/js/contato.js" defer></script>
-  <!-- Importa o arquivo JavaScript que manipula o formulário, carregado após o HTML -->
+  <!-- Script de interação com o formulário, carregado após o HTML -->
 </body>
 
 </html>
