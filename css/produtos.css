@@ -1,6 +1,6 @@
 /* === Importa variáveis globais do index.css === */
 @import url('/css/index.css');  
-/* Importa as variáveis de cores, fontes e resets do CSS global para manter padronização */
+/* Importa as variáveis de cores, fontes e resets do CSS global */
 @import url('/css/midiaquire.css');
 
 /* === Estilos específicos da página de produtos === */
@@ -8,102 +8,108 @@
 /* Introdução da página */
 .introducao {
   text-align: center;             /* Centraliza o texto */
-  padding: 3rem 1rem 2rem;        /* Espaçamento generoso para separar do topo e entre os elementos */
-  color: var(--cor-escura);       /* Usa azul marinho definido no global para destaque */
+  padding: 3rem 1rem 2rem;        /* Espaçamento superior, laterais e inferior */
+  color: var(--cor-escura);       /* Cor azul escuro para o texto */
 }
 
 .introducao h1 {
-  font-size: 2.2rem;              /* Título um pouco menor que o banner, mas ainda grande */
+  font-size: 2.2rem;              /* Tamanho maior para o título */
   margin-bottom: 0.5rem;          /* Espaço abaixo do título */
 }
 
 .introducao p {
-  font-size: 1.1rem;              /* Texto ligeiramente maior para melhor leitura */
-  color: var(--cinza-escuro);     /* Cinza escuro para contraste sem ser muito pesado */
+  font-size: 1.1rem;              /* Tamanho um pouco maior do texto */
+  color: var(--cinza-escuro);     /* Cor cinza escuro para o texto */
 }
 
 /* Grade de produtos */
 .produtos-grid {
-  display: grid;                                  /* Usa grid para organização */
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Colunas responsivas com mínimo de 180px */
-  gap: 2rem;                                     /* Espaço maior entre cards para maior respiro */
-  padding: 2rem 1rem;                            /* Espaçamento interno para respirar */
-  max-width: 1100px;                             /* Largura máxima para não esticar demais */
-  margin: 0 auto;                                /* Centraliza horizontalmente */
+  display: grid;                                   /* Ativa grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Quantidade automática de colunas com mínimo de 180px */
+  gap: 2rem;                                       /* Espaço entre os cards */
+  padding: 2rem 1rem;                              /* Espaçamento interno */
+  max-width: 1100px;                               /* Limita a largura máxima */
+  margin: 0 auto;                                  /* Centraliza horizontalmente */
 }
 
-/* Cada cartão de produto */
+/* Estilo de cada card de produto */
 .produto {
-  text-align: center;
-  background-color: var(--cinza-claro);          /* Fundo cinza claro para destacar o card */
-  border-radius: 8px;                            /* Bordas arredondadas para suavizar */
-  padding: 1.5rem;                               /* Espaçamento interno maior para conforto visual */
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);        /* Sombra leve para dar profundidade */
-  transition: transform 0.3s, box-shadow 0.3s;  /* Transição suave para hover */
+  text-align: center;                              /* Centraliza o conteúdo do card */
+  background-color: var(--cinza-claro);            /* Fundo cinza claro */
+  border-radius: 8px;                              /* Bordas arredondadas */
+  padding: 1.5rem;                                 /* Espaçamento interno */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);            /* Sombra leve */
+  transition: transform 0.3s, box-shadow 0.3s;     /* Transição suave */
+  display: flex;                                   /* Ativa flexbox */
+  flex-direction: column;                          /* Organiza os filhos em coluna */
+  justify-content: flex-start;                     /* Alinha o conteúdo ao topo */
+  height: 100%;                                    /* Ocupa toda a altura possível */
 }
 
-/* Efeito ao passar o mouse */
+/* Efeito hover no card */
 .produto:hover {
-  transform: translateY(-6px);                   /* Eleva o card levemente */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);      /* Sombra mais forte para destaque */
+  transform: translateY(-6px);                     /* Eleva o card */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);          /* Aumenta a sombra */
 }
 
-/* Imagens dos produtos */
+/* Imagem do produto */
 .produto img {
-  width: 100%;                                   /* Preenche o container */
-  max-width: 150px;                              /* Limita o tamanho máximo */
-  height: auto;                                  /* Mantém proporção */
-  margin-bottom: 1rem;                           /* Espaço abaixo da imagem */
+  width: 100%;                                     /* Ocupa toda a largura do container */
+  max-width: 150px;                                /* Limite máximo de largura */
+  height: auto;                                    /* Mantém proporção */
+  margin-bottom: 1rem;                             /* Espaço abaixo da imagem */
 }
 
-/* Nome do produto */
+/* Nome ou descrição do produto */
 .produto p {
-  font-weight: 600;                              /* Texto em negrito médio */
-  color: var(--preto);                           /* Cor preta para contraste */
+  font-weight: 600;                                /* Fonte em negrito médio */
+  color: var(--preto);                             /* Cor preta */
+  margin-bottom: 1.5rem;                           /* Adiciona margem abaixo do parágrafo para separar do botão */
 }
 
-/* === Estilo para os botões “Saiba mais” na grade de produtos === */
+/* === Botão "Saiba mais" === */
 .btn-saiba-mais {
-  background-color: var(--cor-primaria);        /* Fundo azul principal */
-  color: var(--branco);                          /* Texto branco */
-  border: none;
-  padding: 0.5rem 1.2rem;
-  border-radius: 25px;                           /* Botão arredondado, estilo "pill" */
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 0.8rem;                            /* Espaço acima para separar do texto */
-  display: inline-block;
-  font-size: 1rem;
+  background-color: var(--cor-primaria);           /* Fundo azul principal */
+  color: var(--branco);                            /* Texto branco */
+  border: none;                                    /* Remove borda */
+  padding: 0.5rem 1.2rem;                          /* Padding interno */
+  border-radius: 25px;                             /* Bordas arredondadas */
+  cursor: pointer;                                 /* Mãozinha no hover */
+  font-weight: 600;                                /* Fonte em negrito */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+  margin-top: auto;                                /* Empurra o botão para o fundo do card */
+  margin-bottom: 1rem;                             /* Espaço inferior para não colar no limite do card */
+  display: inline-block;                           /* Exibe como inline-block */
+  font-size: 1rem;                                 /* Tamanho do texto */
+  align-self: center;                              /* Centraliza o botão horizontalmente */
 }
 
-/* Efeito hover: botão fica azul claro e levemente aumenta */
+/* Hover do botão */
 .btn-saiba-mais:hover {
-  background-color: var(--cor-secundaria);      /* Azul claro */
-  transform: scale(1.05);                        /* Aumenta levemente */
+  background-color: var(--cor-secundaria);         /* Muda para azul claro */
+  transform: scale(1.05);                          /* Aumenta levemente o tamanho */
 }
 
-/* Responsividade para telas menores */
+/* === Responsividade para telas menores === */
 @media (max-width: 768px) {
   .introducao h1 {
-    font-size: 1.8rem;                           /* Título menor em telas pequenas */
+    font-size: 1.8rem;                             /* Reduz o tamanho do título */
   }
 
   .produtos-grid {
-    gap: 1rem;                                  /* Espaço reduzido entre cards */
+    gap: 1rem;                                     /* Diminui o espaçamento entre os cards */
   }
 
   .produto img {
-    max-width: 100px;                           /* Imagens menores para dispositivos móveis */
+    max-width: 100px;                              /* Reduz tamanho da imagem */
   }
 
   .produto {
-    padding: 1rem;                              /* Padding menor para caber melhor */
+    padding: 1rem;                                 /* Reduz padding do card */
   }
 
-  /* Botão menor em dispositivos móveis */
   .btn-saiba-mais {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.4rem 1rem;                          /* Reduz padding do botão */
+    font-size: 0.9rem;                             /* Fonte um pouco menor */
   }
 }

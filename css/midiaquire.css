@@ -1,272 +1,352 @@
 /* === midiaquire.css - Media Queries para responsividade global === */
-@import url('/css/index.css');
 
-/* Estilos base para telas muito pequenas (ex: celulares antigos e pequenos) */
+/* Telas muito pequenas (até 320px) - celulares bem pequenos */
 @media (max-width: 320px) {
   body {
-    font-size: 14px;
-    /* Diminui o tamanho da fonte para que o texto caiba melhor em telas muito pequenas */
+    font-size: 14px; /* Define fonte pequena para caber em telas muito pequenas */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 100%;
-    /* Garante que o conteúdo ocupe toda a largura da tela disponível */
-
-    padding: 1rem;
-    /* Aplica um espaçamento interno menor para economizar espaço */
-
-    margin: 1rem;
-    /* Margem para afastar o conteúdo das bordas da tela */
+    max-width: 95%; /* Define largura quase total da tela para evitar elementos espremidos */
+    padding: 1.5rem; /* Adiciona espaçamento interno maior para melhor usabilidade */
+    margin: 1.5rem auto; /* Centraliza com margem automática e adiciona espaçamento vertical */
   }
 
   .form-contato {
-    grid-template-columns: 1fr;
-    /* Ajusta o formulário para uma única coluna para facilitar leitura e interação */
-
-    gap: 0.5rem;
-    /* Espaço menor entre os campos para economizar espaço */
+    grid-template-columns: 1fr; /* Configura o formulário para uma única coluna */
+    gap: 0.8rem; /* Espaço entre os campos do formulário */
   }
 
   .form-contato button {
-    width: 100%;
-    /* Faz o botão ocupar toda a largura do container */
+    width: 100%; /* Botão ocupa toda a largura disponível */
+    font-size: 1rem; /* Define tamanho da fonte legível para o botão */
+  }
+  
+  /* Ajustes para o rodapé em telas muito pequenas */
+  .rodape {
+    padding: 1rem 0.5rem; /* Padding interno reduzido para caber melhor em telas pequenas */
+    font-size: 0.8rem; /* Fonte menor para economizar espaço */
+    flex-wrap: wrap; /* Permite que itens do rodapé quebrem linha se necessário */
+  }
+  
+  /* Container dos links sociais */
+  .social-links {
+    gap: 0.8rem; /* Espaçamento reduzido entre os links sociais */
+    justify-content: center; /* Centraliza horizontalmente os links */
+    flex-wrap: wrap; /* Permite quebra de linha para evitar estouro */
+  }
 
-    font-size: 1rem;
-    /* Define uma fonte menor para se adaptar à tela pequena */
+  /* Estilo dos links sociais */
+  .social-link {
+    font-size: 0.9rem; /* Reduz tamanho da fonte para economizar espaço */
+  }
+
+  /* Ícones dentro dos links sociais */
+  .social-link i {
+    font-size: 1.3rem; /* Ícones menores para telas pequenas */
   }
 }
 
-/* Celulares pequenos (360px - comum em smartphones atuais pequenos) */
+/* Celulares pequenos (321px a 480px) */
 @media (min-width: 321px) and (max-width: 480px) {
   body {
-    font-size: 15px;
-    /* Aumenta o tamanho da fonte para melhor legibilidade em celulares pequenos */
+    font-size: 15px; /* Fonte um pouco maior para celulares pequenos */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 95%;
-    /* Define largura máxima para o conteúdo com uma pequena margem lateral */
-
-    padding: 1.5rem;
-    /* Aumenta o espaçamento interno para mais conforto visual */
-
-    margin: 1.5rem auto;
-    /* Centraliza o conteúdo horizontalmente e aplica margem superior/inferior */
+    max-width: 95%; /* Largura quase total da tela */
+    padding: 2rem; /* Espaçamento interno confortável */
+    margin: 2rem auto; /* Centraliza com margem automática */
   }
 
   .form-contato {
-    grid-template-columns: 1fr;
-    /* Mantém o formulário em uma única coluna */
-
-    gap: 0.75rem;
-    /* Espaçamento intermediário entre os campos */
+    grid-template-columns: 1fr; /* Formulário em uma coluna */
+    gap: 1rem; /* Espaço entre campos */
   }
 
   .form-contato button {
-    width: 100%;
-    /* Botão ocupa toda a largura disponível */
+    width: 100%; /* Botão ocupa toda largura */
+    font-size: 1.1rem; /* Fonte maior para melhor legibilidade */
+  }
+  
+  /* Rodapé para celulares pequenos */
+  .rodape {
+    padding: 1.2rem 1rem; /* Padding um pouco maior */
+    font-size: 0.9rem; /* Fonte um pouco maior */
+    flex-wrap: wrap; /* Permite quebra de linha */
+  }
+  
+  /* Container dos links sociais */
+  .social-links {
+    gap: 1rem; /* Espaçamento um pouco maior entre links */
+    justify-content: center; /* Centraliza os links */
+    flex-wrap: wrap; /* Permite quebra de linha */
+  }
 
-    font-size: 1.05rem;
-    /* Fonte levemente maior para melhor leitura */
+  /* Links sociais */
+  .social-link {
+    font-size: 1rem; /* Fonte padrão para links sociais */
+  }
+
+  /* Ícones sociais */
+  .social-link i {
+    font-size: 1.5rem; /* Ícones um pouco maiores */
   }
 }
 
-/* Celulares médios a grandes e pequenos tablets (481px - 768px) */
+/* Celulares médios a tablets pequenos (481px a 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   body {
-    font-size: 16px;
-    /* Fonte confortável para dispositivos médios */
+    font-size: 16px; /* Fonte padrão para tablets pequenos */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 700px;
-    /* Define largura máxima fixa para facilitar a leitura */
-
-    padding: 2rem;
-    /* Espaçamento interno maior para melhor estética */
-
-    margin: 2rem auto;
-    /* Margem superior e inferior e centralização horizontal */
+    max-width: 700px; /* Limita largura para evitar excesso */
+    padding: 2.5rem 3rem; /* Espaçamento confortável nas laterais */
+    margin: 2.5rem auto; /* Centraliza com margem automática */
   }
 
   .form-contato {
-    grid-template-columns: 1fr;
-    /* Formulário em coluna única */
-
-    gap: 1rem;
-    /* Espaçamento mais generoso entre campos */
+    grid-template-columns: 1fr; /* Formulário em uma coluna */
+    gap: 1.2rem; /* Espaço maior entre campos */
   }
 
   .form-contato button {
-    width: 70%;
-    /* Botão ocupa 70% da largura do container para um equilíbrio visual */
+    width: 80%; /* Botão ocupa 80% da largura */
+    font-size: 1.15rem; /* Fonte maior para facilitar toque */
+  }
+  
+  /* Rodapé para tablets pequenos */
+  .rodape {
+    padding: 1.5rem 2rem; /* Padding maior para melhor espaçamento */
+    font-size: 1rem; /* Fonte maior */
+    flex-wrap: nowrap; /* Mantém itens em uma linha */
+  }
+  
+  /* Container dos links sociais */
+  .social-links {
+    gap: 1.2rem; /* Espaçamento maior entre links */
+    justify-content: flex-start; /* Alinha links à esquerda */
+    flex-wrap: nowrap; /* Sem quebra de linha */
+  }
 
-    font-size: 1.1rem;
-    /* Tamanho da fonte maior para destaque */
+  /* Links sociais */
+  .social-link {
+    font-size: 1.1rem; /* Fonte maior */
+  }
+
+  /* Ícones sociais */
+  .social-link i {
+    font-size: 1.8rem; /* Ícones maiores */
   }
 }
 
-/* Tablets maiores e telas pequenas de notebook (769px - 1024px) */
+/* Tablets maiores e telas pequenas de notebook (769px a 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
-    font-size: 17px;
-    /* Fonte maior para telas maiores */
+    font-size: 17px; /* Fonte maior para tablets maiores e notebooks pequenos */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 750px;
-    /* Aumenta a largura máxima para tablets maiores */
-
-    padding: 2rem 3rem;
-    /* Padding horizontal maior para mais espaço lateral */
-
-    margin: 2rem auto;
-    /* Margens superior e inferior e centralização */
+    max-width: 700px; /* Limita largura */
+    padding: 3rem 4rem; /* Padding maior para mais espaço */
+    margin: 3rem auto; /* Centraliza conteúdo */
   }
 
   .form-contato {
-    grid-template-columns: 2fr 1fr;
-    /* Layout com duas colunas: primeira maior para campos maiores, segunda menor */
-
-    gap: 1rem;
-    /* Espaçamento entre colunas */
+    grid-template-columns: 2fr 1fr; /* Formulário com duas colunas */
+    gap: 1rem; /* Espaçamento entre colunas */
   }
 
   .form-contato button {
-    width: 150px;
-    /* Largura fixa para consistência visual */
+    width: 150px; /* Largura fixa para botão */
+    font-size: 1.2rem; /* Fonte maior */
+  }
+  
+  /* Rodapé para tablets maiores */
+  .rodape {
+    padding: 2rem 3rem; /* Padding confortável */
+    font-size: 1.1rem; /* Fonte maior */
+    flex-wrap: nowrap; /* Mantém itens em linha */
+  }
+  
+  /* Container dos links sociais */
+  .social-links {
+    gap: 1.5rem; /* Espaçamento maior */
+    justify-content: flex-start; /* Alinha à esquerda */
+    flex-wrap: nowrap; /* Sem quebra */
+  }
 
-    font-size: 1.1rem;
-    /* Fonte confortável para leitura */
+  /* Links sociais */
+  .social-link {
+    font-size: 1.2rem; /* Fonte maior */
+  }
+
+  /* Ícones sociais */
+  .social-link i {
+    font-size: 2rem; /* Ícones maiores */
   }
 }
 
-/* Tela de notebooks e desktops médios (1025px - 1440px) */
+/* Notebooks e desktops médios (1025px a 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
   body {
-    font-size: 18px;
-    /* Fonte maior para monitores de tamanho médio */
+    font-size: 18px; /* Fonte maior para desktops médios */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 900px;
-    /* Maior largura para desktop médio */
-
-    padding: 3rem 4rem;
-    /* Padding mais generoso para conforto visual */
-
-    margin: 3rem auto;
-    /* Margem para centralizar e espaçar verticalmente */
+    max-width: 700px; /* Limite de largura */
+    padding: 3rem 4rem; /* Padding confortável */
+    margin: 3rem auto; /* Centraliza conteúdo */
   }
 
   .form-contato {
-    grid-template-columns: 2fr 1fr;
-    /* Layout com duas colunas para manter boa organização */
-
-    gap: 1.2rem;
-    /* Espaçamento maior entre campos */
+    grid-template-columns: 2fr 1fr; /* Formulário duas colunas */
+    gap: 1.2rem; /* Espaçamento entre colunas */
   }
 
   .form-contato button {
-    width: 180px;
-    /* Botão maior para desktop */
+    width: 150px; /* Largura fixa botão */
+    font-size: 1.2rem; /* Fonte maior */
+  }
+  
+  /* Rodapé para desktops médios */
+  .rodape {
+    padding: 2.5rem 4rem; /* Padding maior */
+    font-size: 1.2rem; /* Fonte maior */
+    flex-wrap: nowrap; /* Sem quebra de linha */
+  }
+  
+  /* Container dos links sociais */
+  .social-links {
+    gap: 1.8rem; /* Espaçamento maior */
+    justify-content: flex-start; /* Alinhamento à esquerda */
+    flex-wrap: nowrap; /* Sem quebra */
+  }
 
-    font-size: 1.2rem;
-    /* Fonte maior para destaque */
+  /* Links sociais */
+  .social-link {
+    font-size: 1.3rem; /* Fonte maior */
+  }
+
+  /* Ícones sociais */
+  .social-link i {
+    font-size: 2.2rem; /* Ícones maiores */
   }
 }
 
-/* Telas grandes (1441px - 1920px) */
+/* Telas grandes (1441px a 1920px) */
 @media (min-width: 1441px) and (max-width: 1920px) {
   body {
-    font-size: 19px;
-    /* Fonte um pouco maior para telas grandes */
+    font-size: 19px; /* Fonte maior para telas grandes */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 1100px;
-    /* Largura ampla para desktop grande */
-
-    padding: 4rem 6rem;
-    /* Padding horizontal amplo para conforto visual */
-
-    margin: 3rem auto;
-    /* Margem para afastar e centralizar */
+    max-width: 700px; /* Limite largura */
+    padding: 4rem 5rem; /* Padding maior */
+    margin: 3rem auto; /* Centraliza */
   }
 
   .form-contato {
-    grid-template-columns: 3fr 1fr;
-    /* Layout com a primeira coluna maior para destaque nos campos mais importantes */
-
-    gap: 1.5rem;
-    /* Espaçamento amplo entre os campos */
+    grid-template-columns: 3fr 1fr; /* Formulário três colunas e botão menor */
+    gap: 1.5rem; /* Espaçamento maior */
   }
 
   .form-contato button {
-    width: 200px;
-    /* Botão grande para facilidade de clique */
+    width: 150px; /* Largura fixa */
+    font-size: 1.3rem; /* Fonte maior */
+  }
+  
+  /* Rodapé para telas grandes */
+  .rodape {
+    padding: 3rem 5rem; /* Padding maior */
+    font-size: 1.3rem; /* Fonte maior */
+  }
+  
+  /* Container dos links sociais */
+  .social-links {
+    gap: 2rem; /* Espaçamento maior */
+    justify-content: flex-start; /* Alinha à esquerda */
+  }
 
-    font-size: 1.3rem;
-    /* Fonte grande para destaque */
+  /* Links sociais */
+  .social-link {
+    font-size: 1.4rem; /* Fonte maior */
+  }
+
+  /* Ícones sociais */
+  .social-link i {
+    font-size: 2.5rem; /* Ícones maiores */
   }
 }
 
 /* TVs e telas muito grandes (1921px em diante) */
 @media (min-width: 1921px) {
   body {
-    font-size: 20px;
-    /* Fonte muito maior para telas gigantes */
+    font-size: 20px; /* Fonte maior para TVs e telas muito grandes */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 1400px;
-    /* Máxima largura para telas muito grandes */
-
-    padding: 5rem 8rem;
-    /* Padding lateral muito generoso para equilíbrio */
-
-    margin: 4rem auto;
-    /* Margem maior para espaçamento vertical */
+    max-width: 700px; /* Limite largura */
+    padding: 4rem 6rem; /* Padding maior */
+    margin: 4rem auto; /* Margem maior */
   }
 
   .form-contato {
-    grid-template-columns: 3fr 1fr;
-    /* Mantém o layout com colunas proporcionais para telas grandes */
-
-    gap: 2rem;
-    /* Espaçamento grande entre os campos */
+    grid-template-columns: 3fr 1fr; /* Mesma configuração do desktop grande */
+    gap: 2rem; /* Espaçamento maior */
   }
 
   .form-contato button {
-    width: 220px;
-    /* Botão maior para facilidade de uso em telas grandes */
+    width: 150px; /* Largura fixa */
+    font-size: 1.4rem; /* Fonte maior */
+  }
+  
+  /* Rodapé para TVs e telas muito grandes */
+  .rodape {
+    padding: 3.5rem 6rem; /* Padding máximo */
+    font-size: 1.4rem; /* Fonte maior */
+  }
+  
+  /* Container dos links sociais */
+  .social-links {
+    gap: 2.5rem; /* Espaçamento máximo */
+    justify-content: flex-start; /* Alinha à esquerda */
+  }
 
-    font-size: 1.4rem;
-    /* Fonte muito grande para destaque */
+  /* Links sociais */
+  .social-link {
+    font-size: 1.5rem; /* Fonte maior */
+  }
+
+  /* Ícones sociais */
+  .social-link i {
+    font-size: 2.7rem; /* Ícones maiores */
   }
 }
 
+/* Ajustes específicos para banner em telas pequenas */
 @media (max-width: 768px) {
   .banner,
   .banner-img {
-    height: 200px;
+    height: 200px; /* Altura reduzida do banner e imagem de fundo */
   }
 
   .banner-logo {
-    max-width: 160px; /* Reduz logo em tablets */
+    max-width: 160px; /* Logo menor */
   }
 
   .banner h1 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Tamanho do título menor */
   }
 }
 
 @media (max-width: 480px) {
   .banner-logo {
-    max-width: 120px; /* Logo menor em celulares */
+    max-width: 120px; /* Logo ainda menor em telas muito pequenas */
   }
 
   .banner h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Tamanho do título reduzido */
   }
 }

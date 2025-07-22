@@ -4,7 +4,7 @@
 
 /* === CONTAINER DO FORMULÁRIO DE CONTATO === */
 .conteudo-contato {
-  max-width: 600px; /* Limita a largura máxima para evitar containers muito largos */
+  max-width: 00px; /* Limita a largura máxima para evitar containers muito largos */
   margin: 2rem auto 4rem; /* Margem superior e inferior com centralização horizontal */
   padding: 1.5rem 1.5rem; /* Espaço interno ao redor do conteúdo */
 

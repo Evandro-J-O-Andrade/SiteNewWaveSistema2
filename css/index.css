@@ -1,4 +1,4 @@
-@import url('/css/midiaquire.css');
+@import url('/css/midiaquire.css'); /* Importa o arquivo de media queries para responsividade */
 
 /* === VARIÁVEIS GLOBAIS PARA CORES E FONTES === */
 :root {
@@ -201,7 +201,7 @@ nav a:hover {
 }
 
 /* === ESTILO DOS CARDS DE PRODUTO === */
-.produto {
+.produto-home {
   text-align: center;              /* Centraliza texto e imagens dentro do card */
   padding: 1rem;                  /* Espaçamento interno do card */
   border-radius: 8px;             /* Bordas arredondadas para suavidade */
@@ -211,12 +211,12 @@ nav a:hover {
 }
 
 /* === ANIMAÇÃO NO HOVER DOS PRODUTOS === */
-.produto:hover {
+.produto-home:hover {
   transform: translateY(-5px);     /* Levanta o card ao passar o mouse */
 }
 
 /* === IMAGENS DOS PRODUTOS === */
-.produto img {
+.produto-home img {
   width: 100%;                    /* Imagem ocupa toda a largura do container */
   height: auto;                   /* Mantém proporção da imagem */
   max-width: 150px;               /* Limita a largura máxima da imagem */
@@ -226,7 +226,7 @@ nav a:hover {
 }
 
 /* === DESCRIÇÃO DOS PRODUTOS === */
-.produto p {
+.produto-home p {
   font-weight: 500;               /* Peso médio da fonte para texto */
   color: var(--cinza-claro);     /* Cor clara para o texto */
 }
@@ -292,104 +292,7 @@ nav a:hover {
   transform: translateY(-7px);     /* Levanta o card um pouco mais que o padrão */
 }
 
-/* === RESPONSIVIDADE PARA TELAS MENORES === */
-@media (max-width: 768px) {
-  /* Navbar: muda layout para coluna em telas pequenas */
-  .nav-container {
-    flex-direction: column;         /* Itens da navbar empilhados verticalmente */
-    gap: 0.8rem;                   /* Espaço menor entre itens */
-  }
-
-  /* Menu: também vira coluna e tira margem lateral */
-  nav {
-    margin-left: 0;                 /* Remove margem para o lado */
-    gap: 1rem;                     /* Espaço entre links */
-    flex-direction: column;        /* Links empilhados verticalmente */
-  }
-
-  /* Espaçamento maior entre links */
-  nav a {
-    margin: 0.5rem 0;              /* Margem vertical para espaçamento dos links */
-    white-space: normal;           /* Permite quebra de linha nos links para mobile */
-  }
-
-  /* Ajusta tamanho da logo no banner */
-  .logo-central {
-    max-width: 150px;              /* Reduz tamanho da logo central */
-  }
-
-  /* Ajusta tamanho dos logos na navbar */
-  .logo-icon {
-    max-width: 45px;               /* Reduz tamanho do ícone da logo */
-  }
-
-  .logo-nome {
-    max-width: 160px;              /* Reduz tamanho do nome da logo */
-  }
-
-  /* Reduz tamanho dos títulos */
-  h1 {
-    font-size: 2rem;               /* Tamanho menor do título */
-  }
-
-  /* Reduz tamanho do slogan */
-  .slogan {
-    font-size: 1rem;               /* Tamanho menor do slogan */
-  }
-
-  /* Ajusta grade de produtos para telas pequenas */
-  .produtos-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Colunas menores para mobile */
-  }
-
-  /* Ajusta tamanho das imagens dos produtos */
-  .produto img {
-    max-width: 100px;              /* Imagens menores no mobile */
-  }
-
-  /* Reduz margem e padding do conteúdo para melhor visualização */
-  .conteudo {
-    margin: 1rem;                 /* Margem reduzida */
-    padding: 1rem;               /* Padding reduzido */
-  }
-
-  /* Ajusta altura do banner para dispositivos móveis */
-  .banner {
-    height: 220px;               /* Altura menor para o banner */
-    padding: 1rem;               /* Padding interno */
-  }
-
-  /* Ajusta altura da imagem de fundo no banner */
-  .banner-img {
-    height: 220px;               /* Ajusta altura da imagem para o banner */
-  }
-
-  /* Ajusta tamanho da logo no banner */
-  .banner-logo {
-    max-width: 150px;            /* Tamanho menor da logo */
-    margin-bottom: 10px;         /* Espaço reduzido abaixo da logo */
-  }
-
-  /* Ajusta tamanho do título no banner */
-  .banner h1 {
-    font-size: 1.8rem;           /* Fonte menor para títulos */
-  }
-
-  /* Ajusta tamanho do slogan no banner */
-  .slogan {
-    font-size: 1rem;             /* Fonte menor para slogan */
-    margin-top: 6px;             /* Espaço menor acima do slogan */
-  }
-
-  /* RODAPÉ RESPONSIVO */
-  .rodape {
-    padding: 1.5rem 1rem;         /* Padding reduzido para telas menores */
-    font-size: 0.9rem;            /* Fonte um pouco menor para o rodapé */
-    flex-wrap: wrap;             /* Permite quebra de conteúdo no rodapé */
-  }
-}
-
-/* === ESTILO PARA OS LINKS DAS REDES SOCIAIS COM ÍCONES FONT AWESOME === */
+/* === ESTILOS PARA LINKS DAS REDES SOCIAIS (SEM RESPONSIVIDADE) === */
 .social-links {
   display: flex;                    /* Usa flexbox para alinhar os links das redes sociais em linha */
   justify-content: center;          /* Centraliza os links horizontalmente */
