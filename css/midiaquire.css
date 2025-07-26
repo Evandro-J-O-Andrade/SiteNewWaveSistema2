@@ -3,235 +3,215 @@
 /* Telas muito pequenas (até 320px) - celulares bem pequenos */
 @media (max-width: 320px) {
   body {
-    font-size: 14px; /* Define fonte pequena para caber em telas muito pequenas */
+    font-size: 14px; /* Define fonte menor para caber em telas muito pequenas */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 95%; /* Define largura quase total da tela para evitar elementos espremidos */
-    padding: 1.5rem; /* Adiciona espaçamento interno maior para melhor usabilidade */
-    margin: 1.5rem auto; /* Centraliza com margem automática e adiciona espaçamento vertical */
+    max-width: 95%;         /* Largura máxima próxima da tela, com margem */
+    padding: 1.5rem;        /* Espaçamento interno confortável */
+    margin: 1.5rem auto;    /* Espaço externo com centralização horizontal */
   }
 
   .form-contato {
-    grid-template-columns: 1fr; /* Configura o formulário para uma única coluna */
-    gap: 0.8rem; /* Espaço entre os campos do formulário */
+    grid-template-columns: 1fr; /* Formulário em uma única coluna */
+    gap: 0.8rem;                /* Espaço entre elementos do formulário */
   }
 
   .form-contato button {
-    width: 100%; /* Botão ocupa toda a largura disponível */
-    font-size: 1rem; /* Define tamanho da fonte legível para o botão */
+    width: 100%;         /* Botão ocupa toda a largura disponível */
+    font-size: 1rem;     /* Fonte legível no botão */
   }
-  
-  /* Ajustes para o rodapé em telas muito pequenas */
+
   .rodape {
-    padding: 1rem 0.5rem; /* Padding interno reduzido para caber melhor em telas pequenas */
-    font-size: 0.8rem; /* Fonte menor para economizar espaço */
-    flex-wrap: wrap; /* Permite que itens do rodapé quebrem linha se necessário */
+    padding: 1rem 0.5rem; /* Menor espaçamento interno no rodapé */
+    font-size: 0.8rem;    /* Fonte menor para o rodapé */
+    flex-wrap: wrap;      /* Permite quebra de linha se necessário */
   }
-  
-  /* Container dos links sociais */
+
   .social-links {
-    gap: 0.8rem; /* Espaçamento reduzido entre os links sociais */
-    justify-content: center; /* Centraliza horizontalmente os links */
-    flex-wrap: wrap; /* Permite quebra de linha para evitar estouro */
+    gap: 0.8rem;            /* Espaço menor entre ícones sociais */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    flex-wrap: wrap;        /* Permite quebra de linha para ícones */
   }
 
-  /* Estilo dos links sociais */
   .social-link {
-    font-size: 0.9rem; /* Reduz tamanho da fonte para economizar espaço */
+    font-size: 0.9rem; /* Fonte um pouco menor nos links sociais */
   }
 
-  /* Ícones dentro dos links sociais */
   .social-link i {
-    font-size: 1.3rem; /* Ícones menores para telas pequenas */
+    font-size: 1.3rem; /* Ícones um pouco menores para delicadeza */
   }
 }
 
 /* Celulares pequenos (321px a 480px) */
 @media (min-width: 321px) and (max-width: 480px) {
   body {
-    font-size: 15px; /* Fonte um pouco maior para celulares pequenos */
+    font-size: 15px; /* Fonte um pouco maior para telas um pouco maiores */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 95%; /* Largura quase total da tela */
-    padding: 2rem; /* Espaçamento interno confortável */
-    margin: 2rem auto; /* Centraliza com margem automática */
+    max-width: 95%;        /* Largura próxima da tela */
+    padding: 2rem;         /* Mais espaçamento interno para conforto */
+    margin: 2rem auto;     /* Espaçamento externo e centralização */
   }
 
   .form-contato {
-    grid-template-columns: 1fr; /* Formulário em uma coluna */
-    gap: 1rem; /* Espaço entre campos */
+    grid-template-columns: 1fr; /* Formulário em coluna única */
+    gap: 1rem;                  /* Espaço maior entre campos */
   }
 
   .form-contato button {
-    width: 100%; /* Botão ocupa toda largura */
-    font-size: 1.1rem; /* Fonte maior para melhor legibilidade */
-  }
-  
-  /* Rodapé para celulares pequenos */
-  .rodape {
-    padding: 1.2rem 1rem; /* Padding um pouco maior */
-    font-size: 0.9rem; /* Fonte um pouco maior */
-    flex-wrap: wrap; /* Permite quebra de linha */
-  }
-  
-  /* Container dos links sociais */
-  .social-links {
-    gap: 1rem; /* Espaçamento um pouco maior entre links */
-    justify-content: center; /* Centraliza os links */
-    flex-wrap: wrap; /* Permite quebra de linha */
+    width: 100%;         /* Botão ocupa toda a largura */
+    font-size: 1.1rem;   /* Fonte um pouco maior no botão */
   }
 
-  /* Links sociais */
+  .rodape {
+    padding: 1.2rem 1rem; /* Aumento no padding do rodapé */
+    font-size: 0.9rem;    /* Fonte um pouco maior */
+    flex-wrap: wrap;      /* Permite quebra de linha */
+  }
+
+  .social-links {
+    gap: 1rem;             /* Espaço maior entre ícones sociais */
+    justify-content: center; /* Centralização horizontal */
+    flex-wrap: wrap;        /* Quebra de linha para os ícones */
+  }
+
   .social-link {
     font-size: 1rem; /* Fonte padrão para links sociais */
   }
 
-  /* Ícones sociais */
   .social-link i {
-    font-size: 1.5rem; /* Ícones um pouco maiores */
+    font-size: 1.4rem; /* Ícones um pouco maiores para melhor visibilidade */
   }
 }
 
 /* Celulares médios a tablets pequenos (481px a 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   body {
-    font-size: 16px; /* Fonte padrão para tablets pequenos */
+    font-size: 16px; /* Fonte maior para telas maiores */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 700px; /* Limita largura para evitar excesso */
-    padding: 2.5rem 3rem; /* Espaçamento confortável nas laterais */
-    margin: 2.5rem auto; /* Centraliza com margem automática */
+    max-width: 700px;           /* Limite máximo de largura para leitura */
+    padding: 2.5rem 3rem;       /* Espaçamento mais confortável */
+    margin: 2.5rem auto;        /* Espaço externo e centralização */
   }
 
   .form-contato {
     grid-template-columns: 1fr; /* Formulário em uma coluna */
-    gap: 1.2rem; /* Espaço maior entre campos */
+    gap: 1.2rem;                /* Espaço maior entre campos */
   }
 
   .form-contato button {
-    width: 80%; /* Botão ocupa 80% da largura */
-    font-size: 1.15rem; /* Fonte maior para facilitar toque */
+    width: 80%;           /* Botão ocupa 80% da largura do formulário */
+    font-size: 1.15rem;   /* Fonte maior no botão */
   }
-  
-  /* Rodapé para tablets pequenos */
+
   .rodape {
-    padding: 1.5rem 2rem; /* Padding maior para melhor espaçamento */
-    font-size: 1rem; /* Fonte maior */
-    flex-wrap: nowrap; /* Mantém itens em uma linha */
+    padding: 1.5rem 2rem; /* Padding maior no rodapé */
+    font-size: 1rem;      /* Fonte padrão */
+    flex-wrap: nowrap;    /* Não permite quebra de linha */
   }
-  
-  /* Container dos links sociais */
+
   .social-links {
-    gap: 1.2rem; /* Espaçamento maior entre links */
-    justify-content: flex-start; /* Alinha links à esquerda */
-    flex-wrap: nowrap; /* Sem quebra de linha */
+    gap: 1.2rem;               /* Espaço aumentado entre ícones */
+    justify-content: flex-start; /* Alinha ícones à esquerda */
+    flex-wrap: nowrap;          /* Sem quebra de linha */
   }
 
-  /* Links sociais */
   .social-link {
-    font-size: 1.1rem; /* Fonte maior */
+    font-size: 1.1rem; /* Fonte levemente maior nos links sociais */
   }
 
-  /* Ícones sociais */
   .social-link i {
-    font-size: 1.8rem; /* Ícones maiores */
+    font-size: 1.5rem; /* Ícones um pouco menores que o original */
   }
 }
 
 /* Tablets maiores e telas pequenas de notebook (769px a 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
-    font-size: 17px; /* Fonte maior para tablets maiores e notebooks pequenos */
+    font-size: 17px; /* Fonte maior para telas maiores */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 700px; /* Limita largura */
-    padding: 3rem 4rem; /* Padding maior para mais espaço */
-    margin: 3rem auto; /* Centraliza conteúdo */
+    max-width: 700px;           /* Limita largura para conforto visual */
+    padding: 3rem 4rem;         /* Padding maior para espaços maiores */
+    margin: 3rem auto;          /* Espaço externo e centralização */
   }
 
   .form-contato {
-    grid-template-columns: 2fr 1fr; /* Formulário com duas colunas */
-    gap: 1rem; /* Espaçamento entre colunas */
+    grid-template-columns: 2fr 1fr; /* Formulário com duas colunas: maior e menor */
+    gap: 1rem;                     /* Espaçamento entre as colunas */
   }
 
   .form-contato button {
-    width: 150px; /* Largura fixa para botão */
-    font-size: 1.2rem; /* Fonte maior */
+    width: 150px;          /* Largura fixa para o botão */
+    font-size: 1.2rem;    /* Fonte maior no botão */
   }
-  
-  /* Rodapé para tablets maiores */
+
   .rodape {
-    padding: 2rem 3rem; /* Padding confortável */
-    font-size: 1.1rem; /* Fonte maior */
-    flex-wrap: nowrap; /* Mantém itens em linha */
+    padding: 2rem 3rem; /* Padding maior para o rodapé */
+    font-size: 1.1rem;  /* Fonte maior */
+    flex-wrap: nowrap;  /* Sem quebra de linha */
   }
-  
-  /* Container dos links sociais */
+
   .social-links {
-    gap: 1.5rem; /* Espaçamento maior */
-    justify-content: flex-start; /* Alinha à esquerda */
-    flex-wrap: nowrap; /* Sem quebra */
+    gap: 1.5rem;               /* Espaço maior entre ícones */
+    justify-content: flex-start; /* Alinha ícones à esquerda */
+    flex-wrap: nowrap;          /* Sem quebra de linha */
   }
 
-  /* Links sociais */
   .social-link {
-    font-size: 1.2rem; /* Fonte maior */
+    font-size: 1.2rem; /* Fonte maior nos links sociais */
   }
 
-  /* Ícones sociais */
   .social-link i {
-    font-size: 2rem; /* Ícones maiores */
+    font-size: 1.6rem; /* Ajuste delicado para ícones médios */
   }
 }
 
 /* Notebooks e desktops médios (1025px a 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
   body {
-    font-size: 18px; /* Fonte maior para desktops médios */
+    font-size: 18px; /* Fonte maior para telas médias/grandes */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 700px; /* Limite de largura */
-    padding: 3rem 4rem; /* Padding confortável */
-    margin: 3rem auto; /* Centraliza conteúdo */
+    max-width: 700px;          /* Largura máxima fixa */
+    padding: 3rem 4rem;        /* Padding amplo */
+    margin: 3rem auto;         /* Espaço externo e centralização */
   }
 
   .form-contato {
-    grid-template-columns: 2fr 1fr; /* Formulário duas colunas */
-    gap: 1.2rem; /* Espaçamento entre colunas */
+    grid-template-columns: 2fr 1fr; /* Duas colunas para o formulário */
+    gap: 1.2rem;                  /* Espaçamento entre colunas */
   }
 
   .form-contato button {
-    width: 150px; /* Largura fixa botão */
-    font-size: 1.2rem; /* Fonte maior */
-  }
-  
-  /* Rodapé para desktops médios */
-  .rodape {
-    padding: 2.5rem 4rem; /* Padding maior */
-    font-size: 1.2rem; /* Fonte maior */
-    flex-wrap: nowrap; /* Sem quebra de linha */
-  }
-  
-  /* Container dos links sociais */
-  .social-links {
-    gap: 1.8rem; /* Espaçamento maior */
-    justify-content: flex-start; /* Alinhamento à esquerda */
-    flex-wrap: nowrap; /* Sem quebra */
+    width: 150px;         /* Largura fixa do botão */
+    font-size: 1.2rem;   /* Fonte do botão */
   }
 
-  /* Links sociais */
+  .rodape {
+    padding: 2.5rem 4rem; /* Padding aumentado para o rodapé */
+    font-size: 1.2rem;    /* Fonte maior */
+    flex-wrap: nowrap;    /* Sem quebra de linha */
+  }
+
+  .social-links {
+    gap: 1.8rem;               /* Espaçamento maior entre ícones */
+    justify-content: flex-start; /* Alinhamento à esquerda */
+    flex-wrap: nowrap;          /* Sem quebra de linha */
+  }
+
   .social-link {
     font-size: 1.3rem; /* Fonte maior */
   }
 
-  /* Ícones sociais */
   .social-link i {
-    font-size: 2.2rem; /* Ícones maiores */
+    font-size: 1.7rem; /* Ícones com tamanho reduzido para suavidade */
   }
 }
 
@@ -242,86 +222,78 @@
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 700px; /* Limite largura */
-    padding: 4rem 5rem; /* Padding maior */
-    margin: 3rem auto; /* Centraliza */
+    max-width: 700px;          /* Largura fixa para manter conforto de leitura */
+    padding: 4rem 5rem;        /* Padding amplo para telas grandes */
+    margin: 3rem auto;         /* Margem superior e centralização horizontal */
   }
 
   .form-contato {
-    grid-template-columns: 3fr 1fr; /* Formulário três colunas e botão menor */
-    gap: 1.5rem; /* Espaçamento maior */
+    grid-template-columns: 3fr 1fr; /* Colunas do formulário com largura maior e menor */
+    gap: 1.5rem;                   /* Espaço entre as colunas */
   }
 
   .form-contato button {
-    width: 150px; /* Largura fixa */
-    font-size: 1.3rem; /* Fonte maior */
+    width: 150px;          /* Largura fixa do botão */
+    font-size: 1.3rem;    /* Fonte maior para o botão */
   }
-  
-  /* Rodapé para telas grandes */
+
   .rodape {
-    padding: 3rem 5rem; /* Padding maior */
-    font-size: 1.3rem; /* Fonte maior */
+    padding: 3rem 5rem; /* Padding maior no rodapé */
+    font-size: 1.3rem;  /* Fonte maior */
   }
-  
-  /* Container dos links sociais */
+
   .social-links {
-    gap: 2rem; /* Espaçamento maior */
-    justify-content: flex-start; /* Alinha à esquerda */
+    gap: 2rem;                 /* Espaço maior entre ícones */
+    justify-content: flex-start; /* Alinhamento à esquerda */
   }
 
-  /* Links sociais */
   .social-link {
-    font-size: 1.4rem; /* Fonte maior */
+    font-size: 1.4rem; /* Fonte maior para links sociais */
   }
 
-  /* Ícones sociais */
   .social-link i {
-    font-size: 2.5rem; /* Ícones maiores */
+    font-size: 1.8rem; /* Ícones reduzidos para consistência visual */
   }
 }
 
 /* TVs e telas muito grandes (1921px em diante) */
 @media (min-width: 1921px) {
   body {
-    font-size: 20px; /* Fonte maior para TVs e telas muito grandes */
+    font-size: 20px; /* Fonte bem maior para telas muito grandes */
   }
 
   .conteudo-contato, .contatos-extra {
-    max-width: 700px; /* Limite largura */
-    padding: 4rem 6rem; /* Padding maior */
-    margin: 4rem auto; /* Margem maior */
+    max-width: 700px;          /* Largura fixa para leitura confortável */
+    padding: 4rem 6rem;        /* Padding mais amplo para telas muito grandes */
+    margin: 4rem auto;         /* Margem maior superior e centralização */
   }
 
   .form-contato {
-    grid-template-columns: 3fr 1fr; /* Mesma configuração do desktop grande */
-    gap: 2rem; /* Espaçamento maior */
+    grid-template-columns: 3fr 1fr; /* Layout do formulário com colunas proporcionalmente maiores */
+    gap: 2rem;                    /* Espaço maior entre colunas */
   }
 
   .form-contato button {
-    width: 150px; /* Largura fixa */
-    font-size: 1.4rem; /* Fonte maior */
-  }
-  
-  /* Rodapé para TVs e telas muito grandes */
-  .rodape {
-    padding: 3.5rem 6rem; /* Padding máximo */
-    font-size: 1.4rem; /* Fonte maior */
-  }
-  
-  /* Container dos links sociais */
-  .social-links {
-    gap: 2.5rem; /* Espaçamento máximo */
-    justify-content: flex-start; /* Alinha à esquerda */
+    width: 150px;         /* Largura fixa do botão */
+    font-size: 1.4rem;   /* Fonte maior para destaque */
   }
 
-  /* Links sociais */
+  .rodape {
+    padding: 3.5rem 6rem; /* Padding grande para rodapé */
+    font-size: 1.4rem;    /* Fonte maior */
+  }
+
+  .social-links {
+    gap: 2.5rem;              /* Espaçamento maior entre ícones sociais */
+    justify-content: flex-start; /* Alinhamento à esquerda */
+  }
+
   .social-link {
     font-size: 1.5rem; /* Fonte maior */
   }
 
-  /* Ícones sociais */
   .social-link i {
-    font-size: 2.7rem; /* Ícones maiores */
+    font-size: 1.9rem; /* Ícones suavizados para grandes telas */
   }
 }
 
@@ -329,24 +301,79 @@
 @media (max-width: 768px) {
   .banner,
   .banner-img {
-    height: 200px; /* Altura reduzida do banner e imagem de fundo */
+    height: 200px; /* Reduz altura do banner para caber em telas menores */
   }
 
   .banner-logo {
-    max-width: 160px; /* Logo menor */
+    max-width: 160px; /* Tamanho máximo reduzido para a logo no banner */
   }
 
   .banner h1 {
-    font-size: 1.8rem; /* Tamanho do título menor */
+    font-size: 1.8rem; /* Tamanho menor do título para melhor encaixe */
   }
 }
 
+/* Ajustes para telas ainda menores (até 480px) */
 @media (max-width: 480px) {
   .banner-logo {
-    max-width: 120px; /* Logo ainda menor em telas muito pequenas */
+    max-width: 120px; /* Logo menor para telas pequenas */
   }
 
   .banner h1 {
-    font-size: 1.5rem; /* Tamanho do título reduzido */
+    font-size: 1.5rem; /* Título menor para melhor leitura */
+  }
+}
+
+/* Ajustes para telas muito pequenas (até 320px) */
+@media (max-width: 320px) {
+  .banner-logo {
+    max-width: 100px; /* Logo bem pequena para celulares muito pequenos */
+  }
+
+  .banner h1 {
+    font-size: 1.3rem; /* Título pequeno para caber na tela */
+  }
+}
+/* === Estilo padrão: esconde a imagem do menu hamburguer fora do mobile === */
+.menu-hamburguer {
+  display: none;           /* Fica invisível por padrão (em telas grandes) */
+  width: 30px;             /* Tamanho da imagem */
+  cursor: pointer;         /* Cursor de clique */
+  position: absolute;      /* Posiciona no canto do header */
+  top: 20px;
+  right: 20px;
+  z-index: 1001;           /* Fica acima do menu */
+  transition: opacity 0.3s ease; /* Suaviza a transição ao ficar transparente */
+}
+
+/* === Mobile (até 560px): mostra a imagem do menu e ajusta o menu === */
+@media (max-width: 560px) {
+  .menu-hamburguer {
+    display: block; /* Mostra a imagem do menu hamburguer */
+  }
+
+  #menu-principal {
+    display: none;                /* Esconde o menu inicialmente no mobile */
+    flex-direction: column;      /* Empilha os itens */
+    gap: 10px;                   /* Espaço entre os links */
+    background-color: #ffffff;   /* Fundo branco ou o que quiser */
+    padding: 15px;
+    position: absolute;          /* Fica posicionado sobre o conteúdo */
+    top: 60px;                   /* Abaixo da imagem/menu */
+    right: 10px;                 /* A direita da tela */
+    width: calc(100% - 20px);    /* Quase toda a largura */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombrinha leve */
+    z-index: 1000;               /* Fica abaixo do botão menu */
+  }
+
+  /* Quando ativado (via JS), o menu aparece */
+  #menu-principal.menu-ativo {
+    display: flex;               /* Mostra o menu */
+  }
+
+  /* Quando o menu está aberto, a imagem fica transparente */
+  .menu-hamburguer.ativo {
+    opacity: 0;                  /* Fica invisível */
+    pointer-events: none;       /* Não permite mais clique */
   }
 }

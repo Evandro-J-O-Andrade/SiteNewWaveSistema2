@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<!-- Declara que este documento é um HTML5 -->
+<!-- Declara que este é um documento HTML5 -->
 
 <html lang="pt-br">
-<!-- Elemento raiz da página, idioma definido como português do Brasil -->
+<!-- Define o idioma da página como português brasileiro -->
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Define a codificação de caracteres para UTF-8, permitindo caracteres especiais e acentuação -->
+  <!-- Define a codificação como UTF-8 para suportar acentos e caracteres especiais -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Define a viewport para controle de responsividade em dispositivos móveis -->
+  <!-- Garante que o layout se ajuste corretamente em dispositivos móveis -->
 
   <meta name="description" content="New Wave Sistemas Digitais - Soluções tecnológicas modernas e personalizadas" />
   <!-- Descrição para motores de busca -->
@@ -18,129 +18,112 @@
   <!-- Palavras-chave para SEO -->
 
   <meta name="author" content="New Wave Sistemas Digitais" />
-  <!-- Autor do site -->
+  <!-- Define o autor do site -->
 
-  <!-- Favicons e ícones para várias plataformas, todos dentro da pasta img -->
+  <!-- Ícones e favicons da aplicação, todos localizados na pasta img -->
   <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png" />
-  <!-- Ícone favicon PNG 96x96 pixels -->
-
   <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
-  <!-- Ícone favicon no formato SVG -->
-
   <link rel="shortcut icon" href="../img/favicon.ico" />
-  <!-- Ícone padrão para navegadores antigos -->
-
   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
-  <!-- Ícone para dispositivos Apple -->
-
   <link rel="manifest" href="../site.webmanifest" />
-  <!-- Arquivo manifest para Progressive Web App -->
+  <!-- Manifesto para suporte PWA -->
 
   <title>New Wave Sistemas Digitais</title>
-  <!-- Título da página que aparece na aba do navegador -->
+  <!-- Título que aparece na aba do navegador -->
 
+  <!-- Importação do CSS global -->
   <link rel="stylesheet" href="../css/index.css" />
-  <!-- Importa o arquivo CSS externo com os estilos gerais do site -->
 
+  <!-- Importação de estilos responsivos (caso esteja separado) -->
   <link rel="stylesheet" href="/css/midiaquire.css" />
-  <!-- Importa o CSS específico para responsividade -->
 
-  <!-- Importa a biblioteca Font Awesome via CDN para usar os ícones nas redes sociais -->
+  <!-- Importação da biblioteca Font Awesome para ícones de redes sociais -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
   <!-- =================== NAVBAR =================== -->
   <header class="navbar">
-    <!-- Cabeçalho da página com barra de navegação -->
+    <!-- Cabeçalho fixo com a navegação principal -->
 
-    <div class="nav-container">
-      <!-- Container para alinhar e organizar o conteúdo da navbar -->
+    <div class="nav-container" style="position: relative;">
+      <!-- Container de navegação, com position relative para posicionar elementos absolutos como o menu -->
 
       <div class="nav-logo">
-        <!-- Área do logo da empresa -->
-
+        <!-- Logo da empresa -->
         <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon" />
-        <!-- Imagem do ícone do logo com texto alternativo para acessibilidade -->
-
+        <!-- Ícone do logo (parte gráfica) -->
         <img src="../img/lentralog.png" alt="Nome New Wave" class="logo-nome" />
-        <!-- Imagem com o nome da empresa -->
+        <!-- Logo com nome escrito -->
       </div>
 
-      <nav>
-        <!-- Elemento de navegação com links para as seções/páginas -->
+      <!-- Ícone do menu hambúrguer visível apenas em mobile -->
+      <img src="../img/menu.png" alt="Menu Mobile" class="menu-hamburguer" id="btn-menu" />
+      <!--
+        - A imagem será escondida por padrão e exibida no mobile via CSS
+        - O id "btn-menu" é usado no JavaScript para controlar o clique
+      -->
 
+      <nav id="menu-principal">
+        <!-- Navegação principal com links para páginas/seções -->
         <a href="index.html#home">Home</a>
-        <!-- Link para a seção "home" na página index.html -->
-
         <a href="/html/sobre.html#sobre">Sobre</a>
-        <!-- Link para página "Sobre" -->
-
         <a href="/html/produtos.html#produto">Produtos</a>
-        <!-- Link para página de produtos -->
-
         <a href="/html/servicos.html#servicos">Serviços</a>
-        <!-- Link para página de serviços -->
-
         <a href="/html/contato.html#contato">Contato</a>
-        <!-- Link para página de contato -->
       </nav>
     </div>
   </header>
 
   <!-- =================== CONTEÚDO PRINCIPAL =================== -->
   <main class="main-content">
-    <!-- Conteúdo principal da página -->
+    <!-- Área principal da página -->
 
     <section class="banner" id="home">
-      <!-- Seção banner com ID "home" para referência nos links -->
+      <!-- Seção do banner principal da home -->
 
-      <!-- Imagem de fundo do banner -->
       <img src="/img/tsunami.png" alt="Banner Serviços" class="banner-img" />
+      <!-- Imagem de fundo para o banner -->
 
-      <!-- Container para logo, título principal e slogan, todos centralizados -->
       <div class="banner-conteudo">
-        <!-- Container flex vertical para logo e textos -->
+        <!-- Conteúdo sobreposto ao banner -->
 
         <img src="../img/logoicon.png" alt="Logomarca New Wave" class="banner-logo" />
-        <!-- Logomarca central -->
+        <!-- Logo central no banner -->
 
         <h1>New Wave Sistemas Digitais</h1>
-        <!-- Título principal da página, fica abaixo da logo -->
+        <!-- Título principal da empresa -->
 
         <p class="slogan">Uma nova onda de tecnologia</p>
-        <!-- Slogan da empresa, abaixo do título -->
+        <!-- Frase de efeito / slogan -->
       </div>
     </section>
 
     <section class="conteudo">
-      <!-- Seção de conteúdo textual -->
+      <!-- Texto institucional da empresa -->
 
       <h2>Transformamos Tecnologia em Solução</h2>
-      <!-- Título secundário -->
+      <!-- Título da seção -->
 
       <p>
         A <strong>New Wave</strong> oferece sistemas digitais modernos e personalizados para empresas que desejam
         profissionalizar seus processos com eficiência, segurança e performance.
       </p>
-      <!-- Parágrafo explicativo com destaque para o nome da empresa -->
+      <!-- Texto descritivo com destaque para o nome da empresa -->
     </section>
 
     <section class="conteudo destaques">
-      <!-- Seção para destacar produtos -->
+      <!-- Destaques de produtos -->
 
       <h2>Nossos Destaques</h2>
       <!-- Título da seção -->
 
       <div class="produtos-grid">
-        <!-- Container em grid para organizar os produtos destacados -->
+        <!-- Grid com produtos em destaque -->
 
         <div class="produto produto-home">
           <img src="../img/produto1.jpeg" alt="Produto 1" />
-          <!-- Imagem do produto 1 com texto alternativo -->
-
           <p>Controle de Orçamentos</p>
-          <!-- Nome ou descrição curta do produto -->
         </div>
 
         <div class="produto produto-home">
@@ -168,37 +151,38 @@
 
   <!-- =================== RODAPÉ =================== -->
   <footer class="rodape">
-    <!-- Rodapé da página -->
+    <!-- Rodapé com redes sociais e marca -->
 
     <img src="../img/lentralog.png" alt="Logo Rodapé" />
-    <!-- Imagem do logo usado no rodapé -->
+    <!-- Logo usado no rodapé -->
 
     <p>&copy; 2017 New Wave Sistemas Digitais</p>
-    <!-- Texto de direitos autorais -->
+    <!-- Direitos autorais -->
 
     <div class="social-links">
-      <!-- Container dos links sociais -->
+      <!-- Links sociais com ícones -->
 
       <a href="https://wa.me/5511910669810" target="_blank" title="Converse pelo WhatsApp" class="social-link">
         <i class="fab fa-whatsapp"></i> WhatsApp
-        <!-- Ícone do WhatsApp da Font Awesome seguido do texto -->
       </a>
 
       <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" title="Siga no Instagram" class="social-link">
         <i class="fab fa-instagram"></i> Instagram
-        <!-- Ícone do Instagram da Font Awesome seguido do texto -->
       </a>
 
       <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" title="Acompanhe no Facebook" class="social-link">
         <i class="fab fa-facebook"></i> Facebook
-        <!-- Ícone do Facebook da Font Awesome seguido do texto -->
       </a>
 
       <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" title="Veja no LinkedIn" class="social-link">
         <i class="fab fa-linkedin"></i> LinkedIn
-        <!-- Ícone do LinkedIn da Font Awesome seguido do texto -->
       </a>
     </div>
   </footer>
+
+  <!-- =================== SCRIPT JS =================== -->
+  <script src="../js/index.js"></script>
+  <!-- Arquivo JavaScript externo que irá controlar o menu mobile -->
 </body>
+
 </html>

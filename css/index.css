@@ -2,329 +2,304 @@
 
 /* === VARIÁVEIS GLOBAIS PARA CORES E FONTES === */
 :root {
-  --cor-primaria: #0077b6;           /* Azul principal usado no site */
-  --cor-secundaria: #90e0ef;         /* Azul claro para destaques e detalhes */
-  --cor-escura: #023e8a;             /* Azul escuro usado em banners e degradês */
+  --cor-primaria: #0077b6;           /* Define a cor azul principal usada no site */
+  --cor-secundaria: #90e0ef;         /* Define um azul claro para detalhes e destaques */
+  --cor-escura: #023e8a;             /* Azul escuro usado em banners e efeitos de degradê */
   --cinza-claro: #e0e0e0;            /* Cinza claro para textos e fundos suaves */
-  --cinza-escuro: #d0d0d0;           /* Cinza um pouco mais escuro (reserva) */
-  --cinza-preto: #1a1a1a;            /* Cor base escura usada como fundo geral */
-  --preto: #111111;                  /* Preto intenso para textos de destaque */
-  --branco: #ffffff;                 /* Branco puro para fundo claro */
-  --cor-primaria-escura: #004a75;   /* Azul escuro para hover do botão, mais próximo do preto */
-  --fonte-principal: 'Segoe UI', sans-serif; /* Fonte geral do site */
+  --cinza-escuro: #d0d0d0;           /* Cinza um pouco mais escuro, usado como reserva */
+  --cinza-preto: #1a1a1a;            /* Cor escura usada como fundo geral da página */
+  --preto: #111111;                  /* Preto intenso para textos com maior destaque */
+  --branco: #ffffff;                 /* Branco puro, usado para fundos claros e textos */
+  --cor-primaria-escura: #004a75;   /* Azul escuro para efeitos hover nos botões */
+  --fonte-principal: 'Segoe UI', sans-serif; /* Fonte principal usada no site */
 }
 
 /* === RESET GERAL DE ESTILOS === */
 * {
-  margin: 0;                         /* Remove margem padrão de todos elementos para evitar espaçamentos inesperados */
-  padding: 0;                        /* Remove padding padrão para padronizar espaçamentos */
-  box-sizing: border-box;            /* Inclui padding e borda dentro do cálculo do tamanho total do elemento */
+  margin: 0;                         /* Remove margens padrão de todos os elementos */
+  padding: 0;                        /* Remove espaçamentos internos padrão */
+  box-sizing: border-box;           /* Inclui padding e borda na largura e altura totais */
 }
 
-/* === ESTILO DO BODY (FUNDO ESCURO) === */
+/* === ESTILO DO BODY === */
 body {
-  font-family: var(--fonte-principal);  /* Define a fonte principal do site */
-  background: linear-gradient(           /* Aplica degradê vertical como fundo da página */
-    180deg,
-    var(--cinza-preto) 0%,              /* Começa com cinza preto no topo */
-    var(--cinza-preto) 40%,             /* Mantém cinza preto até 40% da altura */
-    var(--cor-primaria) 100%            /* Transição para azul principal no fim */
-  );
-  color: var(--cinza-claro);            /* Cor clara para texto garantindo contraste no fundo escuro */
-  min-height: 100vh;                    /* Garante que o corpo tenha altura mínima da tela inteira */
-  overflow-x: hidden;                   /* Previne scroll horizontal em caso de conteúdo que ultrapasse largura */
+  font-family: var(--fonte-principal); /* Aplica a fonte definida nas variáveis globais */
+  background: linear-gradient(180deg, var(--cinza-preto) 0%, var(--cinza-preto) 40%, var(--cor-primaria) 100%);
+  /* Fundo com degradê do cinza-preto para azul principal, de cima para baixo */
+  color: var(--cinza-claro);        /* Cor clara para o texto, facilitando leitura */
+  min-height: 100vh;                /* Altura mínima da página igual à altura da tela */
+  overflow-x: hidden;               /* Evita rolagem horizontal indesejada */
 }
 
-/* === NAVBAR SUPERIOR === */
+/* === NAVBAR === */
 .navbar {
-  background: linear-gradient(          /* Aplica degradê similar ao do body para a navbar */
-    180deg,
-    var(--cinza-preto) 0%,
-    var(--cinza-preto) 40%,
-    var(--cor-primaria) 100%
-  );
-  padding: 1rem 2rem;                   /* Espaçamento interno da barra: 1rem vertical e 2rem horizontal */
-  display: flex;                        /* Usa flexbox para organizar itens na horizontal */
-  justify-content: space-between;      /* Espaça logo e menu para os extremos */
-  align-items: center;                  /* Alinha verticalmente ao centro */
-  color: var(--branco);                 /* Cor do texto branco */
-  flex-wrap: wrap;                     /* Permite que itens quebrem linha no mobile */
+  background: linear-gradient(180deg, var(--cinza-preto) 0%, var(--cinza-preto) 40%, var(--cor-primaria) 100%);
+  /* Fundo degradê igual ao do body para continuidade visual */
+  padding: 1rem 2rem;               /* Espaçamento interno: 1rem vertical e 2rem horizontal */
+  display: flex;                    /* Utiliza flexbox para alinhar os itens da navbar */
+  justify-content: space-between;  /* Espaça os itens nas extremidades */
+  align-items: center;             /* Alinha verticalmente ao centro */
+  color: var(--branco);            /* Cor do texto branco para contraste */
+  flex-wrap: wrap;                 /* Permite quebra de linha se necessário */
 }
 
-/* === CONTAINER INTERNO DA NAVBAR === */
+/* Container interno da navbar */
 .nav-container {
-  display: flex;                       /* Flexbox para organizar logo e menu */
-  align-items: center;                 /* Alinha verticalmente os itens */
-  gap: 2rem;                          /* Espaço de 2rem entre elementos filhos */
-  width: 100%;                        /* Ocupa 100% da largura disponível */
-  flex-wrap: wrap;                   /* Permite quebra de linha para responsividade */
+  display: flex;                   /* Flexbox para alinhar itens lado a lado */
+  align-items: center;             /* Alinhamento vertical central */
+  gap: 2rem;                      /* Espaço de 2rem entre os itens */
+  width: 100%;                   /* Ocupa toda a largura disponível */
+  flex-wrap: wrap;               /* Permite quebra de linha automática */
 }
 
-/* === ÁREA DA LOGO (IMAGEM + TEXTO) === */
+/* Área da logo */
 .nav-logo {
-  display: flex;                      /* Flexbox para alinhar logo ícone e texto lado a lado */
-  align-items: center;                /* Alinha verticalmente ao centro */
-  gap: 0.8rem;                       /* Espaço de 0.8rem entre ícone e texto */
+  display: flex;                  /* Flex para alinhar ícone e texto lado a lado */
+  align-items: center;             /* Alinha verticalmente ao centro */
+  gap: 0.8rem;                    /* Espaço de 0.8rem entre ícone e texto */
 }
 
-/* === MENU DE NAVEGAÇÃO === */
+/* Menu de navegação */
 nav {
-  margin-left: auto;                  /* Empurra o menu para o lado direito */
-  display: flex;                     /* Organiza links na horizontal */
-  gap: 1.5rem;                      /* Espaço de 1.5rem entre links */
-  flex-wrap: wrap;                  /* Permite quebra de linha para o menu no mobile */
+  margin-left: auto;             /* Empurra o menu para o lado direito */
+  display: flex;                 /* Flexbox para alinhar links horizontalmente */
+  gap: 1.5rem;                   /* Espaço de 1.5rem entre os links */
+  flex-wrap: wrap;               /* Permite quebra de linha se necessário */
 }
 
-/* === TAMANHO DAS LOGOS === */
+/* Tamanho do ícone da logo */
 .logo-icon {
-  max-width: 60px;                   /* Define largura máxima para ícone da logo */
-  height: auto;                     /* Mantém proporção da imagem */
+  max-width: 60px;               /* Largura máxima do ícone é 60 pixels */
+  height: auto;                  /* Altura ajusta proporcionalmente */
 }
 
+/* Tamanho do nome da logo */
 .logo-nome {
-  max-width: 220px;                 /* Define largura máxima para o nome da logo */
-  height: auto;                    /* Mantém proporção */
+  max-width: 220px;              /* Largura máxima do texto da logo */
+  height: auto;                  /* Altura ajusta proporcionalmente */
 }
 
-/* === LINKS DO MENU === */
+/* Estilo dos links do menu */
 nav a {
-  color: var(--branco);              /* Cor branca para os links */
-  text-decoration: none;            /* Remove sublinhado padrão */
-  font-weight: 600;                 /* Define peso da fonte para negrito leve */
-  transition: color 0.3s;           /* Transição suave na mudança de cor ao passar mouse */
-  white-space: nowrap;              /* Previne quebra de linha nos links */
+  color: var(--branco);          /* Cor branca para os links */
+  text-decoration: none;         /* Remove sublinhado padrão dos links */
+  font-weight: 600;              /* Fonte semi-negrito para destaque */
+  transition: color 0.3s;        /* Transição suave na mudança de cor */
+  white-space: nowrap;           /* Impede que o texto quebre em múltiplas linhas */
 }
 
-/* === EFEITO HOVER NOS LINKS === */
+/* Cor dos links no hover */
 nav a:hover {
-  color: var(--cor-secundaria);     /* Muda a cor para azul claro quando o mouse passa sobre o link */
+  color: var(--cor-secundaria);  /* Altera cor para azul claro ao passar o mouse */
 }
 
-/* === BANNER DA PÁGINA INICIAL COM IMAGEM DE FUNDO === */
+/* === BANNER === */
 .banner {
-  position: relative; /* Permite posicionamento absoluto dos elementos internos */
-  width: 100%; /* Largura total do banner */
-  height: 350px; /* Altura fixa para o banner */
-  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do banner */
-  display: flex; /* Flexbox para alinhar o conteúdo central */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  background: linear-gradient(
-    to right,
-    rgba(0, 119, 182, 0.85),
-    rgba(2, 62, 138, 0.85)
-  ); /* Fundo degradê azul semi-transparente para sobrepor imagem */
-  color: var(--branco); /* Texto branco */
-  text-align: center; /* Centraliza texto */
-  border-bottom: 4px solid var(--cor-primaria); /* Linha decorativa inferior */
-  border-radius: 0 0 25px 25px; /* Cantos inferiores arredondados para suavizar */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra leve para destaque */
+  position: relative;            /* Define posicionamento relativo para elementos filhos */
+  width: 100%;                   /* Ocupa 100% da largura do container pai */
+  height: 350px;                 /* Altura fixa do banner */
+  overflow: hidden;              /* Esconde conteúdos que ultrapassam o limite */
+  display: flex;                 /* Flexbox para alinhar conteúdos internos */
+  justify-content: center;       /* Centraliza conteúdo horizontalmente */
+  align-items: center;           /* Centraliza conteúdo verticalmente */
+  background: linear-gradient(to right, rgba(0, 119, 182, 0.85), rgba(2, 62, 138, 0.85));
+  /* Fundo com degradê azul semi-transparente da esquerda para a direita */
+  color: var(--branco);          /* Texto branco dentro do banner */
+  text-align: center;            /* Centraliza o texto */
+  border-bottom: 4px solid var(--cor-primaria); /* Linha inferior decorativa */
+  border-radius: 0 0 25px 25px; /* Cantos inferiores arredondados */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para destaque */
 }
 
-/* Imagem de fundo do banner (ex: ../img/servico-novidade.jpg) */
+/* Imagem de fundo do banner */
 .banner-img {
-  position: absolute; /* Fixa a imagem atrás do conteúdo */
-  top: 0; /* Alinha ao topo */
-  left: 0; /* Alinha à esquerda */
-  width: 100%; /* Preenche largura total */
-  height: 350px; /* Mesma altura do banner */
-  object-fit: cover; /* Cobre toda a área mantendo proporção */
-  z-index: 0; /* Coloca atrás do conteúdo */
-  opacity: 0.6; /* Transparência para melhorar legibilidade do texto */
+  position: absolute;            /* Posição absoluta para ficar atrás do conteúdo */
+  top: 0;                       /* Alinha ao topo do banner */
+  left: 0;                      /* Alinha à esquerda do banner */
+  width: 100%;                  /* Largura total do banner */
+  height: 350px;                /* Altura fixa igual ao banner */
+  object-fit: cover;            /* Cobre todo espaço, cortando se necessário */
+  z-index: 0;                   /* Coloca atrás do conteúdo */
+  opacity: 0.6;                 /* Transparência para deixar o texto legível */
 }
 
-/* Container que agrupa logo, título e slogan */
+/* Container do conteúdo do banner */
 .banner-conteudo {
-  position: relative; /* Garante que fique sobre a imagem de fundo */
-  display: flex; /* Flexbox para coluna */
-  flex-direction: column; /* Coloca itens em coluna (logo, título, slogan) */
-  align-items: center; /* Centraliza horizontalmente */
-  z-index: 1; /* Sobrepõe a imagem */
+  position: relative;           /* Posicionamento relativo para sobrepor imagem */
+  display: flex;               /* Flexbox para organizar conteúdo em coluna */
+  flex-direction: column;      /* Itens alinhados verticalmente */
+  align-items: center;         /* Centraliza itens horizontalmente */
+  z-index: 1;                  /* Sobrepõe a imagem do banner */
 }
 
-/* Logo centralizada com tamanho máximo */
+/* Logo dentro do banner */
 .banner-logo {
-  max-width: 220px; /* Tamanho máximo para a logo */
-  margin-bottom: 15px; /* Espaço entre logo e título */
+  max-width: 220px;            /* Limita o tamanho máximo da logo */
+  margin-bottom: 15px;         /* Espaço abaixo da logo */
 }
 
-/* Título (h1) dentro do banner */
+/* Título principal do banner */
 .banner h1 {
-  font-size: 2.4rem; /* Tamanho grande para destaque */
-  font-weight: 600; /* Negrito */
+  font-size: 2.4rem;           /* Tamanho grande do título */
+  font-weight: 600;            /* Negrito para destaque */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para facilitar leitura */
-  margin: 0; /* Remove margem padrão */
+  margin: 0;                   /* Remove margem padrão */
 }
 
-/* Slogan logo abaixo do título */
+/* Slogan abaixo do título */
 .slogan {
-  font-size: 1.2rem; /* Tamanho menor para o slogan */
-  margin-top: 8px; /* Espaço acima do slogan */
-  font-weight: 400; /* Peso normal para o texto */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra leve para leitura */
+  font-size: 1.2rem;           /* Tamanho menor para o slogan */
+  margin-top: 8px;             /* Espaço acima do slogan */
+  font-weight: 400;            /* Peso normal da fonte */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra leve para destaque */
 }
 
-/* === SEÇÃO PADRÃO DE CONTEÚDO === */
+/* === SEÇÃO DE CONTEÚDO === */
 .conteudo {
-  padding: 2rem 1rem;               /* Espaçamento interno: 2rem vertical e 1rem horizontal */
-  max-width: 960px;                 /* Largura máxima para centralizar o conteúdo */
-  margin: 2rem auto 4rem;           /* Margem superior, horizontal automática (centralizado) e inferior */
-  background: linear-gradient(      /* Fundo com degradê escuro */
-    180deg,
-    var(--cinza-preto) 0%,
-    var(--cinza-preto) 50%,
-    var(--cor-primaria) 100%
-  );
-  color: var(--cinza-claro);        /* Texto em tom claro para contraste */
-  border-radius: 12px;              /* Bordas arredondadas para suavizar */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra leve para profundidade */
-  box-sizing: border-box;           /* Inclui padding e borda no tamanho do elemento */
-  overflow-wrap: break-word;        /* Permite quebra de palavras longas para evitar overflow */
-  word-break: break-word;           /* Complementa quebra para textos muito longos */
+  padding: 2rem 1rem;          /* Espaçamento interno: vertical 2rem e horizontal 1rem */
+  max-width: 960px;            /* Limita largura máxima para facilitar leitura */
+  margin: 2rem auto 4rem;      /* Margens: 2rem cima, auto horizontal (centraliza), 4rem baixo */
+  background: linear-gradient(180deg, var(--cinza-preto) 0%, var(--cinza-preto) 50%, var(--cor-primaria) 100%);
+  /* Fundo degradê do cinza-preto para azul principal */
+  color: var(--cinza-claro);   /* Cor clara para o texto */
+  border-radius: 12px;         /* Bordas arredondadas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra suave para destaque */
+  box-sizing: border-box;      /* Inclui padding e borda no tamanho total */
+  overflow-wrap: break-word;   /* Quebra palavras longas para evitar overflow */
+  word-break: break-word;      /* Complementa a quebra de palavras */
 }
 
-/* === TÍTULO DAS SEÇÕES DE CONTEÚDO === */
+/* Títulos dentro do conteúdo */
 .conteudo h2 {
-  margin-bottom: 1rem;              /* Espaço abaixo do título da seção */
-  color: var(--cor-secundaria);    /* Azul claro para destaque */
-  text-align: center;               /* Centraliza o título */
+  margin-bottom: 1rem;         /* Espaço abaixo do título */
+  color: var(--cor-secundaria); /* Cor azul clara para destaque */
+  text-align: center;          /* Centraliza o texto do título */
 }
 
-/* === GRADE DE PRODUTOS (DESTAQUES) === */
+/* Grade para os produtos */
 .produtos-grid {
-  display: grid;                    /* Usa grid layout para organizar produtos */
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Colunas responsivas: mínimo 160px e máximo 1fr */
-  gap: 1.5rem;                    /* Espaçamento entre os produtos */
-  margin-top: 1rem;               /* Espaço acima da grade */
-  justify-items: center;          /* Centraliza os itens dentro das células do grid */
-  overflow: hidden;               /* Previne conteúdo que possa sair da grade */
+  display: grid;               /* Layout em grade para os produtos */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Colunas responsivas de tamanho mínimo 160px */
+  gap: 1.5rem;                /* Espaço entre os produtos */
+  margin-top: 1rem;           /* Espaço acima da grade */
+  justify-items: center;      /* Centraliza os itens dentro das células da grade */
+  overflow: hidden;           /* Evita que conteúdo ultrapasse a área da grade */
 }
 
-/* === ESTILO DOS CARDS DE PRODUTO === */
+/* Cards dos produtos */
 .produto-home {
-  text-align: center;              /* Centraliza texto e imagens dentro do card */
-  padding: 1rem;                  /* Espaçamento interno do card */
-  border-radius: 8px;             /* Bordas arredondadas para suavidade */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra leve para destaque */
-  transition: transform 0.3s;      /* Animação suave para transformações */
-  overflow: hidden;               /* Evita overflow dentro do card */
+  text-align: center;          /* Centraliza o conteúdo do card */
+  padding: 1rem;              /* Espaçamento interno do card */
+  border-radius: 8px;         /* Bordas arredondadas para suavidade */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+  transition: transform 0.3s;  /* Animação suave para transformações */
+  overflow: hidden;           /* Evita conteúdo excedente */
 }
 
-/* === ANIMAÇÃO NO HOVER DOS PRODUTOS === */
+/* Animação hover nos produtos */
 .produto-home:hover {
-  transform: translateY(-5px);     /* Levanta o card ao passar o mouse */
+  transform: translateY(-5px); /* Levanta o card quando o mouse passa por cima */
 }
 
-/* === IMAGENS DOS PRODUTOS === */
+/* Imagem dos produtos */
 .produto-home img {
-  width: 100%;                    /* Imagem ocupa toda a largura do container */
-  height: auto;                   /* Mantém proporção da imagem */
-  max-width: 150px;               /* Limita a largura máxima da imagem */
-  margin-bottom: 0.5rem;          /* Espaço abaixo da imagem */
-  display: block;                 /* Remove espaço extra abaixo da imagem */
-  object-fit: contain;            /* Mantém proporção sem cortar */
+  width: 100%;                /* Imagem ocupa toda largura do container */
+  height: auto;               /* Mantém proporção da imagem */
+  max-width: 150px;           /* Limita a largura máxima para controle */
+  margin-bottom: 0.5rem;      /* Espaço abaixo da imagem */
+  display: block;             /* Remove espaço em branco abaixo da imagem */
+  object-fit: contain;        /* Mantém proporção sem cortar a imagem */
 }
 
-/* === DESCRIÇÃO DOS PRODUTOS === */
+/* Texto dos produtos */
 .produto-home p {
-  font-weight: 500;               /* Peso médio da fonte para texto */
-  color: var(--cinza-claro);     /* Cor clara para o texto */
+  font-weight: 500;           /* Peso médio da fonte para o texto */
+  color: var(--cinza-claro); /* Cor clara para o texto */
 }
 
-/* === RODAPÉ FINAL === */
+/* === RODAPÉ === */
 .rodape {
-  background: linear-gradient(    /* Fundo com degradê escuro para azul */
-    180deg,
-    var(--cinza-preto) 0%,
-    var(--cinza-preto) 40%,
-    var(--cor-primaria) 100%
-  );
-  color: var(--branco);            /* Texto branco no rodapé */
-  text-align: center;              /* Centraliza o conteúdo */
-  padding: 2rem 1rem;              /* Espaçamento interno */
-  box-sizing: border-box;          /* Inclui padding e borda no tamanho */
-  width: 100%;                    /* Ocupa toda largura da tela */
-  max-width: 100vw;               /* Garante que não ultrapasse a largura da viewport */
-  overflow-x: hidden;             /* Previne scroll horizontal no rodapé */
-  flex-shrink: 0;                 /* Não permite encolher em flexbox pai */
-  display: flex;                  /* Usando flex para centralizar conteúdo */
-  flex-direction: column;         /* Conteúdo vertical no rodapé */
-  justify-content: center;        /* Centraliza verticalmente */
-  align-items: center;            /* Centraliza horizontalmente */
+  background: linear-gradient(180deg, var(--cinza-preto) 0%, var(--cinza-preto) 40%, var(--cor-primaria) 100%);
+  /* Fundo degradê escuro para azul */
+  color: var(--branco);        /* Texto branco para contraste */
+  text-align: center;          /* Centraliza o conteúdo do rodapé */
+  padding: 2rem 1rem;          /* Espaçamento interno vertical e horizontal */
+  box-sizing: border-box;      /* Inclui padding e borda no tamanho total */
+  width: 100%;                /* Ocupa toda a largura disponível */
+  max-width: 100vw;           /* Não ultrapassa a largura da viewport */
+  overflow-x: hidden;         /* Evita rolagem horizontal no rodapé */
+  flex-shrink: 0;             /* Não permite que o rodapé encolha */
+  display: flex;              /* Usa flexbox para o layout interno */
+  flex-direction: column;     /* Itens alinhados em coluna */
+  justify-content: center;    /* Centraliza verticalmente */
+  align-items: center;        /* Centraliza horizontalmente */
 }
 
-/* === LOGO NO RODAPÉ === */
+/* Logo no rodapé */
 .rodape img {
-  max-width: 140px;                /* Limita largura da logo no rodapé */
-  margin-bottom: 1rem;             /* Espaço abaixo da imagem */
-  height: auto;                    /* Mantém proporção */
+  max-width: 180px;            /* Limita a largura da imagem da logo */
+  margin-bottom: 1rem;         /* Espaço abaixo da logo */
+  height: auto;                /* Mantém proporção da imagem */
 }
 
-/* === DEGRADÊ EXCLUSIVO PARA A SEÇÃO DE DESTAQUES NA HOME === */
+/* Seção de destaques */
 .conteudo.destaques {
-  background: linear-gradient(      /* Degradê do azul escuro para o azul principal */
-    180deg,
-    var(--cor-escura) 0%,
-    var(--cor-primaria) 100%
-  );
-  color: var(--cinza-claro);        /* Texto claro para bom contraste */
+  background: linear-gradient(180deg, var(--cor-escura) 0%, var(--cor-primaria) 100%);
+  /* Fundo degradê azul escuro para azul principal */
+  color: var(--cinza-claro);  /* Texto claro para destaque */
 }
 
-/* === ESTILO EXCLUSIVO PARA PRODUTOS NA HOME COM DEGRADÊ PRETO PARA AZUL === */
+/* Estilo exclusivo dos produtos na home com degradê */
 .produto-home {
-  text-align: center;               /* Centraliza conteúdo */
-  padding: 1rem;                   /* Espaçamento interno */
-  margin: 0.5rem;                  /* Espaçamento externo (margem) para separar os cards */
-  border-radius: 8px;              /* Bordas arredondadas */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Sombra um pouco mais escura */
-  transition: transform 0.3s;      /* Animação suave */
-  overflow: hidden;                /* Evita overflow de conteúdo */
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.85) 0%,       /* Preto quase opaco no topo */
-    var(--cor-primaria) 100%       /* Azul principal embaixo */
-  );
-  color: var(--branco);            /* Texto branco para contraste */
+  text-align: center;          /* Centraliza conteúdo do produto */
+  padding: 1rem;              /* Espaçamento interno */
+  margin: 0.5rem;             /* Espaçamento externo entre cards */
+  border-radius: 8px;         /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para destaque */
+  transition: transform 0.3s;  /* Animação suave para transformações */
+  overflow: hidden;           /* Evita que conteúdo extrapole o card */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, var(--cor-primaria) 100%);
+  /* Fundo degradê do preto transparente para azul */
+  color: var(--branco);       /* Texto branco para contraste */
 }
 
-/* === ANIMAÇÃO NO HOVER DOS PRODUTOS NA HOME === */
+/* Hover nos produtos home */
 .produto-home:hover {
-  transform: translateY(-7px);     /* Levanta o card um pouco mais que o padrão */
+  transform: translateY(-7px); /* Levanta o card com efeito hover */
 }
 
-/* === ESTILOS PARA LINKS DAS REDES SOCIAIS (SEM RESPONSIVIDADE) === */
+/* === ÍCONES DE REDES SOCIAIS COM TAMANHO MENOR === */
 .social-links {
-  display: flex;                    /* Usa flexbox para alinhar os links das redes sociais em linha */
-  justify-content: center;          /* Centraliza os links horizontalmente */
-  gap: 1.5rem;                     /* Espaçamento entre cada link */
-  margin-top: 1rem;                /* Espaço acima da seção das redes sociais */
+  display: flex;              /* Flexbox para alinhar os ícones horizontalmente */
+  justify-content: center;    /* Centraliza os ícones na linha */
+  gap: 1.5rem;               /* Espaçamento entre os ícones */
+  margin-top: 1rem;           /* Espaço acima da seção de ícones */
 }
 
-/* Estilo para os links que contém ícones e texto */
 .social-link {
-  color: var(--branco);             /* Cor branca para texto e ícones */
-  font-size: 1.1rem;                /* Tamanho da fonte do texto */
-  text-decoration: none;            /* Remove sublinhado dos links */
-  display: flex;                   /* Flexbox para alinhar ícone e texto */
-  align-items: center;             /* Alinha verticalmente o ícone e texto */
-  gap: 0.5rem;                    /* Espaçamento entre o ícone e o texto */
-  transition: color 0.3s ease;     /* Transição suave na cor ao passar mouse */
+  color: var(--branco);       /* Cor branca para os links das redes sociais */
+  font-size: 1.1rem;          /* Tamanho da fonte do texto/link */
+  text-decoration: none;      /* Remove sublinhado padrão */
+  display: flex;              /* Flex para alinhar ícone e texto */
+  align-items: center;        /* Alinha verticalmente os itens */
+  gap: 0.5rem;                /* Espaço entre ícone e texto */
+  transition: color 0.3s ease; /* Transição suave na mudança de cor */
 }
 
-/* Efeito hover para o link */
+/* Cor no hover do link social */
 .social-link:hover {
-  color: var(--cor-secundaria);    /* Muda a cor do texto e ícone para azul claro no hover */
+  color: var(--cor-secundaria); /* Muda para azul claro ao passar o mouse */
 }
 
-/* Estilo para os ícones das redes sociais */
+/* Ícone dentro do link social */
 .social-link i {
-  font-size: 2rem;              /* Tamanho maior para o ícone */
-  filter: drop-shadow(0 0 5px var(--cor-secundaria)); /* Sombra leve para destacar ícone */
-  transition: filter 0.3s ease, transform 0.3s ease; /* Transição suave para sombra e escala */
+  font-size: 1.2rem;          /* Tamanho do ícone menor e mais sutil */
+  filter: drop-shadow(0 0 5px var(--cor-secundaria)); /* Sombra azul leve no ícone */
+  transition: filter 0.3s ease, transform 0.3s ease; /* Transição suave para filtro e tamanho */
 }
 
-/* Efeito hover para o ícone */
+/* Hover no ícone social */
 .social-link:hover i {
-  filter: drop-shadow(0 0 8px var(--cor-primaria)); /* Sombra azul mais intensa no hover */
-  transform: scale(1.2);         /* Aumenta o tamanho do ícone no hover */
+  filter: drop-shadow(0 0 8px var(--cor-primaria)); /* Sombra azul mais intensa */
+  transform: scale(1.2);       /* Aumenta o tamanho do ícone levemente */
 }
