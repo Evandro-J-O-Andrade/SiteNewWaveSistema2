@@ -64,8 +64,8 @@
   <header class="navbar">
     <!-- Cabeçalho da página contendo a barra de navegação -->
 
-    <div class="nav-container">
-      <!-- Container para agrupar logo e menu -->
+    <div class="nav-container" style="position: relative;">
+      <!-- Container para agrupar logo e menu, com position relative para posicionamento -->
 
       <div class="nav-logo">
         <!-- Área do logo -->
@@ -77,7 +77,17 @@
         <!-- Imagem do nome da empresa -->
       </div>
 
-      <nav>
+      <!-- Ícone do menu hambúrguer visível apenas em mobile -->
+      <img src="../img/menu.png" alt="Menu Mobile" class="menu-hamburguer" id="btn-menu" />
+      <!--
+        A imagem será escondida por padrão e exibida no mobile via CSS
+        O id "btn-menu" é usado no JavaScript para controlar o clique
+      -->
+
+      <span id="span-menu">Menu</span>
+      <!-- Texto opcional para acessibilidade para menu mobile -->
+
+      <nav id="menu-principal">
         <!-- Elemento de navegação com os links -->
 
         <a href="../index.html">Home</a>
@@ -263,6 +273,11 @@
       </a>
     </div>
   </footer>
+
+  <!-- =================== SCRIPT JS =================== -->
+  <script src="../js/index.js" defer></script>
+  <!-- Arquivo JavaScript externo que controla o menu mobile -->
+
 </body>
 
 </html>

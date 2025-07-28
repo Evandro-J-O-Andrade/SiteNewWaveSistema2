@@ -1,5 +1,20 @@
 /* === midiaquire.css - Media Queries para responsividade global === */
 
+/* === Variáveis globais para cores, fontes e estilos usados no site === */
+:root {
+  --cor-primaria: #0077b6;           /* Cor azul principal usada no site */
+  --cor-secundaria: #90e0ef;         /* Azul claro para detalhes e destaques */
+  --cor-escura: #023e8a;             /* Azul escuro para banners e degradês */
+  --cinza-claro: #e0e0e0;            /* Cinza claro para textos e fundos suaves */
+  --cinza-escuro: #d0d0d0;           /* Cinza um pouco mais escuro, reserva */
+  --cinza-preto: #1a1a1a;            /* Cor escura usada no fundo geral */
+  --preto: #111111;                  /* Preto intenso para textos destacados */
+  --branco: #ffffff;                 /* Branco puro para fundos claros/textos */
+  --preto-transparente: rgba(0, 0, 0, 0.3); /* Preto com 30% de opacidade */
+  --cor-primaria-escura: #004a75;   /* Azul escuro para efeitos hover em botões */
+  --fonte-principal: 'Segoe UI', sans-serif; /* Fonte principal do site */
+}
+
 /* Telas muito pequenas (até 320px) - celulares bem pequenos */
 @media (max-width: 320px) {
   body {
@@ -334,36 +349,39 @@
     font-size: 1.3rem; /* Título pequeno para caber na tela */
   }
 }
+
 /* === Estilo padrão: esconde a imagem do menu hamburguer fora do mobile === */
 .menu-hamburguer {
   display: none;           /* Fica invisível por padrão (em telas grandes) */
-  width: 30px;             /* Tamanho da imagem */
+  width: 70px;             /* Tamanho da imagem */
   cursor: pointer;         /* Cursor de clique */
   position: absolute;      /* Posiciona no canto do header */
-  top: 20px;
-  right: 20px;
+  top: 5px;
+  right: 5px;
   z-index: 1001;           /* Fica acima do menu */
   transition: opacity 0.3s ease; /* Suaviza a transição ao ficar transparente */
 }
 
-/* === Mobile (até 560px): mostra a imagem do menu e ajusta o menu === */
-@media (max-width: 560px) {
+/* === Mobile (até 755px): mostra a imagem do menu e ajusta o menu === */
+@media (max-width: 775px) {
   .menu-hamburguer {
     display: block; /* Mostra a imagem do menu hamburguer */
   }
 
   #menu-principal {
-    display: none;                /* Esconde o menu inicialmente no mobile */
-    flex-direction: column;      /* Empilha os itens */
-    gap: 10px;                   /* Espaço entre os links */
-    background-color: #ffffff;   /* Fundo branco ou o que quiser */
-    padding: 15px;
-    position: absolute;          /* Fica posicionado sobre o conteúdo */
-    top: 60px;                   /* Abaixo da imagem/menu */
-    right: 10px;                 /* A direita da tela */
-    width: calc(100% - 20px);    /* Quase toda a largura */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombrinha leve */
-    z-index: 1000;               /* Fica abaixo do botão menu */
+    display: none;                     /* Esconde o menu inicialmente no mobile */
+    flex-direction: column;           /* Empilha os itens verticalmente */
+    gap: 10px;                        /* Espaço entre os links */
+    background-color: var(--preto-transparente); /* Fundo preto transparente conforme sua variável root */
+    padding: 15px;                    /* Espaçamento interno do menu */
+    position: absolute;               /* Posiciona o menu em relação ao pai */
+    top: 0px;                        /* Posiciona o menu no topo */
+    right: 10px;                     /* Cola o menu à direita da tela com 10px de margem */
+    width: 100%;                     /* Define largura fixa para o menu */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra leve para destaque */
+    z-index: 1000;                   /* Garante que fique acima do conteúdo, mas abaixo do botão */
+    border-radius: 6px;              /* Borda arredondada para estilo */
+    align-items: flex-end;           /* Alinha os links à direita dentro do menu */
   }
 
   /* Quando ativado (via JS), o menu aparece */
@@ -374,6 +392,35 @@
   /* Quando o menu está aberto, a imagem fica transparente */
   .menu-hamburguer.ativo {
     opacity: 0;                  /* Fica invisível */
-    pointer-events: none;       /* Não permite mais clique */
+    pointer-events: none;        /* Não permite mais clique */
   }
+}
+
+/* === Estilo para o span do texto "Menu" que acompanha a imagem do menu hamburguer === */
+.nav-container > span {
+  display: none; /* Esconde o span por padrão */
+}
+
+/* No mobile, mostra o span */
+@media (max-width: 770px) {
+  .nav-container > span {
+    display: inline-block; /* Ou block, depende do estilo que quiser */
+    position: absolute; /* Posiciona na frente da imagem */
+    top: 37px;          /* Alinha verticalmente com o menu */
+    right: 15px;        /* Alinha próximo à imagem */
+    color: var(--branco); /* Cor branca */
+    font-weight: bold;    /* Texto em negrito */
+    font-size: 1.1rem;    /* Tamanho da fonte */
+    cursor: pointer;      /* Cursor de clique */
+    user-select: none;    /* Evita seleção do texto ao clicar */
+    z-index: 1002;        /* Fica acima da imagem */
+  }
+}
+
+/* === NOVO: Classe para sumir imagem e span do menu com transição suave === */
+.menu-hamburguer.inativo,
+.nav-container > span.inativo {
+  opacity: 0;           /* Torna invisível */
+  pointer-events: none; /* Remove interatividade */
+  transition: opacity 0.3s ease; /* Transição suave */
 }

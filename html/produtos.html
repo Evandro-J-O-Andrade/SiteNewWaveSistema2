@@ -2,17 +2,20 @@
 <!-- Declara que este documento é HTML5 -->
 
 <html lang="pt-br">
-<!-- Elemento raiz do documento, define o idioma da página como Português do Brasil -->
+<!-- Elemento raiz, idioma definido para Português do Brasil -->
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Define o conjunto de caracteres como UTF-8, suportando acentuação e caracteres especiais -->
+  <!-- Define o conjunto de caracteres como UTF-8, para suportar acentuação -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Define a viewport para responsividade em dispositivos móveis -->
+  <!-- Define viewport para dispositivos móveis -->
 
-  <meta name="description" content="Produtos New Wave - Conheça nossas soluções tecnológicas para empresas modernas." />
-  <!-- Descrição da página para mecanismos de busca -->
+  <meta
+    name="description"
+    content="Produtos New Wave - Conheça nossas soluções tecnológicas para empresas modernas."
+  />
+  <!-- Descrição para SEO -->
 
   <meta name="keywords" content="New Wave, Produtos, Tecnologia, Soluções, Software" />
   <!-- Palavras-chave para SEO -->
@@ -23,299 +26,365 @@
   <title>Produtos - New Wave</title>
   <!-- Título que aparece na aba do navegador -->
 
-  <!-- Favicons e ícones para diferentes dispositivos -->
+  <!-- Favicons para diferentes dispositivos e navegadores -->
   <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png" />
-  <!-- Ícone favicon no formato PNG com tamanho 96x96 -->
+  <!-- Favicon PNG 96x96 -->
 
   <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
-  <!-- Ícone favicon no formato SVG -->
+  <!-- Favicon SVG -->
 
   <link rel="shortcut icon" href="../img/favicon.ico" />
-  <!-- Ícone favicon para navegadores antigos -->
+  <!-- Favicon para navegadores antigos -->
 
   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
-  <!-- Ícone para dispositivos Apple (iPhone, iPad) -->
+  <!-- Ícone para dispositivos Apple -->
 
   <link rel="manifest" href="../site.webmanifest" />
-  <!-- Manifesto do site para Progressive Web App -->
+  <!-- Manifesto para Progressive Web App -->
 
-  <!-- CSS global do site -->
+  <!-- CSS global -->
   <link rel="stylesheet" href="../css/index.css" />
-  <!-- CSS específico da página Produtos -->
+  <!-- CSS específico da página produtos -->
   <link rel="stylesheet" href="../css/produtos.css" />
-  <!-- CSS global para responsividade -->
+  <!-- CSS de media queries para responsividade -->
   <link rel="stylesheet" href="/css/midiaquire.css" />
 
-  <!-- Biblioteca de ícones Font Awesome -->
+  <!-- Font Awesome para ícones sociais -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
   />
-  <!-- Importa o CSS do Font Awesome para usar ícones sociais -->
 </head>
 
 <body>
   <!-- =================== NAVBAR =================== -->
   <header class="navbar">
-    <!-- Cabeçalho da página contendo a barra de navegação -->
+    <!-- Cabeçalho da página com a barra de navegação -->
 
-    <div class="nav-container">
-      <!-- Container que agrupa logo e menu para melhor organização -->
+   <div class="nav-container" style="position: relative;">
+      <!-- Container para agrupar logo e menu -->
 
       <div class="nav-logo">
-        <!-- Área do logo (imagem e nome) -->
+        <!-- Área do logo -->
 
-        <img src="../img/logoicon.png" alt="Logo" class="logo-icon" />
-        <!-- Imagem do ícone do logo com texto alternativo -->
+        <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon" />
+        <!-- Imagem ícone do logo -->
 
-        <img src="../img/lentralog.png" alt="Nome da Empresa" class="logo-nome" />
-        <!-- Imagem do nome da empresa ao lado do ícone -->
+        <img src="../img/lentralog.png" alt="Logomarca New Wave" class="logo-nome" />
+        <!-- Imagem nome da empresa -->
       </div>
+ <!-- Ícone do menu hambúrguer visível apenas em mobile -->
+      <img src="../img/menu.png" alt="Menu Mobile" class="menu-hamburguer" id="btn-menu" />
+      <!--
+        - A imagem será escondida por padrão e exibida no mobile via CSS
+        - O id "btn-menu" é usado no JavaScript para controlar o clique
+      -->
+        <span id="span-menu">Menu</span> <!-- Texto opcional para acessibilidade para menu mobile -->
 
-      <nav>
-        <!-- Elemento de navegação contendo os links do menu -->
+      <nav id="menu-principal">
+        <!-- Navegação com links -->
 
         <a href="../index.html">Home</a>
-        <!-- Link para a página inicial -->
+        <!-- Link para página inicial -->
 
         <a href="../html/sobre.html">Sobre</a>
-        <!-- Link para a página Sobre -->
+        <!-- Link para página Sobre -->
 
         <a href="../html/produtos.html" class="ativo">Produtos</a>
-        <!-- Link para a página atual "Produtos", com classe 'ativo' para destacar -->
+        <!-- Link para página Produtos, com destaque ativo -->
 
         <a href="../html/servicos.html">Serviços</a>
-        <!-- Link para a página Serviços -->
+        <!-- Link para página Serviços -->
 
         <a href="../html/contato.html">Contato</a>
-        <!-- Link para a página Contato -->
+        <!-- Link para página Contato -->
       </nav>
     </div>
   </header>
 
-  <!-- =================== CONTEÚDO PRINCIPAL =================== -->
-  <main class="main-content">
-    <!-- Conteúdo principal da página -->
+  <!-- =================== BANNER PRINCIPAL =================== -->
+  <section class="banner" id="produtos">
+    <!-- Banner principal com id para referência -->
 
-    <!-- ===== BANNER ATUALIZADO COM IMAGEM DE FUNDO, LOGO, TÍTULO E SLOGAN ===== -->
-    <section class="banner" id="produtos">
-      <!-- Seção banner com ID para referência -->
+    <img src="../img/2017-03-07 copy.png" alt="Banner Produtos" class="banner-img" />
+    <!-- Imagem de fundo do banner -->
 
-      <img src="../img/2017-03-07 copy.png" alt="Banner Produtos" class="banner-img" />
-      <!-- Imagem de fundo do banner -->
+    <div class="banner-conteudo">
+      <!-- Container central para logo, título e slogan -->
 
-      <div class="banner-conteudo">
-        <!-- Container para logo, título e slogan centralizados -->
+      <img src="../img/logoicon.png" alt="Logomarca New Wave" class="banner-logo" />
+      <!-- Logo no centro do banner -->
 
-        <img src="../img/logoicon.png" alt="Logo Central" class="banner-logo" />
-        <!-- Logo central no banner -->
+      <h1>Produtos</h1>
+      <!-- Título principal -->
 
-        <h1>Produtos</h1>
-        <!-- Título principal no banner -->
+      <p class="slogan">Conheça nossas soluções tecnológicas</p>
+      <!-- Slogan -->
+    </div>
+  </section>
 
-        <p class="slogan">Conheça nossas soluções tecnológicas</p>
-        <!-- Slogan do banner -->
-      </div>
-    </section>
+  <!-- =================== INTRODUÇÃO =================== -->
+  <section class="introducao">
+    <!-- Texto introdutório sobre os produtos -->
 
-    <!-- Seção introdutória dos produtos -->
-    <section class="introducao">
-      <!-- Container com texto introdutório -->
+    <h1>Nossos Produtos</h1>
+    <!-- Título da seção -->
 
-      <h1>Nossos Produtos</h1>
-      <!-- Título da seção -->
+    <p>
+      Explore as soluções que a New Wave Sistemas oferece para empresas modernas.
+    </p>
+    <!-- Texto explicativo -->
+  </section>
 
-      <p>
-        Explore as soluções que a New Wave Sistemas oferece para empresas modernas.
-      </p>
-      <!-- Parágrafo explicativo -->
-    </section>
+  <!-- =================== GRID DE PRODUTOS =================== -->
+  <section class="produtos-grid" id="produtos-grid">
+    <!-- Container em grid para organizar os cards dos produtos -->
 
-    <!-- Grid dos produtos -->
-    <section class="produtos-grid">
-      <!-- Container em grid para organizar os produtos -->
+    <div class="produto" id="produto1">
+      <!-- Produto 1 -->
 
-      <div class="produto">
-        <!-- Produto 1 -->
+      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto1.jpeg" alt="Produto 1" />
-        <!-- Imagem do Produto 1 -->
+      <p><span id="nome-produto1">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
 
-        <p>kite de Cameras</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais1">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
+    <div class="produto" id="produto2">
+      <!-- Produto 2 -->
 
-      <div class="produto">
-        <!-- Produto 2 -->
+      <img src="../img/produto2.jpeg" alt="Teclados" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto2.jpeg" alt="Produto 2" />
-        <!-- Imagem do Produto 2 -->
+      <p><span id="nome-produto2">Teclados</span></p>
+      <!-- Nome do produto -->
 
-        <p>Teclados</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais2">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
+    <div class="produto" id="produto3">
+      <!-- Produto 3 -->
 
-      <div class="produto">
-        <!-- Produto 3 -->
+      <img src="../img/produto3.jpeg" alt="Centrais de alarmes" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto3.jpeg" alt="Produto 3" />
-        <!-- Imagem do Produto 3 -->
+      <p><span id="nome-produto3">Centrais de alarmes</span></p>
+      <!-- Nome do produto -->
 
-        <p>Centrais de alarmes</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais3">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
+    <div class="produto" id="produto4">
+      <!-- Produto 4 -->
 
-      <div class="produto">
-        <!-- Produto 4 -->
+      <img src="../img/produto4.png" alt="Integração com Intranet" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto4.png" alt="Produto 4" />
-        <!-- Imagem do Produto 4 -->
+      <p><span id="nome-produto4">Integração com Intranet</span></p>
+      <!-- Nome do produto -->
 
-        <p>Integração com Intranet</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais4">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
+    <div class="produto" id="produto5">
+      <!-- Produto 5 -->
 
-      <div class="produto">
-        <!-- Produto 5 -->
+      <img src="../img/produto5.jpeg" alt="Mouse Simples" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto5.jpeg" alt="Produto 5" />
-        <!-- Imagem do Produto 5 -->
+      <p><span id="nome-produto5">Mouse Simples</span></p>
+      <!-- Nome do produto -->
 
-        <p>Mouse Simples</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais5">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto6">
+      <!-- Produto 1 -->
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
-        <div class="produto">
-        <!-- Produto 5 -->
+      <img src="../img/produto6.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto6.jpeg" alt="Produto 6" />
-        <!-- Imagem do Produto 5 -->
+      <p><span id="nome-produto6">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
 
-        <p>Mouse Simples</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais6">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto7">
+      <!-- Produto 1 -->
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
-        <div class="produto">
-        <!-- Produto 5 -->
+      <img src="../img/produto7.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto5.jpeg" alt="Produto 5" />
-        <!-- Imagem do Produto 5 -->
+      <p><span id="nome-produto7">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
 
-        <p>Mouse Simples</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais7">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto8">
+      <!-- Produto 1 -->
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
-        <div class="produto">
-        <!-- Produto 5 -->
+      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto5.jpeg" alt="Produto 5" />
-        <!-- Imagem do Produto 5 -->
+      <p><span id="nome-produto8">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
 
-        <p>Mouse Simples</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais8">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto9">
+      <!-- Produto 1 -->
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
-        <div class="produto">
-        <!-- Produto 5 -->
+      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto5.jpeg" alt="Produto 5" />
-        <!-- Imagem do Produto 5 -->
+      <p><span id="nome-produto9">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
 
-        <p>Mouse Simples</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais9">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto10">
+      <!-- Produto 1 -->
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
-        <div class="produto">
-        <!-- Produto 5 -->
+      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
 
-        <img src="../img/produto5.jpeg" alt="Produto 5" />
-        <!-- Imagem do Produto 5 -->
+      <p><span id="nome-produto10">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
 
-        <p>Mouse Simples</p>
-        <!-- Nome/descrição do produto -->
+      <button class="btn-saiba-mais" id="btn-saiba-mais10">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto11">
+      <!-- Produto 1 -->
 
-        <button class="btn-saiba-mais">Saiba mais</button>
-        <!-- Botão para ação -->
-      </div>
-    </section>
-  </main>
+      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
+
+      <p><span id="nome-produto11">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
+
+      <button class="btn-saiba-mais" id="btn-saiba-mais11">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto12">
+      <!-- Produto 1 -->
+
+      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
+
+      <p><span id="nome-produto12">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
+
+      <button class="btn-saiba-mais" id="btn-saiba-mais12">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto13">
+      <!-- Produto 1 -->
+
+      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
+
+      <p><span id="nome-produto13">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
+
+      <button class="btn-saiba-mais" id="btn-saiba-mais13">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto14">
+      <!-- Produto 1 -->
+
+      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
+
+      <p><span id="nome-produto14">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
+
+      <button class="btn-saiba-mais" id="btn-saiba-mais14">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+    <div class="produto" id="produto15">
+      <!-- Produto 1 -->
+
+      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+      <!-- Imagem do produto -->
+
+      <p><span id="nome-produto15">Kit de Câmeras</span></p>
+      <!-- Nome do produto com span e id para referência -->
+
+      <button class="btn-saiba-mais" id="btn-saiba-mais15">Saiba mais</button>
+      <!-- Botão para ação -->
+    </div>
+
+  </section>
 
   <!-- =================== RODAPÉ =================== -->
   <footer class="rodape">
-    <!-- Rodapé da página -->
+    <!-- Rodapé do site -->
 
-    <img src="../img/lentralog.png" alt="Logo Rodapé" />
-    <!-- Imagem do logo usado no rodapé -->
+    <img src="../img/lentralog.png" alt="Logomarca no rodapé" />
+    <!-- Logo usado no rodapé -->
 
     <p>&copy; 2017 New Wave Sistemas Digitais</p>
-    <!-- Texto de direitos autorais -->
+    <!-- Direitos autorais -->
 
     <div class="social-links">
-      <!-- Container para links das redes sociais -->
+      <!-- Container para redes sociais -->
 
-      <a href="https://wa.me/5511910669810" class="social-link" target="_blank" title="Fale conosco pelo WhatsApp">
-        <!-- Link para WhatsApp que abre em nova aba -->
+      <a href="https://wa.me/5511910669810" target="_blank" class="social-link" title="Fale conosco pelo WhatsApp">
+        <!-- Link para WhatsApp -->
 
         <i class="fab fa-whatsapp"></i>
-        <!-- Ícone do WhatsApp via Font Awesome -->
+        <!-- Ícone WhatsApp -->
 
         WhatsApp
-        <!-- Texto visível ao lado do ícone -->
+        <!-- Texto visível -->
       </a>
 
-      <a href="https://www.instagram.com/SEUINSTAGRAM" class="social-link" target="_blank" title="Nos siga no Instagram">
-        <!-- Link para Instagram que abre em nova aba -->
+      <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" class="social-link" title="Nos siga no Instagram">
+        <!-- Link para Instagram -->
 
         <i class="fab fa-instagram"></i>
-        <!-- Ícone do Instagram via Font Awesome -->
+        <!-- Ícone Instagram -->
 
         Instagram
-        <!-- Texto visível ao lado do ícone -->
+        <!-- Texto visível -->
       </a>
 
-      <a href="https://www.facebook.com/SEUFACEBOOK" class="social-link" target="_blank" title="Curta nossa página no Facebook">
-        <!-- Link para Facebook que abre em nova aba -->
+      <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" class="social-link" title="Curta nossa página no Facebook">
+        <!-- Link para Facebook -->
 
         <i class="fab fa-facebook-f"></i>
-        <!-- Ícone do Facebook via Font Awesome -->
+        <!-- Ícone Facebook -->
 
         Facebook
-        <!-- Texto visível ao lado do ícone -->
+        <!-- Texto visível -->
       </a>
 
-      <a href="https://www.linkedin.com/in/SEULINKEDIN" class="social-link" target="_blank" title="Conecte-se no LinkedIn">
-        <!-- Link para LinkedIn que abre em nova aba -->
+      <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" class="social-link" title="Conecte-se no LinkedIn">
+        <!-- Link para LinkedIn -->
 
         <i class="fab fa-linkedin"></i>
-        <!-- Ícone do LinkedIn via Font Awesome -->
+        <!-- Ícone LinkedIn -->
 
         LinkedIn
-        <!-- Texto visível ao lado do ícone -->
+        <!-- Texto visível -->
       </a>
     </div>
   </footer>
+  <!-- =================== SCRIPT JS =================== -->
+  <script src="../js/index.js"defer></script>
+  <!-- Arquivo JavaScript externo que irá controlar o menu mobile -->
 </body>
 
 </html>

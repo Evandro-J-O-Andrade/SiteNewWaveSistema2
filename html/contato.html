@@ -71,8 +71,14 @@
         <img src="/img/lentralog.png" alt="Nome da Empresa" class="logo-nome" />
         <!-- Nome da empresa ao lado do logo -->
       </div>
-
-      <nav>
+ <!-- Ícone do menu hambúrguer visível apenas em mobile -->
+      <img src="../img/menu.png" alt="Menu Mobile" class="menu-hamburguer" id="btn-menu" />
+      <!--
+        - A imagem será escondida por padrão e exibida no mobile via CSS
+        - O id "btn-menu" é usado no JavaScript para controlar o clique
+      -->
+        <span id="span-menu">Menu</span> <!-- Texto opcional para acessibilidade para menu mobile -->
+      <nav id="menu-principal">
         <!-- Menu de navegação -->
 
         <a href="/index.html">Home</a>
@@ -215,7 +221,9 @@
       </a>
     </div>
   </footer>
-
+<!-- =================== SCRIPT JS =================== -->
+  <script src="../js/index.js"defer></script>
+  <!-- Arquivo JavaScript externo que irá controlar o menu mobile -->
   <script src="/js/contato.js" defer></script>
   <!-- Script de interação com o formulário, carregado após o HTML -->
 </body>
