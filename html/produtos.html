@@ -2,52 +2,57 @@
 <!-- Declara que este documento é HTML5 -->
 
 <html lang="pt-br">
-<!-- Elemento raiz, idioma definido para Português do Brasil -->
+<!-- Elemento raiz da página, com atributo de idioma definido para Português do Brasil -->
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Define o conjunto de caracteres como UTF-8, para suportar acentuação -->
+  <!-- Define a codificação de caracteres como UTF-8, suportando acentuação -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Define viewport para dispositivos móveis -->
+  <!-- Define a viewport para responsividade em dispositivos móveis -->
 
   <meta
     name="description"
     content="Produtos New Wave - Conheça nossas soluções tecnológicas para empresas modernas."
   />
-  <!-- Descrição para SEO -->
+  <!-- Meta descrição para SEO, resumo do conteúdo da página -->
 
   <meta name="keywords" content="New Wave, Produtos, Tecnologia, Soluções, Software" />
-  <!-- Palavras-chave para SEO -->
+  <!-- Palavras-chave relevantes para SEO -->
 
   <meta name="author" content="New Wave Sistemas Digitais" />
-  <!-- Autor do documento -->
+  <!-- Informação sobre o autor da página -->
 
   <title>Produtos - New Wave</title>
-  <!-- Título que aparece na aba do navegador -->
+  <!-- Título da aba do navegador -->
 
   <!-- Favicons para diferentes dispositivos e navegadores -->
   <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png" />
-  <!-- Favicon PNG 96x96 -->
+  <!-- Ícone favicon em PNG, tamanho 96x96 -->
 
   <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
-  <!-- Favicon SVG -->
+  <!-- Ícone favicon em formato SVG -->
 
   <link rel="shortcut icon" href="../img/favicon.ico" />
-  <!-- Favicon para navegadores antigos -->
+  <!-- Ícone favicon padrão para navegadores antigos -->
 
   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
-  <!-- Ícone para dispositivos Apple -->
+  <!-- Ícone para dispositivos Apple (iPhone, iPad) -->
 
   <link rel="manifest" href="../site.webmanifest" />
-  <!-- Manifesto para Progressive Web App -->
+  <!-- Manifesto para configuração de Progressive Web App -->
 
   <!-- CSS global -->
   <link rel="stylesheet" href="../css/index.css" />
+  <!-- Estilos globais compartilhados no site -->
+
   <!-- CSS específico da página produtos -->
   <link rel="stylesheet" href="../css/produtos.css" />
+  <!-- Estilos específicos para a página produtos -->
+
   <!-- CSS de media queries para responsividade -->
   <link rel="stylesheet" href="/css/midiaquire.css" />
+  <!-- Arquivo com media queries para diferentes tamanhos de tela -->
 
   <!-- Font Awesome para ícones sociais -->
   <link
@@ -55,78 +60,173 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous"
   />
+  <!-- Biblioteca externa para usar ícones sociais via CSS -->
+
+  <!-- ====== SEO Avançado: Open Graph + Twitter Cards + JSON-LD ====== -->
+
+  <!-- Open Graph: Meta tags para redes sociais como Facebook, LinkedIn -->
+  <meta property="og:title" content="Produtos - New Wave" />
+  <!-- Título do conteúdo para compartilhamento social -->
+
+  <meta property="og:description" content="Conheça nossas soluções tecnológicas para empresas modernas." />
+  <!-- Descrição curta para redes sociais -->
+
+  <meta property="og:image" content="https://www.seusite.com/img/banner-produtos.jpg" />
+  <!-- Imagem que aparecerá ao compartilhar em redes sociais -->
+
+  <meta property="og:url" content="https://www.seusite.com/html/produtos.html" />
+  <!-- URL da página atual -->
+
+  <meta property="og:type" content="website" />
+  <!-- Tipo do conteúdo Open Graph -->
+
+  <!-- Twitter Card: Metadados para exibir bem no Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Tipo do card no Twitter: resumo com imagem grande -->
+
+  <meta name="twitter:title" content="Produtos - New Wave" />
+  <!-- Título do card Twitter -->
+
+  <meta name="twitter:description" content="Conheça nossas soluções tecnológicas para empresas modernas." />
+  <!-- Descrição do card Twitter -->
+
+  <meta name="twitter:image" content="https://www.seusite.com/img/banner-produtos.jpg" />
+  <!-- Imagem para o card Twitter -->
+<!-- JSON-LD: Marcação estruturada para 3 produtos -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Kit de Câmeras",
+      "image": "https://www.seusite.com/img/produto1.jpeg",
+      "description": "Kit com câmeras de alta definição para segurança residencial e empresarial.",
+      "brand": {
+        "@type": "Brand",
+        "name": "New Wave"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://newwavesistemasdigital.netlify.app/html/produtos.html",
+        "priceCurrency": "BRL",
+        "price": "499.00",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Sistema de Alarme Residencial",
+      "image": "https://www.seusite.com/img/produto2.jpeg",
+      "description": "Sistema de alarme inteligente com sensores de presença e aplicativo.",
+      "brand": {
+        "@type": "Brand",
+        "name": "New Wave"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://newwavesistemasdigital.netlify.app/html/produtos.html",
+        "priceCurrency": "BRL",
+        "price": "299.00",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Fechadura Digital Wi-Fi",
+      "image": "https://www.seusite.com/img/produto3.jpeg",
+      "description": "Fechadura inteligente com acesso por aplicativo e senha numérica.",
+      "brand": {
+        "@type": "Brand",
+        "name": "New Wave"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://newwavesistemasdigital.netlify.app/html/produtos.html",
+        "priceCurrency": "BRL",
+        "price": "899.00",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
+</script>
+
+ 
 </head>
 
 <body>
   <!-- =================== NAVBAR =================== -->
   <header class="navbar">
-    <!-- Cabeçalho da página com a barra de navegação -->
+    <!-- Cabeçalho com barra de navegação -->
 
-   <div class="nav-container">
-      <!-- Container para agrupar logo e menu -->
+    <div class="nav-container">
+      <!-- Container para logo e menu -->
 
       <div class="nav-logo">
         <!-- Área do logo -->
 
         <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon" />
-        <!-- Imagem ícone do logo -->
+        <!-- Imagem do ícone do logo -->
 
         <img src="../img/lentralog.png" alt="Logomarca New Wave" class="logo-nome" />
-        <!-- Imagem nome da empresa -->
+        <!-- Imagem do nome da empresa ao lado do ícone -->
       </div>
- <!-- Ícone do menu hambúrguer visível apenas em mobile -->
+
+      <!-- Ícone do menu hambúrguer para dispositivos móveis -->
       <img src="../img/menu.png" alt="Menu Mobile" class="menu-hamburguer" id="btn-menu" />
       <!--
-        - A imagem será escondida por padrão e exibida no mobile via CSS
-        - O id "btn-menu" é usado no JavaScript para controlar o clique
+        A imagem fica oculta em telas grandes e visível apenas em dispositivos móveis via CSS
+        O id "btn-menu" será usado pelo JavaScript para controlar a ação do menu
       -->
-        <span id="span-menu">Menu</span> <!-- Texto opcional para acessibilidade para menu mobile -->
+
+      <span id="span-menu">Menu</span> <!-- Texto acessível para o menu mobile -->
 
       <nav id="menu-principal">
-        <!-- Navegação com links -->
+        <!-- Menu de navegação principal -->
 
         <a href="../index.html">Home</a>
         <!-- Link para página inicial -->
 
         <a href="../html/sobre.html">Sobre</a>
-        <!-- Link para página Sobre -->
+        <!-- Link para página sobre -->
 
         <a href="../html/produtos.html" class="ativo">Produtos</a>
-        <!-- Link para página Produtos, com destaque ativo -->
+        <!-- Link para página produtos, com classe ativo para destacar -->
 
         <a href="../html/servicos.html">Serviços</a>
-        <!-- Link para página Serviços -->
+        <!-- Link para página serviços -->
 
         <a href="../html/contato.html">Contato</a>
-        <!-- Link para página Contato -->
+        <!-- Link para página contato -->
       </nav>
     </div>
   </header>
 
   <!-- =================== BANNER PRINCIPAL =================== -->
   <section class="banner" id="produtos">
-    <!-- Banner principal com id para referência -->
+    <!-- Seção do banner principal, com id para referência -->
 
     <img src="../img/2017-03-07 copy.png" alt="Banner Produtos" class="banner-img" />
     <!-- Imagem de fundo do banner -->
 
     <div class="banner-conteudo">
-      <!-- Container central para logo, título e slogan -->
+      <!-- Conteúdo centralizado dentro do banner -->
 
       <img src="../img/logoicon.png" alt="Logomarca New Wave" class="banner-logo" />
       <!-- Logo no centro do banner -->
 
       <h1>Produtos</h1>
-      <!-- Título principal -->
+      <!-- Título principal do banner -->
 
       <p class="slogan">Conheça nossas soluções tecnológicas</p>
-      <!-- Slogan -->
+      <!-- Slogan do banner -->
     </div>
   </section>
 
   <!-- =================== INTRODUÇÃO =================== -->
   <section class="introducao">
-    <!-- Texto introdutório sobre os produtos -->
+    <!-- Seção introdutória com texto -->
 
     <h1>Nossos Produtos</h1>
     <!-- Título da seção -->
@@ -139,23 +239,23 @@
 
   <!-- =================== GRID DE PRODUTOS =================== -->
   <section class="produtos-grid" id="produtos-grid">
-    <!-- Container em grid para organizar os cards dos produtos -->
+    <!-- Container que usa grid para organizar produtos -->
 
     <div class="produto" id="produto1">
-      <!-- Produto 1 -->
+      <!-- Card do produto 1 -->
 
       <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
       <!-- Imagem do produto -->
 
       <p><span id="nome-produto1">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <!-- Nome do produto com span e id -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais1">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão para abrir o modal com mais informações -->
     </div>
 
     <div class="produto" id="produto2">
-      <!-- Produto 2 -->
+      <!-- Card do produto 2 -->
 
       <img src="../img/produto2.jpeg" alt="Teclados" />
       <!-- Imagem do produto -->
@@ -164,24 +264,24 @@
       <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais2">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão para abrir modal -->
     </div>
 
     <div class="produto" id="produto3">
-      <!-- Produto 3 -->
+      <!-- Card do produto 3 -->
 
-      <img src="../img/produto3.jpeg" alt="Centrais de alarmes" />
+      <img src="../img/produto11.png" alt="Centrais de alarmes" />
       <!-- Imagem do produto -->
 
       <p><span id="nome-produto3">Centrais de alarmes</span></p>
       <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais3">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
 
     <div class="produto" id="produto4">
-      <!-- Produto 4 -->
+      <!-- Card do produto 4 -->
 
       <img src="../img/produto4.png" alt="Integração com Intranet" />
       <!-- Imagem do produto -->
@@ -190,11 +290,11 @@
       <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais4">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
 
     <div class="produto" id="produto5">
-      <!-- Produto 5 -->
+      <!-- Card do produto 5 -->
 
       <img src="../img/produto5.jpeg" alt="Mouse Simples" />
       <!-- Imagem do produto -->
@@ -203,152 +303,199 @@
       <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais5">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto6">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto6.jpeg" alt="Kit de Câmeras" />
+    <!-- Produtos adicionais para completar 15 -->
+
+    <div class="produto" id="produto6">
+      <!-- Card do produto 6 -->
+
+      <img src="../img/produto6.jpeg" alt="Monitor LED" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto6">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto6">Monitor LED</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais6">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto7">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto7.jpeg" alt="Kit de Câmeras" />
+    <div class="produto" id="produto7">
+      <!-- Card do produto 7 -->
+
+      <img src="../img/produto7.jpeg" alt="Impressora" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto7">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto7">Impressora</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais7">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto8">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+    <div class="produto" id="produto8">
+      <!-- Card do produto 8 -->
+
+      <img src="../img/produto14.jpg" alt="Roteador Wireless" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto8">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto8">Roteador Wireless</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais8">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto9">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+    <div class="produto" id="produto9">
+      <!-- Card do produto 9 -->
+
+      <img src="../img/produto9.jpg" alt="HD Externo" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto9">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto9">HD Externo</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais9">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto10">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+    <div class="produto" id="produto10">
+      <!-- Card do produto 10 -->
+
+      <img src="../img/produto10.jpg" alt="Teclado Mecânico" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto10">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto10">Teclado Mecânico</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais10">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto11">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+    <div class="produto" id="produto11">
+      <!-- Card do produto 11 -->
+
+      <img src="../img/produto12.jpg" alt="Webcam HD" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto11">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto11">Webcam HD</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais11">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto12">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+    <div class="produto" id="produto12">
+      <!-- Card do produto 12 -->
+
+      <img src="../img/produto13.jpg" alt="Fonte de Alimentação" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto12">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto12">Fonte de Alimentação</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais12">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto13">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+    <div class="produto" id="produto13">
+      <!-- Card do produto 13 -->
+
+      <img src="../img/produto14.jpg" alt="Placa de Vídeo" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto13">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto13">Placa de Vídeo</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais13">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto14">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+    <div class="produto" id="produto14">
+      <!-- Card do produto 14 -->
+
+      <img src="../img/produto15.webp" alt="Processador" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto14">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto14">Processador</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais14">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
-    <div class="produto" id="produto15">
-      <!-- Produto 1 -->
 
-      <img src="../img/produto1.jpeg" alt="Kit de Câmeras" />
+    <div class="produto" id="produto15">
+      <!-- Card do produto 15 -->
+
+      <img src="../img/produto11.jpeg" alt="Memória RAM" />
       <!-- Imagem do produto -->
 
-      <p><span id="nome-produto15">Kit de Câmeras</span></p>
-      <!-- Nome do produto com span e id para referência -->
+      <p><span id="nome-produto15">Memória RAM</span></p>
+      <!-- Nome do produto -->
 
       <button class="btn-saiba-mais" id="btn-saiba-mais15">Saiba mais</button>
-      <!-- Botão para ação -->
+      <!-- Botão modal -->
     </div>
 
   </section>
+
+  <!-- =================== MODAL SAIBA MAIS =================== -->
+  <!-- Modal que fica oculto por padrão -->
+  <div id="modal-saiba-mais" class="modal">
+    <!-- Container do conteúdo do modal, centralizado -->
+
+    <div class="modal-content">
+      <!-- Conteúdo interno do modal -->
+
+      <span class="modal-close" id="modal-close">&times;</span>
+      <!-- Botão "X" para fechar o modal -->
+
+      <h2 id="modal-titulo">Título do Produto</h2>
+      <!-- Título dinâmico que será atualizado via JavaScript -->
+
+      <div class="modal-video">
+        <!-- Container para o vídeo embutido -->
+
+        <iframe
+          id="modal-video-frame"
+          width="560"
+          height="315"
+          src=""
+          title="Vídeo do produto"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <!-- Iframe para o vídeo, src vazio inicialmente e será atualizado via JS -->
+      </div>
+
+      <p id="modal-descricao">Descrição detalhada do produto aqui...</p>
+      <!-- Parágrafo dinâmico para descrição detalhada do produto -->
+    </div>
+  </div>
 
   <!-- =================== RODAPÉ =================== -->
   <footer class="rodape">
     <!-- Rodapé do site -->
 
     <img src="../img/lentralog.png" alt="Logomarca no rodapé" />
-    <!-- Logo usado no rodapé -->
+    <!-- Imagem da logomarca usada no rodapé -->
 
     <p>&copy; 2017 New Wave Sistemas Digitais</p>
     <!-- Direitos autorais -->
 
     <div class="social-links">
-      <!-- Container para redes sociais -->
+      <!-- Container para os links das redes sociais -->
 
       <a href="https://wa.me/5511910669810" target="_blank" class="social-link" title="Fale conosco pelo WhatsApp">
         <!-- Link para WhatsApp -->
 
         <i class="fab fa-whatsapp"></i>
-        <!-- Ícone WhatsApp -->
+        <!-- Ícone do WhatsApp -->
 
         WhatsApp
-        <!-- Texto visível -->
+        <!-- Texto visível do link -->
       </a>
 
       <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" class="social-link" title="Nos siga no Instagram">
@@ -382,9 +529,15 @@
       </a>
     </div>
   </footer>
-  <!-- =================== SCRIPT JS =================== -->
-  <script src="../js/index.js"defer></script>
-  <!-- Arquivo JavaScript externo que irá controlar o menu mobile -->
+
+  <!-- =================== SCRIPT JS principal =================== -->
+  <script src="../js/modal.js" defer></script>
+  <!-- Script JavaScript para controlar o modal e vídeos -->
+
+  <script src="../js/index.js" defer></script>
+  <!-- Script JavaScript para menu mobile e funcionalidades gerais -->
+
+  <!-- Ambos scripts usam 'defer' para carregar após o parsing do HTML -->
 </body>
 
 </html>

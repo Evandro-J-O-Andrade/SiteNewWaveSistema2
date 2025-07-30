@@ -347,3 +347,57 @@ nav a.ativo {
   filter: drop-shadow(0 0 8px var(--cor-primaria)); /* Sombra azul mais intensa */
   transform: scale(1.2);       /* Aumenta o tamanho do ícone levemente */
 }
+/* === MODAL GERAL PARA VÍDEOS OU CONTEÚDOS === */
+
+/* Modal oculto por padrão, cobre a tela toda */
+.modal {
+  display: none; /* Modal escondido inicialmente */
+  position: fixed; /* Fixa o modal na tela */
+  z-index: 1000; /* Sobrepõe quase tudo na página */
+  left: 0; /* Começa no canto esquerdo */
+  top: 0; /* Começa no topo da tela */
+  width: 100%; /* Ocupa toda a largura da viewport */
+  height: 100%; /* Ocupa toda a altura da viewport */
+  overflow: auto; /* Permite rolar o conteúdo se ultrapassar a altura */
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo preto translúcido */
+}
+
+/* Conteúdo do modal: caixa branca centralizada */
+.modal-content {
+  background-color: var(--branco); /* Usa branco puro do root */
+  margin: 5% auto; /* Espaço vertical e centraliza horizontalmente */
+  padding: 20px; /* Espaçamento interno confortável */
+  border-radius: 8px; /* Bordas suavemente arredondadas */
+  max-width: 700px; /* Largura máxima do modal */
+  position: relative; /* Para posicionar o botão fechar dentro */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Sombra suave para destaque */
+  font-family: var(--fonte-principal); /* Fonte global do site */
+  color: var(--cor-primaria-escura); /* Texto com azul escuro para legibilidade */
+}
+
+/* Botão fechar (X) do modal */
+.modal-close {
+  color: var(--cinza-escuro); /* Cor cinza escura da paleta */
+  position: absolute; /* Posicionado relativamente ao .modal-content */
+  right: 15px; /* Distância da borda direita */
+  top: 10px; /* Distância do topo */
+  font-size: 28px; /* Tamanho grande para visibilidade */
+  font-weight: bold; /* Negrito para destaque */
+  cursor: pointer; /* Cursor muda para mãozinha */
+  user-select: none; /* Impede seleção acidental do X */
+  transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Cor do botão fechar muda para azul ao passar o mouse */
+.modal-close:hover {
+  color: var(--cor-primaria); /* Cor azul principal da marca */
+}
+
+/* Estilo do iframe de vídeo dentro do modal para ser responsivo */
+.modal-video iframe {
+  width: 100%; /* Ocupa toda a largura do container */
+  height: 315px; /* Altura padrão para vídeos embutidos */
+  border: none; /* Remove borda padrão */
+  border-radius: 8px; /* Bordas arredondadas para combinar com modal */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra leve */
+}
