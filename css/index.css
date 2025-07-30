@@ -12,7 +12,14 @@
   --branco: #ffffff;                 /* Branco puro, usado para fundos claros e textos */
   --cor-primaria-escura: #004a75;   /* Azul escuro para efeitos hover nos botões */
   --fonte-principal: 'Segoe UI', sans-serif; /* Fonte principal usada no site */
-}
+  --cor-verde-agua: #40E0D0; /* Verde água para detalhes e destaques */
+  --cor-rosa-escuro: #e60073; /* Rosa escuro para destaques e links ativos */
+  --cor-laranja: #ff8c00; /* Laranja para botões e  destaques */
+  --cor-amarelo: #ffd700; /* Amarelo para destaques e botões */
+  --cor-roxo: #800080; /* Roxo para detalhes e destaques */   
+  --cor-verde: #06e60d; /* Verde para botões e destaques */
+  --fonte-principal: 'Segoe UI', sans-serif; /* Fonte principal do site */
+  }
 
 /* === RESET GERAL DE ESTILOS === */
 * {
@@ -109,6 +116,43 @@ nav a:hover {
   border-bottom: 4px solid var(--cor-primaria); /* Linha inferior decorativa */
   border-radius: 0 0 25px 25px; /* Cantos inferiores arredondados */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para destaque */
+}
+/* === EFEITO DE SUBLINHADO NOS LINKS DA NAVBAR === */
+nav a {
+  position: relative;               /* Permite posicionar o sublinhado com ::after */
+  color: var(--branco);            /* Mantém cor branca padrão */
+  text-decoration: none;           /* Remove sublinhado nativo */
+  font-weight: 600;                /* Negrito para destaque */
+  transition: color 0.3s;          /* Transição suave para a cor */
+  white-space: nowrap;             /* Evita quebra de linha nos links */
+}
+
+nav a::after {
+  content: "";                     /* Cria elemento visual vazio */
+  position: absolute;             /* Posiciona abaixo do link */
+  left: 0;                         /* Início do sublinhado */
+  bottom: -4px;                    /* Um pouco abaixo do texto */
+  width: 0%;                       /* Começa invisível */
+  height: 2px;                     /* Espessura da linha */
+  background-color: transparent;  /* Cor inicial transparente */
+  transition: width 0.3s ease, background-color 0.3s ease; /* Suaviza animação */
+}
+
+/* Hover: mostra sublinhado com cinza claro */
+nav a:hover::after {
+  width: 100%;                     /* Expande o sublinhado */
+  background-color: var(--cinza-claro); /* Cor do hover */
+}
+
+/* Página ativa: sublinhado rosa escuro fixo */
+nav a.ativo::after {
+  width: 100%;                          /* Mantém sublinhado visível */
+  background-color: var(--cor-verde-agua)        /* Rosa escuro fixo para ativo */
+}
+
+/* Página ativa: cor do texto também muda se quiser destaque extra */
+nav a.ativo {
+  color:var(--cor-verde);
 }
 
 /* Imagem de fundo do banner */

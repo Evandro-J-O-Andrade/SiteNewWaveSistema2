@@ -424,3 +424,59 @@
   pointer-events: none; /* Remove interatividade */
   transition: opacity 0.3s ease; /* Transição suave */
 }
+/* === Media Queries para reduzir gradualmente a logo de 397px até 200px === */
+
+/* De 397px até 360px - começa a reduzir a logo suavemente */
+@media (max-width: 397px) and (min-width: 361px) {
+  .logo-icon {
+    max-width: 55px;      /* Reduz um pouco o tamanho da imagem da logo */
+    height: auto;         /* Mantém proporção */
+    transition: max-width 0.3s ease; /* Suaviza a transição */
+  }
+  .logo-nome {
+    max-width: 200px;     /* Reduz um pouco o texto da logo */
+    height: auto;
+    transition: max-width 0.3s ease; /* Transição suave */
+  }
+}
+
+/* De 360px até 320px - reduz um pouco mais a logo */
+@media (max-width: 360px) and (min-width: 321px) {
+  .logo-icon {
+    max-width: 50px;      /* Diminui mais o ícone */
+    height: auto;
+    transition: max-width 0.3s ease;
+  }
+  .logo-nome {
+    max-width: 165px;     /* Diminui o texto */
+    height: auto;
+    transition: max-width 0.3s ease;
+  }
+}
+/* De 320px até 280px - reduz ainda mais a logo */
+@media (max-width: 320px) and (min-width: 280px)  {
+  .logo-icon {
+    max-width: 45px;      /* Diminui o ícone mais um pouco */
+    height: auto;
+    transition: max-width 0.3s ease;
+  }
+  .logo-nome {
+    max-width: 130px;     /* Diminui o texto da logo */
+    height: auto;
+    transition: max-width 0.3s ease;
+  }
+}   
+
+/* De 320px até 280px - reduz ainda mais a logo */
+@media (max-width: 279px) and (min-width: 200px)  {
+  .logo-icon {
+    max-width: 43px;      /* Diminui o ícone mais um pouco */
+    height: auto;
+    transition: max-width 0.3s ease;
+  }
+  .logo-nome {
+    max-width: 125px;     /* Diminui o texto da logo */
+    height: auto;
+    transition: max-width 0.3s ease;
+  }
+}   
