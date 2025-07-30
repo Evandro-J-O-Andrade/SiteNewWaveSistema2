@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- Declaração do tipo de arquivo XML com codificação UTF-8 -->
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Elemento principal que envolve todas as URLs -->
+
+  <!-- Página inicial (home) -->
+  <url>
+    <loc>https://newwavesistemasdigital.netlify.app/</loc> 
+    <!-- URL da página -->
+    <priority>1.0</priority> 
+    <!-- Prioridade máxima de rastreamento -->
+    <changefreq>weekly</changefreq> 
+    <!-- Frequência estimada de atualização -->
+  </url>
+
+  <!-- Página de produtos -->
+  <url>
+    <loc>https://newwavesistemasdigital.netlify.app/html/produtos.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Página de serviços -->
+  <url>
+    <loc>https://newwavesistemasdigital.netlify.app/html/servicos.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Página sobre a empresa -->
+  <url>
+    <loc>https://newwavesistemasdigital.netlify.app/html/sobre.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Página de contato -->
+  <url>
+    <loc>https://newwavesistemasdigital.netlify.app/html/contato.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Página de login (caso exista) -->
+  <url>
+    <loc>https://newwavesistemasdigital.netlify.app/html/login.html</loc>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Página de conta do usuário -->
+  <url>
+    <loc>https://newwavesistemasdigital.netlify.app/html/minha-conta.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>
