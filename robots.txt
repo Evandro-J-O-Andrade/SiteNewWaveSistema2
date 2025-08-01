@@ -1,0 +1,8 @@
+# Arquivo robots.txt - Permite que os buscadores rastreiem o site
+User-agent: *
+Allow: /
+https://newwavesistemasdigital.netlify.app/
+https://newwavesistemasdigital.netlify.app/html/sobre
+https://newwavesistemasdigital.netlify.app/html/produtos
+https://newwavesistemasdigital.netlify.app/html/servicos
+https://newwavesistemasdigital.netlify.app/html/contato
