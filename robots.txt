@@ -2,7 +2,7 @@
 User-agent: *
 Allow: /
 https://newwavesistemasdigital.netlify.app/
-https://newwavesistemasdigital.netlify.app/html/sobre
-https://newwavesistemasdigital.netlify.app/html/produtos
-https://newwavesistemasdigital.netlify.app/html/servicos
-https://newwavesistemasdigital.netlify.app/html/contato
+https://newwavesistemasdigital.netlify.app/html/sobre.html
+https://newwavesistemasdigital.netlify.app/html/produtos.html
+https://newwavesistemasdigital.netlify.app/html/servicos.html
+https://newwavesistemasdigital.netlify.app/html/contato.html
