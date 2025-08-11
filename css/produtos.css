@@ -43,7 +43,9 @@
   display: flex;                                   /* Ativa flexbox */
   flex-direction: column;                          /* Organiza os filhos em coluna */
   justify-content: flex-start;                     /* Alinha o conteúdo ao topo */
-  height: 100%;                                    /* Ocupa toda a altura possível */
+  height: 100%;                     
+   min-height: 350px; 
+   /* ou uma altura que cubra o maior card */               /* Ocupa toda a altura possível */
 }
 
 /* Efeito hover no card */
@@ -56,8 +58,11 @@
 .produto img {
   width: 100%;                                     /* Ocupa toda a largura do container */
   max-width: 150px;                                /* Limite máximo de largura */
-  height: auto;                                    /* Mantém proporção */
+  height: 100%;                                    /* Mantém proporção */
   margin-bottom: 1rem;                             /* Espaço abaixo da imagem */
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 6px; /* opcional */
 }
 
 /* Nome ou descrição do produto */
@@ -78,7 +83,7 @@
   font-weight: 600;                                /* Fonte em negrito */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
   margin-top: auto;                                /* Empurra o botão para o fundo do card */
-  margin-bottom: 1rem;                             /* Espaço inferior para não colar no limite do card */
+  margin-bottom: 0.5rem;                             /* Espaço inferior para não colar no limite do card */
   display: inline-block;                           /* Exibe como inline-block */
   font-size: 1rem;                                 /* Tamanho do texto */
   align-self: center;                              /* Centraliza o botão horizontalmente */
@@ -89,6 +94,29 @@
   background-color: var(--cor-secundaria);         /* Muda para azul claro */
   transform: scale(1.05);                          /* Aumenta levemente o tamanho */
 }
+
+.btn-comprar {
+  background-color: var(--cor-primaria);
+  color: var(--branco);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 1rem;
+  align-self: center;
+  text-decoration: none; /* para links, remove sublinhado */
+}
+
+.btn-comprar:hover {
+  background-color: var(--cor-secundaria);
+  transform: scale(1.05);
+}
+
 
 /* === Responsividade para telas menores === */
 @media (max-width: 768px) {

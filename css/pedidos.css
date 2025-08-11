@@ -1,0 +1,418 @@
+/* reset/var */
+/* Importa fontes do Google Fonts (Roboto com pesos 400, 500 e 700) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Importa o arquivo de media queries para responsividade */
+@import url('/css/midiaquire.css');
+
+/* Importa o arquivo principal de estilos */
+@import url('./index.css');
+
+/* === VARIÁVEIS GLOBAIS PARA CORES E FONTES === */
+:root {
+  --cor-primaria: #0077b6;           /* Cor azul principal usada no site */
+  --cor-secundaria: #90e0ef;         /* Azul claro para detalhes e destaques */
+  --cor-escura: #023e8a;             /* Azul escuro para banners e efeitos */
+  --cinza-claro: #e0e0e0;            /* Cinza claro para textos e fundos suaves */
+  --cinza-escuro: #d0d0d0;           /* Cinza médio usado como reserva */
+  --cinza-preto: #1a1a1a;            /* Cinza quase preto para fundos */
+  --preto: #111111;                  /* Preto forte para textos importantes */
+  --branco: #ffffff;                 /* Branco puro para fundos e textos */
+  --cor-primaria-escura: #004a75;   /* Azul escuro para efeito hover nos botões */
+  --fonte-principal: 'Segoe UI', sans-serif; /* Fonte principal do site */
+  --cor-verde-agua: #40E0D0;        /* Verde água para detalhes */
+  --cor-rosa-escuro: #e60073;       /* Rosa escuro para destaques e links */
+  --cor-laranja: #ff8c00;            /* Laranja para botões e destaques */
+  --cor-amarelo: #ffd700;            /* Amarelo para destaques */
+  --cor-roxo: #800080;               /* Roxo para detalhes */
+  --cor-verde: #06e60d;             /* Verde para botões e destaques */
+  --fonte-principal: 'Segoe UI', sans-serif; /* (repetida) Fonte principal do site */
+  --bg: #f6f7fb;                    /* Cor de fundo padrão */
+  --card: #ffffff;                  /* Cor do fundo dos cards */
+  --primary: #d6336c;               /* Cor de destaque (rosa vibrante) */
+  --accent: #27ae60;                /* Cor de realce (verde) */
+  --muted: #6b6f76;                 /* Cor neutra para textos menos importantes */
+  --shadow: rgba(0,0,0,0.08);      /* Cor para sombra leve */
+}
+
+/* === RESET GERAL DE ESTILOS === */
+* {
+  margin: 0;                         /* Remove margem padrão de todos elementos */
+  padding: 0;                        /* Remove padding padrão */
+  box-sizing: border-box;           /* Faz com que padding e border sejam incluídos na largura e altura */
+}
+
+/* topo */
+.topo {
+  display: flex;                    /* Layout flexível em linha */
+  justify-content: space-between;  /* Espaço máximo entre os elementos filhos */
+  align-items: center;             /* Alinha verticalmente ao centro */
+  background: #fff;                /* Fundo branco */
+  padding: 15px 20px;             /* Espaçamento interno */
+  border-radius: 10px;            /* Bordas arredondadas */
+  box-shadow: 0 4px 14px var(--shadow); /* Sombra suave */
+  margin-bottom: 3px;             /* Espaço abaixo do topo */
+  height: 80px;                   /* Altura fixa */
+  width: 100%;                   /* Largura total do container pai */
+}
+
+.topo-left {
+  display: flex;                  /* Layout flexível em linha */
+  align-items: center;           /* Alinhamento vertical central */
+  gap: 12px;                     /* Espaço entre itens */
+}
+
+.logo {
+  height: 56px;                  /* Altura fixa para logo */
+  width: auto;                   /* Largura automática proporcional */
+  object-fit: contain;           /* Ajusta a imagem sem distorcer */
+}
+
+.empresa-info small {
+  display: block;                /* Exibe em bloco para quebrar linha */
+  color: var(--muted);           /* Cor neutra para texto */
+  font-size: 13px;               /* Tamanho pequeno para texto secundário */
+}
+
+/* layout principal */
+.layout-triple {
+  display: flex;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  /* Aqui deixamos o container centralizado */
+  position: relative; /* para garantir posicionamento dos filhos */
+}
+
+/* conteúdo principal */
+.conteudo {
+  background: var(--card);       /* Fundo branco dos cards */
+  padding: 14px;                 /* Espaçamento interno */
+  border-radius: 10px;           /* Bordas arredondadas */
+  box-shadow: 0 6px 18px var(--shadow); /* Sombra mais pronunciada */
+}
+
+/* catálogo de produtos */
+.catalogo {
+  display: grid;                 /* Grid para layout de cards */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Ajusta o número de colunas conforme o espaço */
+  gap: 12px;                    /* Espaço entre cards */
+  margin-bottom: 12px;          /* Espaço abaixo do catálogo */
+}
+
+/* card do produto */
+.card-prod {
+  background: #fff;             /* Fundo branco */
+  border: 1px solid #eee;       /* Borda clara */
+  border-radius: 8px;           /* Bordas arredondadas */
+  padding: 8px;                 /* Espaçamento interno */
+  text-align: center;           /* Texto centralizado */
+  box-shadow: 0 2px 6px rgba(172, 9, 9, 0.03); /* Sombra muito suave */
+  
+}
+
+.card-prod img {
+  width: 100%;                 /* Imagem ocupa toda largura do card */
+  height: 110px;               /* Altura fixa */
+  object-fit: cover;           /* Corta a imagem para cobrir o espaço */
+  border-radius: 6px;          /* Bordas arredondadas para a imagem */
+  
+}
+
+.card-prod .nome {
+  font-weight: 600;            /* Texto em negrito */
+  margin: 8px 0 4px;           /* Margem superior e inferior */
+  font-size: 14px;             /* Tamanho da fonte */
+  color: var(--muted);         /* Cor neutra */
+}
+
+.card-prod .preco {
+  color: var(--accent);        /* Cor verde de destaque */
+  font-weight: 700;            /* Negrito */
+  margin-bottom: 8px;          /* Margem inferior */
+}
+/* efeito nas imagens dos cards e banners */
+.card-prod img,
+.banners img {
+  transition: transform 0.3s ease;
+}
+
+.card-prod img:hover,
+.banners img:hover {
+  transform: scale(1.05) rotate(2deg);
+  transition: transform 0.3s ease;
+}
+.card-esquerdo {
+  text-align: center; /* Centraliza tudo que for inline ou inline-block dentro */
+}
+.card-esquerdo img {
+  display: block;
+  margin: 0 auto; /* Garante centralização */
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Animação suave */
+}
+
+
+.card-esquerdo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* efeito hover nos cards do catálogo - sobe */
+.card-prod {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-prod:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card-prod button {
+  background: var(--primary);  /* Fundo rosa forte */
+  color: #fff;                 /* Texto branco */
+  border: none;                /* Sem borda */
+  padding: 8px 10px;           /* Espaçamento interno */
+  border-radius: 6px;          /* Bordas arredondadas */
+  cursor: pointer;             /* Cursor de mãozinha */
+}
+
+.card-prod button:hover {
+  opacity: 0.95;               /* Leve transparência ao passar o mouse */
+}
+.card-h3,
+.card-esquerdo p {
+  text-align: center; /* Centraliza o texto */
+  color: var(--cor-primaria); /* Usa a cor azul principal do tema */
+  font-weight: 600; /* Dá mais destaque */
+  font-size: 1.2rem; /* Tamanho de fonte maior */
+  margin-bottom: 12px; /* Espaço abaixo do título */
+}
+
+.card-esquerdo p {
+  color: var(--fonte-principal); /* Ou outra cor de texto suave */
+  font-weight: normal;
+}
+
+/* tabela de produtos */
+.tabela {
+  width: 100%;                 /* Ocupa toda a largura disponível */
+  border-collapse: collapse;  /* Remove espaçamento entre células */
+  margin-bottom: 12px;         /* Margem inferior */
+}
+
+.tabela thead th {
+  background: var(--accent);   /* Fundo verde */
+  color: #fff;                 /* Texto branco */
+  padding: 8px 10px;           /* Espaçamento interno */
+  text-align: left;            /* Alinha texto à esquerda */
+}
+
+.tabela td {
+  padding: 8px 10px;           /* Espaçamento interno */
+  border-bottom: 1px solid #eee; /* Linha de divisão clara */
+  vertical-align: middle;      /* Alinha conteúdo verticalmente ao meio */
+}
+
+.tabela tbody tr:last-child td {
+  border-bottom: none;         /* Remove linha inferior da última linha */
+}
+
+/* controles do formulário */
+.controls {
+  display: grid;               /* Layout em grid */
+  gap: 8px;                   /* Espaçamento entre os controles */
+  margin: 12px 0;             /* Margem vertical */
+}
+
+.controls label {
+  font-weight: 600;           /* Negrito para os labels */
+  font-size: 14px;            /* Tamanho da fonte */
+  color: #e7e5ee;             /* Cor clara para o texto */
+}
+
+.controls input,
+.controls select,
+.controls textarea {
+  padding: 8px;               /* Espaçamento interno */
+  border-radius: 6px;         /* Bordas arredondadas */
+  border: 1px solid #ddd;     /* Borda cinza clara */
+  width: 100%;                /* Largura total do container pai */
+}
+
+/* resumo dos valores */
+.resumo {
+  display: flex;              /* Layout flexível em linha */
+  flex-direction: column;     /* Coluna para empilhar os valores */
+  gap: 5px;                  /* Espaço entre os itens */
+  background: #1e1e1f;       /* Fundo escuro */
+  padding: 15px;             /* Espaçamento interno */
+  border-radius: 8px;        /* Bordas arredondadas */
+  font-size: 1.1rem;         /* Tamanho da fonte */
+  margin-bottom: 12px;       /* Margem inferior */
+}
+
+.resumo > div {
+  display: grid;             /* Layout em grid para alinhar texto e valores */
+  grid-template-columns: 1fr auto auto; /* Colunas: label | símbolo R$ | valor */
+  align-items: center;       /* Alinhamento vertical */
+}
+
+.resumo .label {
+  text-align: left;          /* Texto alinhado à esquerda */
+  font-weight: 600;          /* Negrito */
+}
+
+.resumo .moeda {
+  text-align: center;        /* Texto centralizado */
+  min-width: 30px;           /* Largura mínima para o símbolo de moeda */
+}
+
+.resumo #subtotal,
+.resumo #ajuste,
+.resumo #total {
+  text-align: right;         /* Valores alinhados à direita */
+  min-width: 60px;           /* Largura mínima para os valores */
+}
+
+.resumo .total {
+  font-weight: bold;         /* Negrito */
+  font-size: 1.2rem;         /* Fonte maior */
+  color: var(--primary);     /* Cor rosa forte */
+}
+
+/* ações dos botões */
+.acoes {
+  display: flex;             /* Layout flexível em linha */
+  flex-wrap: wrap;           /* Permite quebra de linha se necessário */
+  gap: 12px;                 /* Espaço entre os botões */
+  justify-content: flex-end; /* Alinha os botões à direita */
+  margin-top: 12px;          /* Margem superior */
+}
+
+.acoes button {
+  min-width: 140px;          /* Largura mínima para os botões */
+}
+
+.btn-primary {
+  background: var(--primary); /* Fundo rosa */
+  color: #fff;                /* Texto branco */
+  padding: 10px 14px;         /* Espaçamento interno */
+  border-radius: 8px;         /* Bordas arredondadas */
+  border: none;               /* Sem borda */
+  cursor: pointer;            /* Cursor pointer */
+}
+
+.btn-sec {
+  background: #fff;           /* Fundo branco */
+  border: 1px solid #ddd;     /* Borda cinza clara */
+  padding: 8px 12px;          /* Espaçamento interno */
+  border-radius: 8px;         /* Bordas arredondadas */
+  cursor: pointer;            /* Cursor pointer */
+}
+
+/* banners laterais */
+.banners {
+  display: flex;              /* Layout flexível em linha */
+  flex-direction: column;     /* Alinha as imagens verticalmente */
+  gap: 8px;                   /* Espaçamento entre imagens */
+}
+
+.banners img {
+  width: 100%;               /* Imagem ocupa toda largura do container */
+  border-radius: 10px;       /* Bordas arredondadas */
+  object-fit: cover;         /* Corta a imagem para cobrir o espaço */
+  box-shadow: 0 6px 18px var(--shadow); /* Sombra para destaque */
+}
+
+/* layout com 3 colunas */
+.layout-triple {
+  display: flex;             /* Layout flexível em linha */
+  gap: 1.5rem;              /* Espaço entre as colunas */
+  max-width: 1200px;         /* Largura máxima da área de conteúdo */
+  margin: 0 auto;            /* Centraliza horizontalmente */
+  padding: 1rem;             /* Espaçamento interno */
+}
+
+/* Coluna esquerda encostada na esquerda da tela com 15px de margem */
+.lado-esquerdo {
+  flex: 1;
+  min-width: 200px;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-left: calc(-50vw + 15px + 600px); 
+  /* 
+    -50vw: metade da largura da viewport (esquerda) 
+    + 15px: o espaçamento da borda da tela
+    + 600px: metade da largura do container central (1200/2)
+  */
+}
+.lado-esquerdo h3 {
+  text-align: center;
+  color: var(--cinza-preto);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+.lado-esquerdo p {
+  text-align: center;
+  color: var(--cor-primaria);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+/* Coluna direita encostada na direita da tela com 15px de margem */
+.lado-direito {
+  flex: 1;
+  min-width: 200px;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-right: calc(-50vw + 15px + 600px);
+  /* espelhado para direita */
+}
+.lado-direito h3 {
+  text-align: center;
+  color: var(--cinza-preto);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+.lado-direito p {
+  text-align: center;
+  color: var(--cor-primaria);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+/* Conteúdo central mantém o centro */
+.conteudo-central {
+  flex: 2.5;
+  min-width: 300px;
+}
+
+
+/* Responsividade para telas menores que 900px */
+@media (max-width: 900px) {
+  .layout-triple {
+    flex-direction: column;  /* Empilha as colunas verticalmente */
+  }
+  .lado-esquerdo,
+  .conteudo-central,
+  .lado-direito {
+    min-width: auto;         /* Remove largura mínima fixa */
+    flex: none;              /* Desabilita flex-grow/shrink */
+  }
+}
+@media (max-width: 1200px) {
+  .lado-esquerdo,
+  .lado-direito {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

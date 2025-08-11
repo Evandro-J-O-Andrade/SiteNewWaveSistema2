@@ -480,3 +480,28 @@
     transition: max-width 0.3s ease;
   }
 }   
+/* === pedidos.css - Estilos específicos para a página de pedidos === */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .banners {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .acoes {
+    justify-content: center;
+  }
+
+  .card-prod {
+    padding: 6px;
+  }
+
+  .resumo {
+    font-size: 1rem;
+  }
+}
+/* === pedidos.css - Estilos específicos para a página de pedidos === */

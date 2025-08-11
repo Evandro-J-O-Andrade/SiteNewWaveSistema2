@@ -1,0 +1,13 @@
+{
+  "carrinho": [],
+  "cliente": {
+    "nome": "",
+    "telefone": ""
+  },
+  "formaPagamento": "avista",
+  "calculos": {
+    "subtotal": 0,
+    "ajuste": 0,
+    "total": 0
+  }
+}

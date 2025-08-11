@@ -1,28 +1,6 @@
 // Aguarda o carregamento completo do conteúdo da página antes de executar o script
 document.addEventListener('DOMContentLoaded', () => {
-  
-  // Seleciona o elemento do modal pelo ID 'modal-saiba-mais'
-  const modal = document.getElementById('modal-saiba-mais');
-  
-  // Seleciona o elemento onde ficará o título do modal
-  const modalTitulo = document.getElementById('modal-titulo');
-  
-  // Seleciona o elemento onde ficará a descrição do modal
-  const modalDescricao = document.getElementById('modal-descricao');
-  
-  // Seleciona o iframe onde será carregado o vídeo do modal
-  const modalVideoFrame = document.getElementById('modal-video-frame');
-  
-  // Seleciona o botão (ou elemento) para fechar o modal (o "X")
-  const modalClose = document.getElementById('modal-close');
-
-  // Verifica se todos os elementos necessários existem na página
-  if (!modal || !modalTitulo || !modalDescricao || !modalVideoFrame || !modalClose) {
-    console.error('Elementos do modal não encontrados no DOM.');
-    return; // Para a execução do script caso algum elemento esteja faltando
-  }
-
-  // Objeto que contém informações de cada produto para preencher o modal dinamicamente
+ // Objeto que contém informações de cada produto para preencher o modal dinamicamente
   // Aqui com 15 produtos
   const produtosInfo = {
     produto1: {
@@ -101,7 +79,43 @@ document.addEventListener('DOMContentLoaded', () => {
       videoUrl: "https://www.youtube.com/embed/tntOCGkgt98"
     }
   };
+// BOTÕES COMPRAR
+  const botoesComprar = document.querySelectorAll('.btn-comprar');
+  botoesComprar.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idProduto = btn.getAttribute('data-produto');
+      if (produtosInfo[idProduto]) {
+        const nomeProduto = produtosInfo[idProduto].titulo;
+        const produtoUrl = encodeURIComponent(nomeProduto);
+        window.location.href = `../html/pedidos.html?produto=${produtoUrl}`;
+      } else {
+        console.warn('Produto não encontrado para comprar:', idProduto);
+      }
+    });
+  });
 
+  // Seleciona o elemento do modal pelo ID 'modal-saiba-mais'
+  const modal = document.getElementById('modal-saiba-mais');
+  
+  // Seleciona o elemento onde ficará o título do modal
+  const modalTitulo = document.getElementById('modal-titulo');
+  
+  // Seleciona o elemento onde ficará a descrição do modal
+  const modalDescricao = document.getElementById('modal-descricao');
+  
+  // Seleciona o iframe onde será carregado o vídeo do modal
+  const modalVideoFrame = document.getElementById('modal-video-frame');
+  
+  // Seleciona o botão (ou elemento) para fechar o modal (o "X")
+  const modalClose = document.getElementById('modal-close');
+
+  // Verifica se todos os elementos necessários existem na página
+  if (!modal || !modalTitulo || !modalDescricao || !modalVideoFrame || !modalClose) {
+    console.error('Elementos do modal não encontrados no DOM.');
+    return; // Para a execução do script caso algum elemento esteja faltando
+  }
+
+  
   // Função que abre o modal preenchendo com as informações do produto passado como parâmetro
   function abrirModal(produtoId) {
     // Verifica se o produto existe no objeto produtosInfo

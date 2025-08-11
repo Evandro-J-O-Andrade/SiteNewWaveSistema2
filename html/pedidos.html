@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!-- Declara que este documento está usando o padrão HTML5 -->
+
+<html lang="pt-br">
+<!-- Elemento raiz do documento HTML com atributo de idioma para Português do Brasil -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Define a codificação de caracteres para UTF-8 (suporta acentuação) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Configura a viewport para dispositivos móveis, garantindo responsividade -->
+
+  <meta name="description" content="Produtos New Wave - Conheça nossas soluções tecnológicas para empresas modernas." />
+  <!-- Meta tag que fornece uma descrição resumida para SEO -->
+
+  <meta name="keywords" content="New Wave, Produtos, Tecnologia, Soluções, Software" />
+  <!-- Palavras-chave relevantes para SEO -->
+
+  <meta name="author" content="New Wave Sistemas Digitais" />
+  <!-- Autor da página -->
+
+  <title>Produtos - New Wave</title>
+  <!-- Título da página que aparece na aba do navegador -->
+
+  <!-- Favicons para diversos dispositivos e navegadores -->
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png" />
+  <!-- Favicon PNG tamanho 96x96 pixels -->
+
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <!-- Favicon em formato SVG -->
+
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <!-- Favicon padrão para navegadores antigos -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+  <!-- Ícone para dispositivos Apple (iPhone, iPad) -->
+
+  <link rel="manifest" href="../site.webmanifest" />
+  <!-- Manifesto para Progressive Web App -->
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <!-- Estilos globais compartilhados pelo site -->
+
+  <link rel="stylesheet" href="../css/pedidos.css" />
+  <!-- Estilos específicos para pedidos -->
+
+  <link rel="stylesheet" href="../css/produtos.css" />
+  <!-- Estilos específicos para a página de produtos -->
+
+  <link rel="stylesheet" href="../css/midiaquire.css" />
+  <!-- Arquivo com media queries para responsividade -->
+
+  <!-- Font Awesome para ícones sociais -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <!-- Biblioteca de ícones externos -->
+
+  <!-- Aqui normalmente você teria as meta tags Open Graph, Twitter Cards e JSON-LD para SEO avançado (omitidas para brevidade) -->
+
+</head>
+
+<body>
+  <!-- Início do corpo da página -->
+
+  <!-- =================== CABEÇALHO / NAVBAR =================== -->
+  <header class="navbar">
+    <!-- Cabeçalho com barra de navegação -->
+
+    <div class="nav-container">
+      <!-- Container que agrupa logo e menu -->
+
+      <div class="nav-logo">
+        <!-- Área do logo -->
+
+        <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon" />
+        <!-- Imagem do ícone do logo com texto alternativo -->
+
+        <img src="../img/lentralog.png" alt="Nome New Wave" class="logo-nome" />
+        <!-- Imagem do nome da empresa -->
+      </div>
+
+      <!-- Ícone do menu hambúrguer, visível apenas em telas móveis -->
+      <img src="../img/menu.png" alt="Menu Mobile" class="menu-hamburguer" id="btn-menu" />
+      <!-- Este elemento será usado no JS para abrir/fechar o menu -->
+
+      <span id="span-menu">Menu</span>
+      <!-- Texto para acessibilidade, indicando o menu -->
+
+      <nav id="menu-principal">
+        <!-- Menu principal de navegação -->
+
+        <a href="../index.html">Home</a>
+        <!-- Link para página inicial -->
+
+        <a href="../html/sobre.html">Sobre</a>
+        <!-- Link para página sobre -->
+
+        <a href="../html/produtos.html">Produtos</a>
+        <!-- Link para página produtos -->
+
+        <a href="../html/servicos.html" class="ativo">Serviços</a>
+        <!-- Link para página serviços, com classe ativo indicando a página atual -->
+
+        <a href="../html/contato.html">Contato</a>
+        <!-- Link para página contato -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- =================== BANNER PRINCIPAL =================== -->
+  <section class="banner" id="pedidos">
+    <!-- Seção do banner principal com ID para referência -->
+
+    <img src="../img/servico-novidade.jpg" alt="Banner Pedidos" class="banner-img" />
+    <!-- Imagem de fundo do banner -->
+
+    <div class="banner-conteudo">
+      <!-- Container para o conteúdo textual e logo dentro do banner -->
+
+      <img src="../img/logoicon.png" alt="Logomarca New Wave" class="banner-logo" />
+      <!-- Logomarca centralizada no banner -->
+
+      <h1>Faça seu Pedido</h1>
+      <!-- Título principal do banner -->
+
+      <p class="slogan">Conheça nossas soluções em infraestrutura, segurança e tecnologia</p>
+      <!-- Slogan do banner -->
+    </div>
+  </section>
+
+  <!-- =================== CONTEÚDO PRINCIPAL COM 3 COLUNAS =================== -->
+  <main class="layout-triple">
+    <!-- Container principal com layout de três colunas -->
+
+    <!-- Coluna esquerda -->
+    <aside class="lado-esquerdo">
+   <!-- Área para conteúdo adicional/destaques -->
+
+      <h3>Destaques</h3>
+  <!-- Título da seção de destaques -->
+
+  <div class="card-esquerdo">
+    <!-- Card simples com conteúdo dentro da coluna esquerda -->
+
+    <p>Promoção especial!</p>
+    <!-- Texto da promoção -->
+
+    <img src="../img/produto2.jpeg" alt="Produto destaque" />
+    <!-- Imagem do produto em destaque -->
+  </div>
+  </aside>
+
+
+    <!-- Coluna central -->
+    <section class="conteudo-central">
+      <!-- Conteúdo principal da página -->
+
+      <section class="conteudo">
+        <!-- Seção que contém catálogo e itens selecionados -->
+
+        <h2>Catálogo de Produtos</h2>
+        <!-- Título do catálogo -->
+
+        <div id="catalogo" class="catalogo">
+          <!-- Container para os cards do catálogo, preenchido via JavaScript -->
+        </div>
+
+        <h2>Itens selecionados</h2>
+        <!-- Título para a lista de itens selecionados -->
+
+        <table id="tabelaProdutos" class="tabela">
+          <!-- Tabela para mostrar os produtos adicionados -->
+
+          <thead>
+            <!-- Cabeçalho da tabela -->
+            <tr>
+              <th>Produto</th>
+              <th>Qtd</th>
+              <th>Valor unit.</th>
+              <th>Subtotal</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- Corpo da tabela que será preenchido pelo JS -->
+          </tbody>
+        </table>
+
+        <div class="controls">
+          <!-- Controles para forma de pagamento e dados do cliente -->
+
+          <label for="formaPagamento">Forma de pagamento:</label>
+          <select id="formaPagamento">
+            <option value="avista">À vista (10% desconto)</option>
+            <option value="credito">Cartão de crédito (+5% taxa)</option>
+          </select>
+
+          <label for="nomeCliente">Nome do cliente:</label>
+          <input id="nomeCliente" placeholder="Nome completo" />
+          <!-- Input para nome do cliente -->
+
+          <label for="telefoneCliente">Telefone / WhatsApp:</label>
+          <input id="telefoneCliente" placeholder="(11) 9xxxx-xxxx" />
+          <!-- Input para telefone ou WhatsApp -->
+
+          <label for="observacao">Observação (opcional):</label>
+          <textarea id="observacao" rows="2" placeholder="Observações do pedido"></textarea>
+          <!-- Textarea para observações adicionais -->
+        </div>
+
+        <div class="resumo">
+          <!-- Resumo dos valores do pedido -->
+
+          <div><span>Subtotal:</span> R$ <span id="subtotal">0,00</span></div>
+          <!-- Exibe subtotal -->
+
+          <div><span>Desconto / Taxa:</span> R$ <span id="ajuste">0,00</span></div>
+          <!-- Exibe desconto ou taxa -->
+
+          <div class="total"><span>Total:</span> R$ <span id="total">0,00</span></div>
+          <!-- Exibe total final -->
+        </div>
+
+        <div class="acoes">
+          <!-- Botões para ações do pedido -->
+
+          <button id="btnGerarPDF" class="btn-primary">Gerar PDF profissional</button>
+          <!-- Botão para gerar PDF -->
+
+          <button id="btnGerarPedido" class="btn-primary">Gerar Pedido (Finalizar)</button>
+          <!-- Botão para finalizar pedido -->
+
+          <button id="btnExportJson" class="btn-sec">Exportar (JSON)</button>
+          <!-- Botão para exportar dados em JSON -->
+
+          <button id="limparCarrinho" class="btn-sec">Limpar Carrinho</button>
+          <!-- Botão para limpar o carrinho -->
+        </div>
+      </section>
+    </section>
+
+    <!-- Coluna direita -->
+    <aside class="lado-direito">
+      <!-- Área para banners/promos laterais -->
+
+      <div class="banners">
+        <!-- Container para imagens promocionais -->
+        <h3>Nova Tecnologia</h3>
+          <p>Novos produtos </p>
+        </h3>
+        <img src="../img/images (2).jpeg" alt="Promoção 1" />
+        <!-- Imagem do primeiro banner -->
+
+        <img src="../img/images.jpeg" alt="Promoção 2" />
+        <!-- Imagem do segundo banner -->
+      </div>
+    </aside>
+  </main>
+
+  <!-- =================== RODAPÉ =================== -->
+  <footer class="rodape">
+    <!-- Rodapé do site -->
+
+    <img src="../img/lentralog.png" alt="Logomarca no rodapé" />
+    <!-- Logomarca usada no rodapé -->
+
+    <p>&copy; 2017 New Wave Sistemas Digitais</p>
+    <!-- Direitos autorais -->
+
+    <div class="social-links">
+      <!-- Container para links das redes sociais -->
+
+      <a href="https://wa.me/5511910669810" target="_blank" class="social-link" title="Fale conosco pelo WhatsApp">
+        <!-- Link para WhatsApp -->
+
+        <i class="fab fa-whatsapp"></i>
+        <!-- Ícone do WhatsApp -->
+
+        WhatsApp
+        <!-- Texto visível do link -->
+      </a>
+
+      <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" class="social-link" title="Nos siga no Instagram">
+        <!-- Link para Instagram -->
+
+        <i class="fab fa-instagram"></i>
+        <!-- Ícone do Instagram -->
+
+        Instagram
+        <!-- Texto visível -->
+      </a>
+
+      <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" class="social-link" title="Curta nossa página no Facebook">
+        <!-- Link para Facebook -->
+
+        <i class="fab fa-facebook-f"></i>
+        <!-- Ícone do Facebook -->
+
+        Facebook
+        <!-- Texto visível -->
+      </a>
+
+      <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" class="social-link" title="Conecte-se no LinkedIn">
+        <!-- Link para LinkedIn -->
+
+        <i class="fab fa-linkedin"></i>
+        <!-- Ícone do LinkedIn -->
+
+        LinkedIn
+        <!-- Texto visível -->
+      </a>
+    </div>
+  </footer>
+
+  <!-- =================== SCRIPTS =================== -->
+  <!-- Biblioteca jsPDF para geração de PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Biblioteca jsPDF AutoTable para tabelas no PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+  <!-- Script personalizado para gerar PDF do pedido -->
+  <script src="../js/gerapdf.js" defer></script>
+
+  <!-- Script personalizado para finalizar o pedido -->
+  <script src="../js/gerapedido.js" defer></script>
+
+  <!-- Script geral para funcionalidades da página -->
+  <script src="../js/index.js" defer></script>
+
+</body>
+
+</html>
