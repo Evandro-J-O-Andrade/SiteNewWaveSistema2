@@ -102,9 +102,11 @@
 
         <a href="../html/produtos.html">Produtos</a>
         <!-- Link para página produtos -->
-
-        <a href="../html/servicos.html" class="ativo">Serviços</a>
+        <a href="../html/pedidos.html"class="ativo">Pedidos</a>
+        <a href="../html/servicos.html" >Serviços</a>
         <!-- Link para página serviços, com classe ativo indicando a página atual -->
+        <a href="../html/vendas.html">Criação de Sites</a>
+        <!-- Link para página de criação de sites -->
 
         <a href="../html/contato.html">Contato</a>
         <!-- Link para página contato -->
@@ -144,14 +146,35 @@
       <h3>Destaques</h3>
   <!-- Título da seção de destaques -->
 
-  <div class="card-esquerdo">
+    <div class="card-esquerdo">
     <!-- Card simples com conteúdo dentro da coluna esquerda -->
 
     <p>Promoção especial!</p>
     <!-- Texto da promoção -->
-
-    <img src="../img/produto2.jpeg" alt="Produto destaque" />
+    <img src="../img/produto1.jpeg" alt="Produto destaque" />
     <!-- Imagem do produto em destaque -->
+     <img src="../img/produto2.jpeg" alt="Produto destaque" />
+    <!-- Imagem do produto em destaque -->
+     <img src="../img/servico-alarmes.jpg" alt="Produto destaque" />
+    <!-- Imagem do produto em destaque -->
+     <img src="../img/produto4.png" alt="Produto destaque" />
+    <!-- Imagem do produto em destaque -->
+
+    <img src="../img/produto5.jpeg" alt="Produto destaque" />
+    <!-- Imagem do produto em destaque -->
+     <img src="../img/produto6.jpeg" alt="Produto destaque" />
+    <!-- Imagem do produto em destaque -->
+     <img src="../img/produto7.jpeg" alt="Produto destaque" />
+    <!-- Imagem do produto em destaque -->
+     <img src="../img/produto8.jpg" alt="Produto destaque" />
+    <!-- Imagem do produto em destaque -->
+     <img src="../img/produto9.jpg" alt="Produto destaque" />
+    <!-- Imagem do produto em destaque -->
+    
+     <img src="../img/servico-facial.png" alt="Produto destaque" />
+
+    <!-- Imagem do produto em destaque -->
+     
   </div>
   </aside>
 
@@ -227,6 +250,13 @@
           <!-- Exibe total final -->
         </div>
 
+        <!--Api de cep-->
+   <label for="cep">CEP:</label>
+<input id="cep" placeholder="00000-000" maxlength="9">
+<button type="button" id="btnValidarCEP">Consultar CEP</button>
+<span id="endereco"></span>
+<p>Frete: <span id="frete"></span></p> <!-- Aqui aparece o frete ou a mensagem de frete grátis -->
+
         <div class="acoes">
           <!-- Botões para ações do pedido -->
 
@@ -241,7 +271,10 @@
 
           <button id="limparCarrinho" class="btn-sec">Limpar Carrinho</button>
           <!-- Botão para limpar o carrinho -->
+           
         </div>
+     
+
       </section>
     </section>
 
@@ -251,10 +284,30 @@
 
       <div class="banners">
         <!-- Container para imagens promocionais -->
-        <h3>Nova Tecnologia</h3>
+        <h3>Nova Tecnologias</h3>
           <p>Novos produtos </p>
         </h3>
         <img src="../img/images (2).jpeg" alt="Promoção 1" />
+        <!-- Imagem do primeiro banner -->
+
+        <img src="../img/images.jpeg" alt="Promoção 2" />
+        <!-- Imagem do segundo banner -->
+            <img src="../img/images (2).jpeg" alt="Promoção 1" />
+        <!-- Imagem do primeiro banner -->
+
+        <img src="../img/images.jpeg" alt="Promoção 2" />
+        <!-- Imagem do segundo banner -->
+            <img src="../img/images (2).jpeg" alt="Promoção 1" />
+        <!-- Imagem do primeiro banner -->
+
+        <img src="../img/images.jpeg" alt="Promoção 2" />
+        <!-- Imagem do segundo banner -->
+            <img src="../img/images (2).jpeg" alt="Promoção 1" />
+        <!-- Imagem do primeiro banner -->
+
+        <img src="../img/images.jpeg" alt="Promoção 2" />
+        <!-- Imagem do segundo banner -->
+            <img src="../img/images (2).jpeg" alt="Promoção 1" />
         <!-- Imagem do primeiro banner -->
 
         <img src="../img/images.jpeg" alt="Promoção 2" />
@@ -320,16 +373,14 @@
 
   <!-- =================== SCRIPTS =================== -->
   <!-- Biblioteca jsPDF para geração de PDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-  <!-- Biblioteca jsPDF AutoTable para tabelas no PDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 
   <!-- Script personalizado para gerar PDF do pedido -->
-  <script src="../js/gerapdf.js" defer></script>
-
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
   <!-- Script personalizado para finalizar o pedido -->
-  <script src="../js/gerapedido.js" defer></script>
+  <script src="../js/gerapedido.js"defer></script>
+ <script src="../js/gerapdf.js"defer></script>
 
   <!-- Script geral para funcionalidades da página -->
   <script src="../js/index.js" defer></script>

@@ -1,69 +1,345 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<!-- Declara que este é um documento HTML5 -->
+
+<html lang="pt-br">
+<!-- Define o idioma da página como português brasileiro -->
+
 <head>
-  <meta charset="UTF-8">
+ <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="New Wave Sistemas - Criação de sites, sistemas e landing pages profissionais. Sites rápidos, bonitos e otimizados para Google. Solicite seu orçamento.">
-  <title>Criação de Sites e Landing Pages - New Wave Sistemas</title>
-  <link rel="stylesheet" href="../css/vendas.css">
-  <link rel="stylesheet" href="../css/midiaquire.css">
-  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
-  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
-  <link rel="manifest" href="../site.webmanifest">  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="../css/index.css">
+  <title>Criação de Sites Profissionais | New Wave Sistemas Digitais</title>
+  <meta name="description" content="Criação de sites, landing pages, e-commerces e blogs. Design moderno, responsivo e SEO avançado para sua empresa.">
+  <meta name="keywords" content="criação de sites, landing page, e-commerce, blogs, New Wave Sistemas, sites responsivos, desenvolvimento web">
+  <meta name="author" content="New Wave Sistemas Digitais">
+<!-- Open Graph -->
+<meta property="og:title" content="Criação de Sites Profissionais | New Wave Sistemas Digitais">
+<meta property="og:description" content="Criação de sites, landing pages, e-commerces e blogs. Design moderno, responsivo e SEO avançado para sua empresa.">
+<meta property="og:image" content="../img/bannercapa.jpg">
+<meta property="og:url" content="https://www.seusite.com.br/vendas.html">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Criação de Sites Profissionais | New Wave Sistemas Digitais">
+<meta name="twitter:description" content="Criação de sites, landing pages, e-commerces e blogs. Design moderno, responsivo e SEO avançado para sua empresa.">
+<meta name="twitter:image" content="../img/bannercapa.jpg">
+
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="V7lFV1_cimOzZiI_cU-CgiO9NIZcsCpElr_7h-J92qM" />
+
+  <!-- Ícones e favicons da aplicação, todos localizados na pasta img -->
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png" />
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <link rel="stylesheet" href="/css/vendas.css">
+  <!-- Manifesto para suporte PWA -->
+
+  <title>New Wave Sistemas Digitais</title>
+  <!-- Título que aparece na aba do navegador -->
+
+  <!-- Importação do CSS global -->
+  <link rel="stylesheet" href="../css/index.css" />
+
+  <!-- Importação de estilos responsivos (caso esteja separado) -->
+  <link rel="stylesheet" href="../css/midiaquire.css" />
+
+  <!-- Importação da biblioteca Font Awesome para ícones de redes sociais -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "New Wave Sistemas Digitais",
+    "url": "https://www.seusite.com.br",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https:/newwavesistemasdigital.netlify.app/busca?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Landing Page",
+  "description": "Landing Page profissional com design focado em conversão, otimização SEO básica e integração com ferramentas de análise.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BRL",
+    "price": "499",
+    "url": "https://wa.me/5511910669810?text=Olá!%20Tenho%20interesse%20em%20uma%20Landing%20Page."
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Site Premium + Blog",
+  "description": "Landing Page profissional com design focado em conversão, otimização SEO básica e integração com ferramentas de análise.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BRL",
+    "price": "1800",
+    "url": "https://wa.me/5511910669810?text=Olá!%20Tenho%20interesse%20em%20uma%20Site%Premium%20+Blog."
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "E-Commerce / Loja Virtual",
+  "description": "Landing Page profissional com design focado em conversão, otimização SEO básica e integração com ferramentas de análise.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BRL",
+    "price": "2500",
+    "url": "https://wa.me/5511910669810?text=Olá!%20Tenho%20interesse%20em%20uma%20E-commerce."
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Site Completo",
+  "description": "Landing Page profissional com design focado em conversão, otimização SEO básica e integração com ferramentas de análise.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BRL",
+    "price": "499",
+    "url": "https://wa.me/5511910669810?text=Olá!%20Tenho%20interesse%20em%20uma%20Site%Completo."
+  }
+}
+</script>
 <body>
+  <!-- =================== NAVBAR =================== -->
+  <header class="navbar">
+    <!-- Cabeçalho fixo com a navegação principal -->
 
-  <!-- ===== Cabeçalho ===== -->
-  <header class="site-header">
-    <div class="logo">
-      <a href="index.html">New Wave Sistemas</a>
+    <div class="nav-container">
+      <!-- Container de navegação, com position relative para posicionar elementos absolutos como o menu -->
+
+      <div class="nav-logo">
+        <!-- Logo da empresa -->
+        <img src="../img/logoicon.png" alt="Ícone New Wave" class="logo-icon" />
+        <!-- Ícone do logo (parte gráfica) -->
+        <img src="../img/lentralog.png" alt="Nome New Wave" class="logo-nome" />
+        <!-- Logo com nome escrito -->
+      </div>
+
+      <!-- Ícone do menu hambúrguer visível apenas em mobile -->
+      <img src="../img/menu.png" alt="Menu Mobile" class="menu-hamburguer" id="btn-menu" />
+      <!--
+        - A imagem será escondida por padrão e exibida no mobile via CSS
+        - O id "btn-menu" é usado no JavaScript para controlar o clique
+      -->
+        <span id="span-menu">Menu</span> <!-- Texto opcional para acessibilidade para menu mobile -->
+
+      <nav id="menu-principal">
+        <!-- Navegação principal com links para páginas/seções -->
+        <a href="../index.html" >Home</a>
+        <a href="../html/sobre.html" >Sobre</a>
+        <a href="../html/produtos.html" >Produtos</a>
+        <a href="../html/servicos.html" >Serviços</a>
+        <a  href="../html/vendas.html" class="ativo">Criação de Sites</a>
+        <a href="../html/contato.html" >Contato</a>
+      </nav>
     </div>
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="criacao-de-sites.html" class="ativo">Criação de Sites</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+   </header>
 
-  <!-- ===== Conteúdo ===== -->
-  <section>
-    <h1>Criação de Sites e Landing Pages</h1>
-    <p class="subtitulo">Na <strong>New Wave Sistemas</strong> criamos soluções digitais sob medida para sua empresa, com design moderno, responsivo e otimização para mecanismos de busca.</p>
-    
-    <div class="cards">
-      <div class="card">
+   <!-- =================== CONTEÚDO PRINCIPAL =================== -->
+   <main class="main-content">
+     <!-- Área principal da página -->
+
+ 
+
+        <section class="banner" id="vendas">
+        <!-- Seção do banner principal da home -->
+
+        <img src="../img/bannercapa.jpg" alt="Banner vendas " class="banner-img" />
+        <!-- Imagem de fundo para o banner -->
+
+        <div class="banner-conteudo">
+        <!-- Conteúdo sobreposto ao banner -->
+
+        <img src="../img/logoicon.png" alt="Logomarca New Wave" class="banner-logo" />
+        <!-- Logo central no banner -->
+
+        <h1>Criação de Sites e Landing Page</h1>
+        <!-- Título principal da empresa -->
+
+        <p class="slogan">Uma nova onda de tecnologia</p>
+        <!-- Frase de efeito / slogan -->
+        </div>
+      </section>
+
+     <section class="conteudo">
+      <!-- Texto institucional da empresa -->
+
+      <h2>Faça o seu site conosco!</h2>
+      <!-- Título da seção -->
+
+      <p>
+        Na <strong>New Wave Sistemas</strong> criamos soluções digitais sob medida para sua empresa, com design moderno, responsivo e otimização para mecanismos de busca.
+      </p>
+      <!-- Texto descritivo com destaque para o nome da empresa -->
+    </section>
+
+    <section class="subtitulo">
+      <!-- Subtítulo da seção de criação de sites -->
+
+      <h2>Escolha o tipo de site ideal para você</h2>
+      <!-- Título secundário -->   
+    </section>
+
+   <div class="flip-cards">
+  <div class="flip-card" tabindex="0" aria-label="Landing Page - clique para mais detalhes">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
         <h2>Landing Page</h2>
         <p>Ideal para campanhas, lançamentos e vendas rápidas, focada em conversão.</p>
-        <h3>R$ 499</h3>
+        <h3>Apartir de R$ 499</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Landing Page profissional com design focado em conversão, otimização SEO básica e integração com ferramentas de análise.</p>
         <a href="https://wa.me/5511910669810?text=Olá!%20Tenho%20interesse%20em%20uma%20Landing%20Page." class="btn">Solicitar Orçamento</a>
       </div>
+    </div>
+  </div>
 
-      <div class="card">
+  <div class="flip-card" tabindex="0" aria-label="Site Completo - clique para mais detalhes">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
         <h2>Site Completo</h2>
         <p>Perfeito para empresas que precisam apresentar serviços e captar clientes.</p>
-        <h3>R$ 1.200</h3>
+        <h3>Nossa Promoção! R$ 1.200</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Site completo com múltiplas páginas, formulário de contato, design responsivo e SEO otimizado.</p>
         <a href="https://wa.me/5511910669810?text=Olá!%20Tenho%20interesse%20em%20um%20Site%20Completo." class="btn">Solicitar Orçamento</a>
       </div>
+    </div>
+  </div>
 
-      <div class="card">
+  <div class="flip-card" tabindex="0" aria-label="Site Premium com Blog - clique para mais detalhes">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
         <h2>Site Premium + Blog</h2>
         <p>Inclui blog integrado para marketing de conteúdo e maior alcance no Google.</p>
         <h3>R$ 1.800</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Site Premium com blog integrado, SEO avançado e ferramentas para engajamento do público.</p>
         <a href="https://wa.me/5511910669810?text=Olá!%20Tenho%20interesse%20em%20um%20Site%20Premium%20com%20Blog." class="btn">Solicitar Orçamento</a>
       </div>
     </div>
-  </section>
+    
+  </div>
+<div class="flip-card" tabindex="0" aria-label="Site Premium com Blog - clique para mais detalhes">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h2> E-commerce / Loja Virtua</h2>
+        <p>Vende produtos online, com integração de pagamentos, para sites.Ex: cosméticos, roupas, produtos digitais.</p>
+        <h3>R$  2.500</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Site Premium com blog integrado, SEO avançado e ferramentas para engajamento do público.</p>
+        <a href="https://wa.me/5511910669810?text=Olá!%20Tenho%20interesse%20em%20um%20Site%20Premium%20com%20Blog." class="btn">Solicitar Orçamento</a>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
 
-  <section class="incluso">
-    <h2>O que está incluído?</h2>
+
+<section class="portfolio">
+  <!-- Subtítulo do Portfólio -->
+  <div class="subtitulo">
+    <h2>Portfólio de Sites</h2>
+    <p>Confira alguns projetos que já desenvolvemos para nossos clientes</p>
+  </div>
+</section>
+  <!-- Flip-cards de projetos -->
+  <div class="flip-cards">
+    <!-- Cliente 1 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../img/SiteAngelCosmeticos.png" alt="Site Cliente 1" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <h2>Cliente 1</h2>
+        </div>
+        <div class="flip-card-back">
+          <h3>Projeto Institucional</h3>
+          <p>Site moderno, responsivo e otimizado para SEO.</p>
+          <a href="https://angelcosmeticos.netlify.app/" class="btn" target="_blank">Visitar Site</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cliente 2 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../img/bannercapa.jpg" alt="Site Cliente 2" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <h2>Cliente 2</h2>
+        </div>
+        <div class="flip-card-back">
+          <h3>E-commerce</h3>
+          <p>Loja online completa, com integração de pagamento e design atrativo.</p>
+          <a href="https://sitecliente2.com" class="btn" target="_blank">Visitar Site</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cliente 3 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../img/servico-novidade.jpg" alt="Site Cliente 3" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <h2>Cliente 3</h2>
+        </div>
+        <div class="flip-card-back">
+          <h3>Landing Page</h3>
+          <p>Página de conversão otimizada para campanhas de marketing digital.</p>
+          <a href="https://sitecliente3.com" class="btn" target="_blank">Visitar Site</a>
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- Cliente 4 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../img/bannerrede.png" alt="Site Cliente 4" style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <h2>Cliente 4</h2>
+        </div>
+        <div class="flip-card-back">
+          <h3>Blog Corporativo</h3>
+          <p>Blog responsivo, com área de artigos e integração com redes sociais.</p>
+          <a href="https://sitecliente4.com" class="btn" target="_blank">Visitar Site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CTA final -->
+  <div style="text-align:center; margin-top:3rem;">
+    <a href="../html/contato.html" class="btn btn-saiba-mais">Quero meu site também</a>
+  </div>
+</section>
+<section></section>
+   <section class="incluso">
+    <h2>O que está incluso?</h2>
     <ul>
       <li>✅ Design responsivo (PC, tablet e celular)</li>
       <li>✅ Integração com redes sociais</li>
@@ -72,12 +348,45 @@
       <li>✅ Integração com WhatsApp</li>
       <li>✅ Painel de administração fácil de usar</li>
     </ul>
-  </section>
+   </section>
 
-  <!-- ===== Rodapé ===== -->
-  <footer>
-    &copy; 2025 New Wave Sistemas - Todos os direitos reservados
+   </main>
+
+   <!-- =================== RODAPÉ =================== -->
+  <footer class="rodape">
+    <!-- Rodapé com redes sociais e marca -->
+
+    <img src="../img/lentralog.png" alt="Logo Rodapé" />
+    <!-- Logo usado no rodapé -->
+
+    <p>&copy; 2017 New Wave Sistemas Digitais</p>
+    <!-- Direitos autorais -->
+
+    <div class="social-links">
+      <!-- Links sociais com ícones -->
+
+      <a href="https://wa.me/5511910669810" target="_blank" title="Converse pelo WhatsApp" class="social-link">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+
+      <a href="https://www.instagram.com/SEUINSTAGRAM" target="_blank" title="Siga no Instagram" class="social-link">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+
+      <a href="https://www.facebook.com/SEUFACEBOOK" target="_blank" title="Acompanhe no Facebook" class="social-link">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+
+      <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank" title="Veja no LinkedIn" class="social-link">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
   </footer>
 
+  <!-- =================== SCRIPT JS =================== -->
+  <script src="../js/index.js"defer></script>
+  <script src="../js/flip.js"></script>
+  <!-- Arquivo JavaScript externo que irá controlar o menu mobile -->
 </body>
+
 </html>

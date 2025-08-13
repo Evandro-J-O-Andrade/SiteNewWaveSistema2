@@ -1,156 +1,700 @@
 /* ===== Reset ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('/css/midiaquire.css');
+@import url('/css/index.css');
+/* vendas.css */
+/* Estilos específicos da página de Criação de Sites */
+/* === VARIÁVEIS GLOBAIS PARA CORES E FONTES === */
+:root {
+  --cor-primaria: #0077b6;           /* Define a cor azul principal usada no site */
+  --cor-secundaria: #90e0ef;         /* Define um azul claro para detalhes e destaques */
+  --cor-escura: #023e8a;             /* Azul escuro usado em banners e efeitos de degradê */
+  --cinza-claro: #e0e0e0;            /* Cinza claro para textos e fundos suaves */
+  --cinza-escuro: #d0d0d0;           /* Cinza um pouco mais escuro, usado como reserva */
+  --cinza-preto: #1a1a1a;            /* Cor escura usada como fundo geral da página */
+  --preto: #111111;                  /* Preto intenso para textos com maior destaque */
+  --branco: #ffffff;                 /* Branco puro, usado para fundos claros e textos */
+  --cor-primaria-escura: #004a75;   /* Azul escuro para efeitos hover nos botões */
+  --fonte-principal: 'Segoe UI', sans-serif; /* Fonte principal usada no site */
+  --cor-verde-agua: #40E0D0; /* Verde água para detalhes e destaques */
+  --cor-rosa-escuro: #e60073; /* Rosa escuro para destaques e links ativos */
+  --cor-laranja: #ff8c00; /* Laranja para botões e  destaques */
+  --cor-amarelo: #ffd700; /* Amarelo para destaques e botões */
+  --cor-roxo: #800080; /* Roxo para detalhes e destaques */   
+  --cor-verde: #06e60d; /* Verde para botões e destaques */
+  --fonte-principal: 'Segoe UI', sans-serif; /* Fonte principal do site */
+  }
+
+.subtitulo h2 {
+  margin-bottom: 1rem;         /* Espaço abaixo do título */
+  color: var(--cor-texto); /* Cor azul clara para destaque */
+  text-align: center;          /* Centraliza o texto do título */
 }
 
-/* ===== Layout geral ===== */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-}
 
-/* ===== Cabeçalho ===== */
-.site-header {
-  background-color: #0077b6;
-  color: #fff;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.site-header .logo a {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 5px 10px;
-  transition: background 0.3s ease;
-}
-
-.menu a:hover,
-.menu a.ativo {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-}
-
-/* ===== Conteúdo ===== */
-section {
-  padding: 40px 20px;
+.subtitulo {
+  max-width: 800px;
+  margin: 0 auto 2rem;
   text-align: center;
-}
-
-h1 {
-  color: #0077b6;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-h2 {
-  color: #0077b6;
-}
-
-p.subtitulo {
   font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #555;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  color: var(--cor-texto);
 }
 
+/* ==== Cards de preços ==== */
 .cards {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+/* ==== Cards com degradê ==== */
 .card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: linear-gradient(145deg, var(--preto) 0%, var(--cor-escura) 60%, var(--cor-primaria) 100%);
+  color: var(--branco);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  max-width: 320px;
   text-align: center;
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card h2,
+.card p,
+.card h3 {
+  color: var(--branco);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  color: var(--branco);
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.card h3 {
+  color: var(--cor-secundaria);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+/* ==== Responsividade ==== */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 90%;
+  }
+}
+
+.card {
+  background: linear-gradient(135deg, var(--preto) 0%, var(--cor-escura) 100%);
+  color: var(--branco);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h2,
+.card p,
+.card h3 {
+  color: var(--branco);
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .card h2 {
-  margin-bottom: 10px;
-  color: #0077b6;
+  color: var(--cor-primaria);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .card p {
+  color: var(--cor-texto);
   font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  color: #333;
+  color: var(--cor-secundaria);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
+/* ==== Botões ==== */
 .btn {
-  padding: 10px 20px;
-  background: #0077b6;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  text-decoration: none;
   display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
 }
 
 .btn:hover {
-  background: #005a85;
+  background-color: var(--cor-primaria-escura);
 }
 
-/* ===== Lista ===== */
-ul {
+/* ==== Lista de inclusões ==== */
+.incluso {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.incluso h2 {
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+}
+
+.incluso ul {
   list-style: none;
   padding: 0;
-  max-width: 500px;
-  margin: auto;
-  text-align: left;
 }
 
-ul li {
-  margin-bottom: 10px;
+.incluso li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--cor-texto);
 }
 
-.incluso {
-  background: #fff;
+/* ==== Responsividade específica ==== */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    max-width: 90%;
+  }
 }
 
-/* ===== Rodapé ===== */
-footer {
-  background: #333;
-  color: #fff;
+
+.incluso ul {
+  list-style: none;
+  padding: 0;
+}
+
+.incluso li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--cor-texto);
+}
+
+/* ==== Responsividade específica ==== */
+@media (max-width: 768px) {
+  .banner {
+    height: 280px;
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner .slogan {
+    font-size: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
+/* ==== Responsividade ==== */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 90%;
+  }
+}
+.btn-saiba-mais {
+  background-color: var(--cor-primaria);         /* Cor de fundo azul */
+  color: var(--branco);                            /* Texto branco */
+  border: none;                                   /* Sem borda */
+  padding: 0.5rem 1.2rem;                         /* Espaçamento interno */
+  border-radius: 25px;                            /* Bordas arredondadas */
+  cursor: pointer;                                /* Cursor de mãozinha */
+  font-weight: 600;                               /* Texto em negrito */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+  margin-top: auto;                               /* Empurra o botão para o fundo do card */   
+  margin-bottom: 0.5rem;                          /* Espaço inferior para não colar no limite do card */
+  display: inline-block;                          /* Exibe como inline-block */  
+  font-size: 1rem;                                /* Tamanho do texto */
+  align-self: center;                             /* Centraliza o botão horizontalmente */  
+}
+.cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+/* ==== Cards com visual premium ==== */
+.card {
+  background: linear-gradient(145deg, var(--preto) 0%, var(--cor-escura) 60%, var(--cor-primaria) 100%);
+  color: var(--branco);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  max-width: 320px;
   text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  color: var(--branco);
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.card h3 {
+  color: var(--cor-secundaria);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* ==== Botão Premium ==== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--branco);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* ==== Responsividade ==== */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
+.incluso {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(145deg, var(--preto) 0%, var(--cor-escura) 100%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  color: var(--branco);
+}
+
+.incluso h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--cor-secundaria);
+}
+
+.incluso ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 0.8rem 1.2rem; /* espaçamento vertical e horizontal */
+}
+
+.incluso li {
+  font-size: 1.05rem;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.25s ease;
+}
+
+.incluso li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.incluso li::before {
+  content: "✔";
+  color: var(--cor-secundaria);
+  font-weight: bold;
+}
+
+/* Responsivo: volta para 1 coluna no mobile */
+@media (max-width: 768px) {
+  .incluso ul {
+    grid-template-columns: 1fr;
+  }
+}
+/* Botão Saiba Mais */
+
+.flip-card {
+  width: 320px;
+  height: 220px;
+  perspective: 900px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  background: transparent;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* adicionado transform */
+}
+
+.flip-card:hover,
+.flip-card:focus {
+  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+  transform: translateY(-6px) scale(1.03); /* leve "zoom" e subida */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ==== Flip Cards - Container principal ==== */
+.flip-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+/* ==== Flip Card ==== */
+.flip-card {
+  width: 320px;
+  height: 220px;
+  perspective: 900px; /* Profundidade para efeito 3D */
+  cursor: pointer;
+  outline: none; /* Para focar sem contorno feio */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: box-shadow 0.3s ease;
+  background: transparent;
+}
+
+.flip-card:focus,
+.flip-card:hover {
+  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+}
+
+/* ==== Conteúdo interno que gira ==== */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+}
+
+/* Quando estiver "virado" */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ==== Lados frontal e traseiro ==== */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 2rem 1.5rem;
+  backface-visibility: hidden; /* Esconde o lado "atrás" quando não estiver virado */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ==== Frente ==== */
+.flip-card-front {
+  background: linear-gradient(145deg, var(--preto) 0%, var(--cor-escura) 60%, var(--cor-primaria) 100%);
+  color: var(--branco);
+}
+
+.flip-card-front h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  color: var(--branco);
+}
+
+.flip-card-front p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(255 255 255 / 0.85);
+  line-height: 1.3;
+}
+
+.flip-card-front h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--cor-secundaria);
+}
+
+/* ==== Verso ==== */
+.flip-card-back {
+  background: var(--branco);
+  color: var(--cor-escura);
+  transform: rotateY(180deg);
+  font-weight: 500;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.flip-card-back p {
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.5;
+}
+
+.flip-card-back .btn {
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--branco);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.flip-card-back .btn:hover,
+.flip-card-back .btn:focus {
+  opacity: 0.9;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* ==== Responsividade ==== */
+@media (max-width: 768px) {
+  .flip-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flip-card {
+    width: 90%;
+    height: auto;
+    max-width: 350px;
+    min-height: 220px;
+  }
+}
+.flip-card {
+  /* já tem transition para box-shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  /* cursor pointer já */
+}
+
+
+.flip-card {
+  width: 320px;
+  height: 220px;
+  perspective: 900px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  background: transparent;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* adicionado transform */
+}
+
+.flip-card:hover,
+.flip-card:focus {
+  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+  transform: translateY(-6px) scale(1.03); /* leve "zoom" e subida */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+/* === Flip Cards === */
+.flip-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.flip-card {
+  width: 320px;
+  height: 220px;
+  perspective: 900px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  background: transparent;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.flip-card:focus {
+  outline: 3px solid var(--cor-secundaria);
+  outline-offset: 3px;
+}
+
+.flip-card:hover {
+  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+  transform: translateY(-6px) scale(1.03);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 2rem 1.5rem;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.flip-card-front {
+  background: linear-gradient(145deg, var(--preto) 0%, var(--cor-escura) 60%, var(--cor-primaria) 100%);
+  color: var(--branco);
+}
+
+.flip-card-back {
+  background: var(--branco);
+  color: var(--cor-escura);
+  transform: rotateY(180deg);
+  font-weight: 500;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.flip-card-back .btn {
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--branco);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.flip-card-back .btn:hover,
+.flip-card-back .btn:focus {
+  opacity: 0.9;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+  .cards,
+  .flip-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card,
+  .flip-card {
+    max-width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  /* estilos para .cards, .flip-cards, .banner, .incluso, etc */
+}
+/*ate aqui esta bom */

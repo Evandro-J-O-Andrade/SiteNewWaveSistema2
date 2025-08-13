@@ -416,3 +416,169 @@
     margin-right: 0 !important;
   }
 }
+/* ==== Lado Direito - Banners Promocionais ==== */
+.lado-direito {
+  background: linear-gradient(145deg, var(--preto) 0%, var(--cor-escura) 60%, var(--cor-primaria) 100%);
+  /* Degradê igual aos cards */
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  color: var(--branco);
+  max-width: 320px;
+}
+
+.lado-direito h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--branco);
+  text-align: center;
+}
+
+.lado-direito p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.85);
+  text-align: center;
+}
+
+/* Container de imagens */
+.lado-direito .banners img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem; /* Espaçamento entre imagens */
+  object-fit: cover; /* Ajusta proporção da imagem sem distorcer */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lado-direito .banners img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .lado-direito {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+}
+/* ==== Lado Esquerdo - Destaques ==== */
+.lado-esquerdo {
+  background: linear-gradient(145deg, var(--preto) 0%, var(--cor-escura) 60%, var(--cor-primaria) 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  color: var(--branco);
+  max-width: 320px;
+ 
+}
+
+.lado-esquerdo h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--branco);
+  text-align: center;
+}
+
+/* Card dentro do lado esquerdo */
+.card-esquerdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Espaçamento entre imagens e textos */
+}
+
+/* Texto promocional */
+.card-esquerdo p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.85);
+  text-align: center;
+}
+
+/* Imagens dos produtos/destaques */
+.card-esquerdo img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-esquerdo img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .lado-esquerdo {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+}
+/* ==== Imagens padronizadas ==== */
+.lado-esquerdo img,
+.lado-direito img {
+  width: 100%;          /* Ocupa toda a largura do container */
+  height: 200px;        /* Altura fixa para todas as imagens */
+  object-fit: cover;    /* Ajusta a imagem sem distorcer, cortando se necessário */
+  border-radius: 12px;  /* Bordas arredondadas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover */
+.lado-esquerdo img:hover,
+.lado-direito img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .lado-esquerdo img,
+  .lado-direito img {
+    height: 180px;  /* Ajusta a altura para telas menores */
+  }
+}
+/* Estiliza APENAS o <label> que aponta para o input #cep */
+label[for="cep"] {
+margin-bottom: auto;
+  font-weight: 600;
+  letter-spacing: .2px;
+  padding: auto;
+}
+#cep {
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+  width: 125px;
+  margin: 10px;
+  padding: 7px 10px;
+}
+
+#cep:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+}
+#endereco{
+  font-size: 13px;
+  color:var(--cinza-escuro)
+}
+#btnValidarCEP {
+  background: linear-gradient(45deg, #00bfff, #1e90ff);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnValidarCEP:hover {
+  background: linear-gradient(45deg, #1e90ff, #00bfff);
+}
+
