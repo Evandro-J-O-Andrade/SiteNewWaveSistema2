@@ -203,8 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ajusteEl = document.getElementById("ajuste");
   const totalEl = document.getElementById("total");
   const btnGerarPDF = document.getElementById("btnGerarPDF");
-  const btnExportJson = document.getElementById("btnExportJson");
-  const limparCarrinho = document.getElementById("limparCarrinho");
+   const limparCarrinho = document.getElementById("limparCarrinho");
   const nomeCliente = document.getElementById("nomeCliente");
   const telefoneCliente = document.getElementById("telefoneCliente");
   const observacao = document.getElementById("observacao");
@@ -333,22 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.gerarPDFPedido(dados);
   });
 
-  btnExportJson.addEventListener("click", () => {
-    const snapshot = {
-      carrinho,
-      cliente: { nome: nomeCliente.value, telefone: telefoneCliente.value },
-      formaPagamento: formaPagamento.value,
-      calculos: calcular()
-    };
-    const blob = new Blob([JSON.stringify(snapshot, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "pedido.json";
-    a.click();
-    URL.revokeObjectURL(url);
-  });
-
+  
   limparCarrinho.addEventListener("click", () => {
     if (!confirm("Limpar o carrinho?")) return;
     carrinho = [];

@@ -1,6 +1,6 @@
 // gerar-pdf.js
 window.gerarPDFPedido = function (dados) {
-  const { jsPDF } = window.jspdf;
+  const {  } = window.jspdf;
   const doc = new jsPDF();
 
   // ==== Cabeçalho com logo ====

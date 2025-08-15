@@ -582,3 +582,46 @@ margin-bottom: auto;
   background: linear-gradient(45deg, #1e90ff, #00bfff);
 }
 
+/* ======== AJUSTES PARA CELULAR ======== */
+@media (max-width: 768px) {
+  
+  /* Empilhar colunas */
+  .layout-triple {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Colunas ocupam 100% */
+  .lado-esquerdo,
+  .conteudo-central,
+  .lado-direito {
+    width: 100%;
+  }
+
+  /* Imagens responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Menu mobile */
+  #menu-principal {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px;
+  }
+  .menu-hamburguer,
+  #span-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Tabela com rolagem */
+  .tabela {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
